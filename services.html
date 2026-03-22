@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Services – SISBM Academy | Cybersécurité, GPS, Caméras, BTP | Abidjan</title>
+  <meta name="description" content="Découvrez tous les services SISBM : audit cybersécurité, pentest, sécurité électronique, tracking GPS flotte, mobilité & logistique, construction BTP à Abidjan." />
+  <meta name="keywords" content="audit cybersécurité Abidjan, pentest Côte d'Ivoire, tracking GPS flotte, vidéosurveillance Abidjan, sécurité BTP" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services SISBM Academy – Cybersécurité & Sécurité" />
+  <meta property="og:description" content="Audit, pentest, GPS, caméras, BTP – solutions complètes à Abidjan." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+
+  <style>
+  /* ═══════════════════════════════════════
+     RESET & VARIABLES
+  ═══════════════════════════════════════ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:       #060F1E;
+    --navy-mid:   #0B1F3A;
+    --blue:       #0B3C5D;
+    --cyan:       #1A9FD6;
+    --cyan-light: #4BB8E8;
+    --green:      #00FFB2;
+    --green-dim:  rgba(0,255,178,0.12);
+    --white:      #FFFFFF;
+    --gray-bg:    #F0F4F8;
+    --gray-card:  #FAFBFC;
+    --text:       #1A2B3C;
+    --muted:      #607080;
+    --border:     rgba(11,60,93,0.1);
+
+    --font-d: 'Poppins', sans-serif;
+    --font-b: 'Poppins', sans-serif;
+    --r-sm: 6px; --r-md: 10px; --r-lg: 16px;
+    --tr: 0.25s ease;
+    --shadow: 0 2px 16px rgba(11,60,93,0.08);
+    --shadow-h: 0 8px 32px rgba(11,60,93,0.14);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-b); color: var(--text); background: var(--white); overflow-x: hidden; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+  button { cursor: pointer; font-family: var(--font-b); }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+  /* ─── NAVBAR ─── */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    height: 68px; display: flex; align-items: center;
+    background: rgba(6,15,30,0.96); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,159,214,0.15);
+  }
+  .nav-inner {
+    width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-family: var(--font-d); font-size: 1.25rem; font-weight: 900; color: var(--white); letter-spacing: 3px; }
+  .logo-dot { color: var(--green); }
+  .nav-links { display: flex; align-items: center; gap: 2.25rem; }
+  .nav-links a { font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: color var(--tr); }
+  .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--cyan), #0E7AB0);
+    color: white; padding: 0.55rem 1.3rem; border: none;
+    border-radius: var(--r-sm); font-size: 0.85rem; font-weight: 500; transition: var(--tr);
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(26,159,214,0.4); }
+
+  /* ─── HERO PAGE SERVICES ─── */
+  .page-hero {
+    background: var(--navy);
+    background-image:
+      linear-gradient(rgba(26,159,214,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,159,214,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    padding: 9rem 2rem 5rem;
+    position: relative; overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .page-hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: linear-gradient(to top, var(--gray-bg), transparent);
+  }
+  .page-hero-orb {
+    position: absolute; width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,159,214,0.12) 0%, transparent 70%);
+    top: -100px; right: -100px; pointer-events: none;
+  }
+  .page-hero-content { max-width: 700px; position: relative; z-index: 1; }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: var(--cyan); }
+  .breadcrumb span { color: rgba(255,255,255,0.25); }
+  .page-hero h1 {
+    font-family: var(--font-d); font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem;
+  }
+  .page-hero h1 em { color: var(--green); font-style: normal; }
+  .page-hero p { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.8; max-width: 560px; margin-bottom: 2rem; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .hero-tag {
+    background: rgba(26,159,214,0.12); border: 1px solid rgba(26,159,214,0.25);
+    color: var(--cyan-light); font-size: 0.75rem; padding: 0.3rem 0.85rem;
+    border-radius: 20px; letter-spacing: 0.3px;
+  }
+  .page-hero-image {
+    position: relative; z-index: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(26,159,214,0.2);
+    opacity: 0;
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* ─── NAV SERVICES (onglets) ─── */
+  .services-nav {
+    background: var(--gray-bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 68px; z-index: 100;
+  }
+  .services-nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+    display: flex; gap: 0; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .services-nav-inner::-webkit-scrollbar { display: none; }
+  .snav-btn {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 1rem 1.5rem; border: none; background: none;
+    font-size: 0.85rem; font-weight: 500; color: var(--muted);
+    border-bottom: 2px solid transparent;
+    transition: color var(--tr), border-color var(--tr);
+    white-space: nowrap; cursor: pointer;
+  }
+  .snav-btn:hover { color: var(--navy); }
+  .snav-btn.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+  .snav-icon { font-size: 1rem; }
+
+  /* ─── SECTION COMMUNE ─── */
+  .svc-section { padding: 6rem 0; }
+  .svc-section:nth-child(even) { background: var(--gray-bg); }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--cyan); font-weight: 600; margin-bottom: 0.75rem;
+  }
+  .section-label::before {
+    content: ''; width: 20px; height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--green));
+    border-radius: 2px;
+  }
+
+  /* Layout 2 colonnes */
+  .svc-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+  }
+  .svc-layout.reverse { direction: rtl; }
+  .svc-layout.reverse > * { direction: ltr; }
+
+  .svc-text h2 {
+    font-family: var(--font-d); font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 1rem;
+  }
+  .svc-text > p {
+    color: var(--muted); font-size: 0.92rem; line-height: 1.85; margin-bottom: 1.75rem;
+  }
+
+  /* Liste de prestations */
+  .prestation-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem; }
+  .prestation-item {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--r-md); transition: var(--tr);
+  }
+  .svc-section:nth-child(even) .prestation-item { background: var(--white); }
+  .prestation-item:hover { border-color: var(--cyan); transform: translateX(4px); box-shadow: var(--shadow); }
+  .pi-check {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(26,159,214,0.12); color: var(--cyan);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  }
+  .pi-text { flex: 1; }
+  .pi-text strong { font-size: 0.88rem; font-weight: 600; color: var(--navy); display: block; margin-bottom: 0.15rem; }
+  .pi-text span { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+  /* CTA boutons */
+  .svc-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.7rem 1.5rem; border-radius: var(--r-sm);
+    font-size: 0.88rem; font-weight: 500; border: none; transition: var(--tr);
+  }
+  .btn-primary { background: var(--cyan); color: white; }
+  .btn-primary:hover { background: var(--cyan-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,159,214,0.35); }
+  .btn-outline { background: transparent; color: var(--cyan); border: 1px solid var(--cyan); }
+  .btn-outline:hover { background: var(--cyan); color: white; }
+
+  /* ─── VISUEL : panneau illustratif ─── */
+  .svc-visual {
+    border-radius: var(--r-lg);
+    overflow: hidden; position: relative;
+    min-height: 380px;
+  }
+
+  /* Cyber visual */
+  .visual-cyber {
+    background: var(--navy-mid);
+    border: 1px solid rgba(26,159,214,0.2);
+    padding: 2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .cyber-terminal {
+    background: rgba(0,0,0,0.4); border-radius: var(--r-md);
+    padding: 1.25rem; font-family: 'Courier New', monospace; font-size: 0.8rem;
+    border: 1px solid rgba(0,255,178,0.15);
+  }
+  .t-line { margin-bottom: 0.4rem; color: rgba(255,255,255,0.5); }
+  .t-line .t-prompt { color: var(--green); }
+  .t-line .t-cmd { color: var(--cyan-light); }
+  .t-line .t-ok { color: var(--green); }
+  .t-line .t-warn { color: #F5A623; }
+  .t-line .t-err { color: #FF6B6B; }
+
+  .cyber-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .c-metric {
+    background: rgba(26,159,214,0.08); border: 1px solid rgba(26,159,214,0.15);
+    border-radius: var(--r-sm); padding: 0.85rem 1rem;
+  }
+  .c-metric-val { font-family: var(--font-d); font-size: 1.4rem; font-weight: 700; color: var(--green); display: block; }
+  .c-metric-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+  .c-metric.warn .c-metric-val { color: #F5A623; }
+  .c-metric.danger .c-metric-val { color: #FF6B6B; }
+
+  /* GPS visual */
+  .visual-gps {
+    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+  }
+  .gps-map {
+    background: rgba(11,60,93,0.5);
+    border-radius: var(--r-md); height: 180px; position: relative;
+    overflow: hidden; border: 1px solid rgba(26,159,214,0.1);
+  }
+  .gps-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(26,159,214,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,159,214,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .gps-dot {
+    position: absolute; width: 12px; height: 12px; border-radius: 50%;
+    background: var(--green); border: 2px solid var(--white);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 6px rgba(0,255,178,0.2);
+  }
+  .gps-dot::after {
+    content: ''; position: absolute; inset: -6px; border-radius: 50%;
+    border: 1px solid rgba(0,255,178,0.3);
+    animation: ping 1.5s ease-out infinite;
+  }
+  @keyframes ping {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+  .gps-dot-2 { background: var(--cyan); border-color: white; box-shadow: 0 0 0 6px rgba(26,159,214,0.2); }
+  .gps-dot-2::after { border-color: rgba(26,159,214,0.3); animation-delay: 0.5s; }
+
+  .gps-vehicles { display: flex; flex-direction: column; gap: 0.5rem; }
+  .gps-vehicle {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: rgba(26,159,214,0.06); border: 1px solid rgba(26,159,214,0.12);
+    border-radius: var(--r-sm); padding: 0.65rem 0.85rem;
+  }
+  .gv-icon { font-size: 1rem; }
+  .gv-name { font-size: 0.8rem; font-weight: 600; color: var(--white); flex: 1; }
+  .gv-speed { font-family: var(--font-d); font-size: 0.75rem; color: var(--cyan); }
+  .gv-status {
+    font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 10px; font-weight: 500;
+  }
+  .gvs-on  { background: rgba(0,255,178,0.15); color: var(--green); }
+  .gvs-off { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.4); }
+  .gvs-alr { background: rgba(245,166,35,0.15); color: #F5A623; }
+
+  /* Elec visual */
+  .visual-elec {
+    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+  }
+  .cam-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .cam-feed {
+    background: #000; border-radius: var(--r-sm); aspect-ratio: 16/9;
+    position: relative; overflow: hidden; border: 1px solid rgba(26,159,214,0.15);
+  }
+  .cam-feed-bg {
+    position: absolute; inset: 0; opacity: 0.25;
+    background-image: radial-gradient(ellipse at center, rgba(26,159,214,0.3) 0%, transparent 70%);
+  }
+  .cam-rec {
+    position: absolute; top: 6px; left: 8px;
+    display: flex; align-items: center; gap: 4px;
+    font-size: 0.6rem; color: rgba(255,255,255,0.7); font-family: monospace;
+  }
+  .rec-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #FF4444;
+    animation: blink 1.2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+  .cam-label {
+    position: absolute; bottom: 6px; left: 8px;
+    font-size: 0.62rem; color: rgba(255,255,255,0.5); font-family: monospace;
+  }
+  .cam-crosshair {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  }
+  .crosshair-svg { width: 28px; height: 28px; opacity: 0.15; }
+
+  .cam-events { display: flex; flex-direction: column; gap: 0.45rem; }
+  .cam-event {
+    display: flex; align-items: center; gap: 0.65rem;
+    padding: 0.5rem 0.75rem; border-radius: var(--r-sm);
+    font-size: 0.75rem;
+  }
+  .ce-time { font-family: monospace; color: rgba(255,255,255,0.35); flex-shrink: 0; width: 42px; }
+  .ce-text { color: rgba(255,255,255,0.65); flex: 1; }
+  .ce-badge { font-size: 0.68rem; padding: 0.15rem 0.5rem; border-radius: 10px; flex-shrink: 0; }
+  .ce-motion { background: rgba(245,166,35,0.15); color: #F5A623; }
+  .ce-ok     { background: rgba(0,255,178,0.12); color: var(--green); }
+  .ce-intrusion { background: rgba(255,107,107,0.15); color: #FF6B6B; }
+
+  /* BTP visual */
+  .visual-btp {
+    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+  }
+  .btp-zones { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .btp-zone {
+    border-radius: var(--r-sm); padding: 1rem;
+    border: 1px solid; transition: var(--tr);
+  }
+  .bz-secure  { background: rgba(0,255,178,0.06); border-color: rgba(0,255,178,0.2); }
+  .bz-access  { background: rgba(26,159,214,0.06); border-color: rgba(26,159,214,0.2); }
+  .bz-warning { background: rgba(245,166,35,0.06); border-color: rgba(245,166,35,0.2); }
+  .bz-locked  { background: rgba(255,107,107,0.06); border-color: rgba(255,107,107,0.2); }
+  .bz-name { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem; }
+  .bz-status { font-size: 0.7rem; font-weight: 500; }
+  .bz-secure  .bz-status { color: var(--green); }
+  .bz-access  .bz-status { color: var(--cyan); }
+  .bz-warning .bz-status { color: #F5A623; }
+  .bz-locked  .bz-status { color: #FF6B6B; }
+
+  .btp-log { display: flex; flex-direction: column; gap: 0.4rem; }
+  .btp-log-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.75rem; padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .bli-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .bli-green { background: var(--green); }
+  .bli-cyan  { background: var(--cyan); }
+  .bli-amber { background: #F5A623; }
+  .bli-red   { background: #FF6B6B; }
+  .bli-text  { color: rgba(255,255,255,0.55); flex: 1; }
+  .bli-time  { color: rgba(255,255,255,0.25); font-family: monospace; font-size: 0.68rem; }
+
+  /* ─── CHIFFRES CLÉS PAR SERVICE ─── */
+  .svc-kpis {
+    display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.75rem;
+  }
+  .kpi-item {
+    padding: 0.85rem 1.25rem;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--r-md); text-align: center; min-width: 90px;
+    border-top: 3px solid var(--cyan);
+  }
+  .svc-section:nth-child(even) .kpi-item { background: var(--white); }
+  .kpi-val { font-family: var(--font-d); font-size: 1.3rem; font-weight: 700; color: var(--navy); display: block; }
+  .kpi-lbl { font-size: 0.72rem; color: var(--muted); }
+
+  /* ─── PROCESSUS ─── */
+  .process-section { padding: 5rem 0; background: var(--navy); }
+  .process-section .section-label::before { background: linear-gradient(90deg, var(--green), var(--cyan)); }
+  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; position: relative; }
+  .process-grid::before {
+    content: ''; position: absolute;
+    top: 28px; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(26,159,214,0.3), var(--cyan), rgba(26,159,214,0.3), transparent);
+    z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 1.5rem; position: relative; z-index: 1; }
+  .ps-number {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--navy-mid); border: 2px solid var(--cyan);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-d); font-size: 1rem; font-weight: 700; color: var(--cyan);
+    margin: 0 auto 1.25rem;
+  }
+  .process-step.active .ps-number { background: var(--cyan); color: var(--navy); border-color: var(--cyan); box-shadow: 0 0 20px rgba(26,159,214,0.4); }
+  .ps-title { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+  .ps-desc  { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
+
+  /* ─── CTA FINAL ─── */
+  .final-cta {
+    padding: 5rem 0; background: var(--gray-bg);
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: var(--font-d); font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 700; color: var(--navy); margin-bottom: 1rem;
+  }
+  .final-cta p { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+  .final-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.45);
+    padding: 2rem; text-align: center; font-size: 0.8rem;
+    border-top: 1px solid rgba(26,159,214,0.12);
+  }
+
+  /* ─── WHATSAPP FLOAT ─── */
+  .wa-float {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+    width: 54px; height: 54px; background: #25D366;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    animation: float-bounce 3s ease-in-out infinite;
+  }
+  @keyframes float-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+  /* ─── ANIMATIONS ─── */
+  [data-aos] { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
+  [data-aos-delay="100"] { transition-delay: 0.1s; }
+  [data-aos-delay="200"] { transition-delay: 0.2s; }
+  [data-aos-delay="300"] { transition-delay: 0.3s; }
+  [data-aos-delay="400"] { transition-delay: 0.4s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .svc-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .svc-layout.reverse { direction: ltr; }
+  }
+  @media (max-width: 900px) {
+    .svc-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .svc-layout.reverse { direction: ltr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    .page-hero { padding: 6rem 1.5rem 4rem; flex-direction: column; }
+    .page-hero-image { max-width: 300px; }
+    .page-hero h1 { font-size: 1.8rem; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-grid::before { display: none; }
+    .svc-kpis { gap: 1rem; }
+  }
+  @media (max-width: 640px) {
+    .nav-links, .nav-cta { display: none; }
+    .page-hero { padding: 5rem 1rem 3rem; flex-direction: column; }
+    .page-hero-image { max-width: 280px; margin-top: 2rem; }
+    .page-hero h1 { font-size: 1.5rem; }
+    .page-hero-content { padding-left: 0; }
+    .breadcrumb { font-size: 0.7rem; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-grid::before { display: none; }
+    .svc-kpis { gap: 0.75rem; flex-direction: column; }
+    .svc-kpi-item { min-width: 100%; }
+    .container { padding: 0 1rem; }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 40px; width: auto;"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="contact.html#contact-form">Contact</a></li>
+    </ul>
+    <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="page-hero">
+  <div class="page-hero-orb"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span>/</span>
+      <span>Services</span>
+    </div>
+    <h1>Nos <em>Services</em><br />de Sécurité</h1>
+    <p>De la cybersécurité au tracking GPS, en passant par la vidéosurveillance et la sécurité BTP — SISBM est votre partenaire unique pour protéger vos actifs numériques et physiques.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">🔐 Cybersécurité</span>
+      <span class="hero-tag">🚗 Tracking GPS</span>
+      <span class="hero-tag"> 🎥 Vidéosurveillance</span>
+      <span class="hero-tag">🏗️ BTP & Chantiers</span>
+    </div>
+  </div>
+  <div class="page-hero-image">
+    <img src="images/serv.png" alt="Services SISBM" />
+  </div>
+</div>
+
+<!-- ══════════════ NAV ONGLETS ══════════════ -->
+<div class="services-nav">
+  <div class="services-nav-inner">
+    <button class="snav-btn active" onclick="scrollTo('cybersec')"><span class="snav-icon"><img src="images/cybersecurité.png" alt="Cybersécurité" style="width: 20px; height: 20px; object-fit: cover; display: inline-block;"></span> Cybersécurité</button>
+    <button class="snav-btn" onclick="scrollTo('tracking')"><span class="snav-icon"><img src="images/vehicle.png" alt="Tracking GPS" style="width: 20px; height: 20px; object-fit: cover; display: inline-block;"></span> Tracking GPS</button>
+    <button class="snav-btn" onclick="scrollTo('electronique')"><span class="snav-icon"><img src="images/videosurveillance.jpg" alt="Sécurité Électronique" style="width: 20px; height: 20px; object-fit: cover; display: inline-block;"></span> Sécurité Électronique</button>
+    <button class="snav-btn" onclick="scrollTo('btp')"><span class="snav-icon"><img src="images/btp.png" alt="BTP &amp; Génie Civil" style="width: 20px; height: 20px; object-fit: cover; display: inline-block;"></span> BTP &amp; Génie Civil</button>
+  </div>
+</div>
+
+<!-- ══════════════ CYBERSÉCURITÉ ══════════════ -->
+<section class="svc-section" id="cybersec">
+  <div class="container">
+    <div class="svc-layout">
+      <!-- Texte -->
+      <div class="svc-text" data-aos>
+        <div class="section-label">Cybersécurité</div>
+        <h2>Protégez votre système d'information</h2>
+        <p>Nos experts certifiés (CEH, OSCP) analysent vos vulnérabilités, testent vos défenses et vous accompagnent pour bâtir une posture de sécurité robuste. Chaque mission est documentée avec un rapport CVSS complet.</p>
+
+        <div class="svc-kpis">
+          <div class="kpi-item"><span class="kpi-val">98%</span><span class="kpi-lbl">Vulnérabilités détectées</span></div>
+          <div class="kpi-item"><span class="kpi-val">48h</span><span class="kpi-lbl">Délai rapport</span></div>
+          <div class="kpi-item"><span class="kpi-val">24/7</span><span class="kpi-lbl">Support IR</span></div>
+        </div>
+
+        <div class="prestation-list">
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Audit de sécurité (interne / externe)</strong>
+              <span>Analyse complète de votre périmètre réseau, applicatif et organisationnel selon la méthodologie PTES.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Test d'intrusion (Pentest)</strong>
+              <span>Simulation d'attaques réelles : web, réseau, Active Directory, mobile. Rapport détaillé + preuves d'exploitation.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Réponse aux incidents (IR)</strong>
+              <span>Intervention rapide en cas de cyberattaque : containment, éradication, forensic et remédiation.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Conseil GRC / ISO 27001</strong>
+              <span>Accompagnement à la conformité : politique de sécurité, analyse des risques, préparation aux certifications.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Formation & sensibilisation</strong>
+              <span>Ateliers phishing, ingénierie sociale et bonnes pratiques pour vos équipes non-techniques.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">Demander un audit →</a>
+          <a href="formations.html" class="btn btn-outline">Voir les formations</a>
+        </div>
+      </div>
+
+      <!-- Visuel terminal -->
+      <div class="svc-visual visual-cyber" data-aos data-aos-delay="200">
+        <div class="cyber-terminal">
+          <div class="t-line"><span class="t-prompt">root@sisbm:~$</span> <span class="t-cmd">nmap -sV -sC target.ci</span></div>
+          <div class="t-line"><span class="t-ok">PORT     STATE  SERVICE</span></div>
+          <div class="t-line"><span class="t-ok">22/tcp   open   ssh OpenSSH 8.2</span></div>
+          <div class="t-line"><span class="t-warn">80/tcp   open   http Apache 2.4.41</span></div>
+          <div class="t-line"><span class="t-err">443/tcp  open   ssl/https [VULN: CVE-2021-41773]</span></div>
+          <div class="t-line"><span class="t-warn">3306/tcp open   mysql 5.7.38</span></div>
+          <div class="t-line" style="margin-top:0.5rem"><span class="t-prompt">root@sisbm:~$</span> <span class="t-cmd">sqlmap -u "target.ci/login" --dbs</span></div>
+          <div class="t-line"><span class="t-err">  [CRITICAL] Database exposed: users, credentials</span></div>
+          <div class="t-line"><span class="t-ok">  [+] Generating report...</span></div>
+        </div>
+        <div class="cyber-metrics">
+          <div class="c-metric danger"><span class="c-metric-val">17</span><span class="c-metric-lbl">Vulnérabilités critiques</span></div>
+          <div class="c-metric warn"><span class="c-metric-val">34</span><span class="c-metric-lbl">Risques moyens</span></div>
+          <div class="c-metric"><span class="c-metric-val" style="color:var(--cyan)">CVSS</span><span class="c-metric-lbl">Score moyen : 8.4/10</span></div>
+          <div class="c-metric"><span class="c-metric-val" style="color:var(--green)">PDF</span><span class="c-metric-lbl">Rapport prêt en 48h</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TRACKING GPS ══════════════ -->
+<section class="svc-section" id="tracking">
+  <div class="container">
+    <div class="svc-layout reverse">
+      <!-- Visuel GPS -->
+      <div class="svc-visual visual-gps" data-aos>
+        <div class="gps-map">
+          <div class="gps-grid"></div>
+          <!-- Chemins de routes stylisés SVG -->
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15" viewBox="0 0 300 180">
+            <path d="M 0 90 Q 75 60 150 90 Q 225 120 300 90" stroke="#1A9FD6" stroke-width="2" fill="none"/>
+            <path d="M 100 0 Q 120 90 100 180" stroke="#1A9FD6" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
+            <path d="M 200 0 Q 180 90 200 180" stroke="#1A9FD6" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
+          </svg>
+          <div class="gps-dot" style="top:42%;left:35%"></div>
+          <div class="gps-dot gps-dot-2" style="top:60%;left:62%"></div>
+          <div class="gps-dot" style="top:28%;left:70%;background:#F5A623;box-shadow:0 0 0 6px rgba(245,166,35,0.2)"></div>
+          <!-- Label ville -->
+          <div style="position:absolute;bottom:8px;right:10px;font-size:0.6rem;color:rgba(255,255,255,0.3);font-family:monospace">Abidjan, CI</div>
+        </div>
+        <div class="gps-vehicles">
+          <div class="gps-vehicle">
+            <span class="gv-icon">🚛</span>
+            <span class="gv-name">Camion-01 · Plateau</span>
+            <span class="gv-speed">62 km/h</span>
+            <span class="gv-status gvs-on">EN ROUTE</span>
+          </div>
+          <div class="gps-vehicle">
+            <span class="gv-icon">🚐</span>
+            <span class="gv-name">Van-07 · Yopougon</span>
+            <span class="gv-speed">0 km/h</span>
+            <span class="gv-status gvs-off">À L'ARRÊT</span>
+          </div>
+          <div class="gps-vehicle">
+            <span class="gv-icon">🚗</span>
+            <span class="gv-name">Véh-12 · Cocody</span>
+            <span class="gv-speed">91 km/h</span>
+            <span class="gv-status gvs-alr">ALERTE VITESSE</span>
+          </div>
+          <div class="gps-vehicle">
+            <span class="gv-icon">🚚</span>
+            <span class="gv-name">Camion-03 · Abobo</span>
+            <span class="gv-speed">44 km/h</span>
+            <span class="gv-status gvs-on">EN ROUTE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="svc-text" data-aos data-aos-delay="200">
+        <div class="section-label">Tracking de Véhicules</div>
+        <h2>Gérez votre flotte en temps réel</h2>
+        <p>Nos traceurs GPS professionnels vous donnent une visibilité totale sur vos véhicules, 24h/24. Réduisez vos coûts, prévenez les vols et optimisez vos trajets avec notre plateforme de gestion dédiée.</p>
+
+        <div class="svc-kpis">
+          <div class="kpi-item"><span class="kpi-val">-18%</span><span class="kpi-lbl">Coûts carburant</span></div>
+          <div class="kpi-item"><span class="kpi-val">99%</span><span class="kpi-lbl">Couverture CI</span></div>
+          <div class="kpi-item"><span class="kpi-val">30s</span><span class="kpi-lbl">Rafraîchissement</span></div>
+        </div>
+
+        <div class="prestation-list">
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Localisation GPS temps réel</strong>
+              <span>Suivi continu avec actualisation toutes les 30 secondes. Historique des trajets sur 12 mois.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Alertes intelligentes</strong>
+              <span>Notifications instantanées : excès de vitesse, sortie de zone, coupure moteur, tentative de vol.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Gestion de flotte avancée</strong>
+              <span>Tableau de bord centralisé : consommation, kilométrage, maintenance préventive, rapports automatiques.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Géofencing (zones virtuelles)</strong>
+              <span>Définissez des zones autorisées et recevez une alerte dès qu'un véhicule en sort ou y entre.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">Demander une démo →</a>
+          <a href="contact.html#contact-form" class="btn btn-outline">Tarifs sur devis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SÉCURITÉ ÉLECTRONIQUE ══════════════ -->
+<section class="svc-section" id="electronique">
+  <div class="container">
+    <div class="svc-layout">
+      <!-- Texte -->
+      <div class="svc-text" data-aos>
+        <div class="section-label">Sécurité Électronique</div>
+        <h2>Surveillez et sécurisez vos locaux</h2>
+        <p>Nous concevons et installons des systèmes de vidéosurveillance IP haute définition, de contrôle d'accès biométrique et d'alarmes intrusion pour protéger vos bureaux, entrepôts et sites industriels.</p>
+
+        <div class="svc-kpis">
+          <div class="kpi-item"><span class="kpi-val">4K</span><span class="kpi-lbl">Résolution max</span></div>
+          <div class="kpi-item"><span class="kpi-val">30j</span><span class="kpi-lbl">Stockage vidéo</span></div>
+          <div class="kpi-item"><span class="kpi-val">IR</span><span class="kpi-lbl">Vision nuit 40m</span></div>
+        </div>
+
+        <div class="prestation-list">
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Vidéosurveillance IP HD / 4K</strong>
+              <span>Caméras dôme, bullet, fisheye. Enregistrement NVR local + accès cloud sécurisé depuis votre smartphone.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Contrôle d'accès biométrique</strong>
+              <span>Badges RFID, lecteurs d'empreintes, claviers à code. Gestion des habilitations et journaux d'accès.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Alarmes intrusion & incendie</strong>
+              <span>Détecteurs de mouvement, bris de vitre, fumée. Télésurveillance 24h/24 avec levée de doute.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Interphonie & portiers vidéo</strong>
+              <span>Gestion des entrées à distance via application mobile. Intégration avec le contrôle d'accès.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">Demander une étude →</a>
+          <a href="contact.html#contact-form" class="btn btn-outline">Voir nos réalisations</a>
+        </div>
+      </div>
+
+      <!-- Visuel caméras -->
+      <div class="svc-visual visual-elec" data-aos data-aos-delay="200">
+        <div class="cam-grid">
+          <div class="cam-feed">
+            <div class="cam-feed-bg"></div>
+            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
+            <div class="cam-crosshair">
+              <svg class="crosshair-svg" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/>
+                <line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/>
+                <line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="cam-label">CAM-01 · ENTRÉE</div>
+          </div>
+          <div class="cam-feed">
+            <div class="cam-feed-bg" style="background:radial-gradient(ellipse, rgba(0,255,178,0.15) 0%, transparent 70%)"></div>
+            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
+            <div class="cam-crosshair">
+              <svg class="crosshair-svg" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/>
+                <line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/>
+                <line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="cam-label">CAM-02 · PARKING</div>
+          </div>
+          <div class="cam-feed" style="border-color:rgba(255,107,107,0.4)">
+            <div class="cam-feed-bg" style="background:radial-gradient(ellipse, rgba(255,107,107,0.2) 0%, transparent 70%)"></div>
+            <div class="cam-rec" style="color:#FF6B6B"><div class="rec-dot" style="background:#FF6B6B"></div>ALERTE</div>
+            <div class="cam-crosshair">
+              <svg class="crosshair-svg" viewBox="0 0 40 40" fill="none" style="opacity:0.4">
+                <circle cx="20" cy="20" r="10" stroke="#FF6B6B" stroke-width="1.5"/>
+                <line x1="20" y1="0" x2="20" y2="8" stroke="#FF6B6B" stroke-width="1.5"/>
+                <line x1="20" y1="32" x2="20" y2="40" stroke="#FF6B6B" stroke-width="1.5"/>
+                <line x1="0" y1="20" x2="8" y2="20" stroke="#FF6B6B" stroke-width="1.5"/>
+                <line x1="32" y1="20" x2="40" y2="20" stroke="#FF6B6B" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="cam-label" style="color:#FF6B6B">CAM-03 · COULOIR</div>
+          </div>
+          <div class="cam-feed">
+            <div class="cam-feed-bg"></div>
+            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
+            <div class="cam-crosshair">
+              <svg class="crosshair-svg" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/>
+                <line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/>
+                <line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/>
+                <line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="cam-label">CAM-04 · BUREAU</div>
+          </div>
+        </div>
+
+        <div class="cam-events">
+          <div class="cam-event" style="background:rgba(255,107,107,0.08)">
+            <span class="ce-time">14:32</span>
+            <span class="ce-text">Mouvement détecté – Zone couloir</span>
+            <span class="ce-badge ce-intrusion">ALERTE</span>
+          </div>
+          <div class="cam-event" style="background:rgba(245,166,35,0.06)">
+            <span class="ce-time">14:28</span>
+            <span class="ce-text">Badge inconnu – Tentative accès serveur</span>
+            <span class="ce-badge ce-motion">REFUSÉ</span>
+          </div>
+          <div class="cam-event">
+            <span class="ce-time">14:15</span>
+            <span class="ce-text">Accès autorisé – Salle de réunion</span>
+            <span class="ce-badge ce-ok">OK</span>
+          </div>
+          <div class="cam-event">
+            <span class="ce-time">13:50</span>
+            <span class="ce-text">Système actif – Toutes caméras opérationnelles</span>
+            <span class="ce-badge ce-ok">OK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BTP ══════════════ -->
+<section class="svc-section" id="btp">
+  <div class="container">
+    <div class="svc-layout reverse">
+      <!-- Visuel BTP -->
+      <div class="svc-visual visual-btp" data-aos>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+          <span style="font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.7)">Chantier Cocody – Secteur A</span>
+          <span style="font-size:0.7rem;color:var(--green);font-family:monospace">● EN DIRECT</span>
+        </div>
+        <div class="btp-zones">
+          <div class="btp-zone bz-secure">
+            <div class="bz-name">Zone Bureaux</div>
+            <div class="bz-status">✓ Sécurisé · 3 badges</div>
+          </div>
+          <div class="btp-zone bz-access">
+            <div class="bz-name">Zone Matériel</div>
+            <div class="bz-status">◉ Accès contrôlé</div>
+          </div>
+          <div class="btp-zone bz-warning">
+            <div class="bz-name">Périmètre Nord</div>
+            <div class="bz-status">⚠ Mouvement détecté</div>
+          </div>
+          <div class="btp-zone bz-locked">
+            <div class="bz-name">Zone Explosifs</div>
+            <div class="bz-status">🔒 Accès verrouillé</div>
+          </div>
+        </div>
+
+        <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.5);margin-top:0.25rem;margin-bottom:0.5rem;letter-spacing:0.5px;text-transform:uppercase">
+          Journal des événements
+        </div>
+        <div class="btp-log">
+          <div class="btp-log-item">
+            <div class="bli-dot bli-amber"></div>
+            <div class="bli-text">Mouvement détecté périmètre Nord (CAM-08)</div>
+            <div class="bli-time">16:42</div>
+          </div>
+          <div class="btp-log-item">
+            <div class="bli-dot bli-green"></div>
+            <div class="bli-text">Badge #047 autorisé – Zone matériel</div>
+            <div class="bli-time">16:38</div>
+          </div>
+          <div class="btp-log-item">
+            <div class="bli-dot bli-red"></div>
+            <div class="bli-text">Tentative d'accès non autorisé – Zone explosifs</div>
+            <div class="bli-time">16:31</div>
+          </div>
+          <div class="btp-log-item">
+            <div class="bli-dot bli-cyan"></div>
+            <div class="bli-text">Ronde automatique secteur A – OK</div>
+            <div class="bli-time">16:00</div>
+          </div>
+          <div class="btp-log-item">
+            <div class="bli-dot bli-green"></div>
+            <div class="bli-text">Système de surveillance initialisé</div>
+            <div class="bli-time">08:00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="svc-text" data-aos data-aos-delay="200">
+        <div class="section-label">BTP & Génie Civil</div>
+        <h2>Sécurisez vos chantiers et sites industriels</h2>
+        <p>Les chantiers de construction présentent des risques spécifiques : vols de matériaux, intrusions nocturnes, accidents. Nos solutions intègrent vidéosurveillance mobile, contrôle d'accès et périmétrie pour protéger vos investissements.</p>
+
+        <div class="svc-kpis">
+          <div class="kpi-item"><span class="kpi-val">-80%</span><span class="kpi-lbl">Vols chantier</span></div>
+          <div class="kpi-item"><span class="kpi-val">360°</span><span class="kpi-lbl">Couverture</span></div>
+          <div class="kpi-item"><span class="kpi-val">GSM</span><span class="kpi-lbl">Sans câblage</span></div>
+        </div>
+
+        <div class="prestation-list">
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Vidéosurveillance mobile solaire</strong>
+              <span>Tours de surveillance autonomes (panneau solaire + 4G). Idéal pour chantiers sans électricité.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Clôture périmétrique intelligente</strong>
+              <span>Détection de franchissement, alarme sonore instantanée et alerte SMS/appel vers le responsable.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Contrôle d'accès chantier</strong>
+              <span>Badges nominatifs pour chaque intervenant. Traçabilité complète des entrées/sorties du personnel.</span>
+            </div>
+          </div>
+          <div class="prestation-item">
+            <div class="pi-check">✓</div>
+            <div class="pi-text">
+              <strong>Gardiennage & télésurveillance</strong>
+              <span>Ronde virtuelle automatisée la nuit. Intervention physique partenaire en cas d'alerte confirmée.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">Devis chantier →</a>
+          <a href="contact.html#contact-form" class="btn btn-outline">Nos références BTP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROCESSUS ══════════════ -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:3rem">
+      <div class="section-label" style="color:var(--green);justify-content:center">
+        <span style="width:20px;height:2px;background:linear-gradient(90deg,var(--green),var(--cyan));border-radius:2px;display:inline-block"></span>
+        Notre méthode
+      </div>
+      <h2 style="font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.8rem);color:var(--white);margin-bottom:0.5rem">Comment nous travaillons</h2>
+      <p style="color:rgba(255,255,255,0.45);font-size:0.92rem">Un processus éprouvé pour chaque mission</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step" data-aos data-aos-delay="100">
+        <div class="ps-number">01</div>
+        <div class="ps-title">Prise de contact</div>
+        <div class="ps-desc">Échange gratuit pour comprendre vos besoins, votre secteur et vos contraintes.</div>
+      </div>
+      <div class="process-step" data-aos data-aos-delay="200">
+        <div class="ps-number active">02</div>
+        <div class="ps-title">Analyse & devis</div>
+        <div class="ps-desc">Audit préliminaire et proposition commerciale personnalisée sous 48h.</div>
+      </div>
+      <div class="process-step" data-aos data-aos-delay="300">
+        <div class="ps-number">03</div>
+        <div class="ps-title">Mission / Installation</div>
+        <div class="ps-desc">Exécution par nos experts certifiés selon la méthodologie convenue.</div>
+      </div>
+      <div class="process-step" data-aos data-aos-delay="400">
+        <div class="ps-number">04</div>
+        <div class="ps-title">Rapport & livrables</div>
+        <div class="ps-desc">Restitution complète avec preuves, recommandations et plan de remédiation.</div>
+      </div>
+      <div class="process-step" data-aos data-aos-delay="400">
+        <div class="ps-number">05</div>
+        <div class="ps-title">Suivi & support</div>
+        <div class="ps-desc">Accompagnement post-mission et disponibilité 24/7 pour les urgences.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA FINAL ══════════════ -->
+<div class="final-cta">
+  <div class="container">
+    <h2>Prêt à sécuriser votre entreprise ?</h2>
+    <p>Obtenez un devis personnalisé gratuit en moins de 48 heures. Aucun engagement.</p>
+    <div class="final-btns">
+      <a href="contact.html#contact-form" class="btn btn-primary" style="padding:0.85rem 2rem;font-size:0.95rem">Demander un devis gratuit →</a>
+      <a href="formations.html" class="btn btn-outline" style="padding:0.85rem 2rem;font-size:0.95rem">Voir les formations</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <span style="font-family:var(--font-d);font-size:1.1rem;font-weight:900;color:white;letter-spacing:3px;display:block;margin-bottom:0.5rem">SISBM<span style="color:var(--green)">.</span>CI</span>
+  <p>© 2026 SISBM Academy – Cybersécurité · Tracking · Formations IT – Abidjan, Côte d'Ivoire</p>
+  <div class="footer-social" style="margin-top:1rem">
+    <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+    <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" target="_blank">f</a>
+    <a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" target="_blank">W</a>
+  </div>
+</footer>
+
+<!-- WhatsApp flottant -->
+<div class="wa-float" title="Contacter sur WhatsApp">💬</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  /* AOS */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('aos-animate'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
+
+  /* Scroll vers section */
+  window.scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 130;
+      window.scroll({ top, behavior: 'smooth' });
+    }
+  };
+
+  /* Onglets actifs au scroll */
+  const sections = ['cybersec','tracking','electronique','btp'];
+  const btns = document.querySelectorAll('.snav-btn');
+  const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = sections.indexOf(e.target.id);
+        if (idx > -1) {
+          btns.forEach(b => b.classList.remove('active'));
+          btns[idx].classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(id => { const el = document.getElementById(id); if (el) sectionObs.observe(el); });
+
+  /* Image animation on hover */
+  const heroImage = document.querySelector('.page-hero-image img');
+  if (heroImage) {
+    heroImage.addEventListener('mouseenter', () => {
+      heroImage.style.transform = 'scale(1.05) translateY(-10px)';
+      heroImage.style.transition = 'all 0.3s ease';
+    });
+    heroImage.addEventListener('mouseleave', () => {
+      heroImage.style.transform = 'scale(1) translateY(0)';
+    });
+  }
+
+  /* WhatsApp */
+  document.querySelector('.wa-float').addEventListener('click', () => {
+    window.open('https://wa.me/2250720161466?text=' + encodeURIComponent('Bonjour SISBM, je souhaite un devis pour vos services.'), '_blank');
+  });
+});
+</script>
+</body>
+</html>

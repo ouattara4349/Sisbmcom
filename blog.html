@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – SISBM Academy | Actualités Cybersécurité Côte d'Ivoire</title>
+  <meta name="description" content="Articles, conseils et actualités cybersécurité par les experts SISBM Academy. Pentest, défense, GRC, actualités IT en Côte d'Ivoire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-rmN2KkQ3N6qGLh3HASfM96eBc5GmYRB4w+fS3nz1pjh6j5s2zJUuGJbJHlyM4YQZsJ88kuxkchWoyd4xT3BLKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 40px; width: auto;"></a>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li>
+      <li><a href="formations.html">Formations</a></li><li><a href="apropos.html">À propos</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-orb"></div><div class="hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> <span>/</span> <span>Blog</span></div>
+    <h1>Blog & <em>Actualités</em></h1>
+    <p>Conseils pratiques, analyses de menaces et actualités de la cybersécurité en Côte d'Ivoire et en Afrique, par nos experts certifiés.</p>
+    <div class="search-bar">
+      <input type="text" id="blog-search" placeholder="Rechercher un article..." />
+      <button class="search-btn">🔍</button>
+    </div>
+  </div>
+</div>
+
+<!-- CATÉGORIES -->
+<div class="categories-bar">
+  <div class="categories-inner">
+    <button class="cat-btn active" data-cat="all">Tous</button>
+    <button class="cat-btn" data-cat="pentest">Pentest</button>
+    <button class="cat-btn" data-cat="defense">Défense</button>
+    <button class="cat-btn" data-cat="grc">GRC</button>
+    <button class="cat-btn" data-cat="actu">Actualités CI</button>
+    <button class="cat-btn" data-cat="conseils">Conseils pratiques</button>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<section id="articles">
+  <div class="container">
+
+    <!-- Article à la une -->
+    <div class="article-featured" data-aos>
+      <div class="article-featured-img">
+        <div class="af-placeholder">
+          <span>🔐</span>
+          <div class="af-bg-grid"></div>
+        </div>
+        <span class="cat-badge cat-pentest">Pentest</span>
+      </div>
+      <div class="article-featured-text">
+        <div class="art-meta"><span class="art-date">15 Mars 2026</span><span class="art-read">8 min de lecture</span></div>
+        <h2>Top 10 des vulnérabilités les plus exploitées en Côte d'Ivoire en 2026</h2>
+        <p>Notre équipe a analysé plus de 50 audits réalisés en 2025-2026 pour identifier les failles les plus fréquentes dans les systèmes des entreprises ivoiriennes. Résultats et recommandations.</p>
+        <div class="art-tags"><span>SQLi</span><span>XSS</span><span>Configuration</span><span>Mots de passe</span></div>
+        <a href="#" class="btn btn-primary btn-sm">Lire l'article →</a>
+      </div>
+    </div>
+
+    <!-- Grille articles -->
+    <div class="articles-grid" id="articles-grid">
+
+      <article class="article-card" data-cat="defense" data-aos data-aos-delay="100">
+        <div class="art-card-img"><span>🛡️</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-defense">Défense</span>
+          <h3>Comment mettre en place un SOC pour une PME ivoirienne</h3>
+          <p>Guide pratique pour créer un centre de surveillance des menaces adapté aux ressources des entreprises locales.</p>
+          <div class="art-card-footer"><span>10 Mars 2026</span><span>6 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="actu" data-aos data-aos-delay="200">
+        <div class="art-card-img"><span>📰</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-actu">Actualités CI</span>
+          <h3>Cybercriminalité en Afrique de l'Ouest : bilan 2025 et tendances 2026</h3>
+          <p>Analyse des incidents majeurs de cybersécurité ayant touché la région en 2025 et perspectives pour l'année à venir.</p>
+          <div class="art-card-footer"><span>5 Mars 2026</span><span>10 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="conseils" data-aos data-aos-delay="300">
+        <div class="art-card-img"><span>💡</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-conseils">Conseils pratiques</span>
+          <h3>5 outils gratuits pour auditer la sécurité de votre réseau</h3>
+          <p>Nmap, Wireshark, OpenVAS, Metasploit Community, Nikto – notre sélection d'outils open-source incontournables.</p>
+          <div class="art-card-footer"><span>28 Fév. 2026</span><span>5 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="grc" data-aos data-aos-delay="100">
+        <div class="art-card-img"><span>📋</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-grc">GRC</span>
+          <h3>ISO 27001 : par où commencer pour une PME en Côte d'Ivoire ?</h3>
+          <p>Démystifier la certification ISO 27001 : coûts, délais et étapes pratiques pour les entreprises ivoiriennes.</p>
+          <div class="art-card-footer"><span>20 Fév. 2026</span><span>7 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="pentest" data-aos data-aos-delay="200">
+        <div class="art-card-img"><span>⚡</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-pentest">Pentest</span>
+          <h3>Kali Linux vs Parrot OS : quel système pour débuter en pentest ?</h3>
+          <p>Comparatif détaillé des deux distributions de référence pour les tests d'intrusion. Laquelle choisir selon votre niveau ?</p>
+          <div class="art-card-footer"><span>15 Fév. 2026</span><span>4 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="defense" data-aos data-aos-delay="300">
+        <div class="art-card-img"><span>🔍</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-defense">Défense</span>
+          <h3>Détecter une intrusion avec Splunk : cas pratique étape par étape</h3>
+          <p>Tutoriel complet sur la création de règles de détection SIEM pour identifier les attaques courantes sur votre réseau.</p>
+          <div class="art-card-footer"><span>8 Fév. 2026</span><span>12 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="conseils" data-aos data-aos-delay="100">
+        <div class="art-card-img"><span>🔒</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-conseils">Conseils pratiques</span>
+          <h3>Phishing en Côte d'Ivoire : comment sensibiliser vos employés</h3>
+          <p>Méthodes éprouvées pour former vos équipes à reconnaître et signaler les tentatives de phishing ciblant les entreprises CI.</p>
+          <div class="art-card-footer"><span>1 Fév. 2026</span><span>6 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="actu" data-aos data-aos-delay="200">
+        <div class="art-card-img"><span>🌍</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-actu">Actualités CI</span>
+          <h3>La CERT-CI renforce ses capacités de réponse aux incidents en 2026</h3>
+          <p>Analyse du renforcement des capacités nationales de cybersécurité en Côte d'Ivoire et implications pour les entreprises.</p>
+          <div class="art-card-footer"><span>25 Jan. 2026</span><span>5 min</span></div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="grc" data-aos data-aos-delay="300">
+        <div class="art-card-img"><span>⚖️</span><div class="art-card-bg"></div></div>
+        <div class="art-card-body">
+          <span class="cat-badge cat-grc">GRC</span>
+          <h3>RGPD et loi ivoirienne sur la protection des données : ce qu'il faut savoir</h3>
+          <p>Comparatif entre le RGPD européen et la réglementation ivoirienne. Quelles obligations pour les entreprises locales ?</p>
+          <div class="art-card-footer"><span>18 Jan. 2026</span><span>8 min</span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" data-aos>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn page-next">Suivant →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="container">
+    <div class="newsletter-box" data-aos>
+      <div class="nl-text">
+        <h2>📬 Restez informé</h2>
+        <p>Recevez chaque semaine les dernières actualités cyber et nos conseils pratiques directement dans votre boîte mail.</p>
+      </div>
+      <div class="nl-form">
+        <input type="email" placeholder="votre@email.com" />
+        <button class="btn btn-primary">S'abonner</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 32px; width: auto;"></a><p>Cybersécurité · Tracking · Formations IT – Abidjan, CI.</p></div>
+  <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#cybersec">Cybersécurité</a></li><li><a href="services.html#tracking">Tracking GPS</a></li><li><a href="services.html#electronique">Sécurité élec.</a></li><li><a href="services.html#btp">BTP</a></li></ul></div>
+  <div class="footer-col"><h4>Formations</h4><ul><li><a href="formations.html#cyber-off">Cyber Offensive</a></li><li><a href="formations.html#cyber-def">Cyber Défensive</a></li><li><a href="formations.html#reseau">Réseau & Système</a></li><li><a href="formations.html#grc">GRC</a></li></ul></div>
+  <div class="footer-col"><h4>Liens</h4><ul><li><a href="apropos.html">À propos</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 SISBM Academy – Abidjan, Côte d'Ivoire</p><div class="footer-social"><a href="#" class="social-btn" aria-label="LinkedIn">in</a><a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" target="_blank">f</a><a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" target="_blank">W</a></div></div></div></footer>
+
+<div class="wa-float" id="wa-float">💬</div>
+<script src="js/blog.js"></script>
+</body>
+</html>
