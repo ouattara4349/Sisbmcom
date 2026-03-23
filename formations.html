@@ -1,41 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formations – SISBM Academy | Cybersécurité & IT | Abidjan</title>
   <meta name="description" content="Formations certifiantes en cybersécurité offensive, défensive, réseau et GRC à Abidjan. 100% pratiques, labs réels." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/formations.css" />
   <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
 </head>
 <body>
+
+<!-- ══════════════ LOADER ══════════════ -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">
+      <img src="images/logo.jpg" alt="SISBM Academy Logo" />
+    </div>
+    <div class="loader-spinner"></div>
+    <p>Chargement en cours...</p>
+  </div>
+</div>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 40px; width: auto;"></a>
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:40px;width:auto;" />
+    </a>
     <ul class="nav-links" id="nav-menu">
-      <li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li>
-      <li><a href="formations.html" class="active">Formations</a></li><li><a href="apropos.html">À propos</a></li>
-      <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="formations.html" class="active">Formations</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
-    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
+<!-- ══════════════ HERO ══════════════ -->
 <div class="page-hero">
-  <div class="hero-orb"></div><div class="hero-grid"></div>
-  <div class="page-hero-content">
-    <div class="breadcrumb"><a href="index.html">Accueil</a> <span>/</span> <span>Formations</span></div>
-    <h1>Formations <em>Certifiantes</em></h1>
-    <p>Devenez expert en cybersécurité avec nos programmes 100% pratiques, dispensés par des professionnels certifiés. Labs réels, environnements d'attaque simulés, accompagnement personnalisé.</p>
-    <div class="hero-badges">
-      <span class="hbadge">🎓 Certifiants</span><span class="hbadge">🧪 100% Pratique</span>
-      <span class="hbadge">📍 Présentiel Abidjan</span><span class="hbadge">🏅 Experts CEH / OSCP</span>
+  <div class="hero-orb"></div>
+  <div class="hero-grid"></div>
+
+  <div class="page-hero-inner">
+    <!-- Texte gauche -->
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a> <span>/</span> <span>Formations</span>
+      </div>
+      <h1>Formations <em>Certifiantes</em></h1>
+      <p>Devenez expert en cybersécurité avec nos programmes 100% pratiques, dispensés par des professionnels certifiés. Labs réels, environnements d'attaque simulés, accompagnement personnalisé.</p>
+      <div class="hero-badges">
+        <span class="hbadge"><i class="fa-solid fa-graduation-cap"></i> Certifiants</span>
+        <span class="hbadge"><i class="fa-solid fa-flask"></i> 100% Pratique</span>
+        <span class="hbadge"><i class="fa-solid fa-location-dot"></i> Présentiel Abidjan</span>
+        <span class="hbadge"><i class="fa-solid fa-medal"></i> Experts CEH / OSCP</span>
+      </div>
+    </div>
+
+    <!-- Image droite -->
+    <div class="page-hero-image">
+      <div class="hero-img-wrap">
+        <img src="images/FORMATION.jpg" alt="Formation cybersécurité SISBM Academy Abidjan" />
+        <!-- Badge flottant sur l'image -->
+        <div class="hero-img-badge">
+          <i class="fa-solid fa-user-graduate"></i>
+          <div>
+            <strong>200+</strong>
+            <span>Professionnels formés</span>
+          </div>
+        </div>
+        <div class="hero-img-badge2">
+          <i class="fa-solid fa-star" style="color:#F5A623"></i>
+          <span>Certification reconnue</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- ══════════════ CHIFFRES CLÉS ══════════════ -->
+<section class="formation-stats">
+  <div class="container">
+    <div class="fstats-grid">
+      <div class="fstat-item" data-aos data-aos-delay="100">
+        <div class="fstat-icon"><i class="fa-solid fa-users"></i></div>
+        <span class="fstat-num">200+</span>
+        <span class="fstat-label">Professionnels formés</span>
+      </div>
+      <div class="fstat-item" data-aos data-aos-delay="200">
+        <div class="fstat-icon"><i class="fa-solid fa-book-open"></i></div>
+        <span class="fstat-num">4</span>
+        <span class="fstat-label">Programmes certifiants</span>
+      </div>
+      <div class="fstat-item" data-aos data-aos-delay="300">
+        <div class="fstat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <span class="fstat-num">100%</span>
+        <span class="fstat-label">Labs pratiques réels</span>
+      </div>
+      <div class="fstat-item" data-aos data-aos-delay="400">
+        <div class="fstat-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <span class="fstat-num">85%</span>
+        <span class="fstat-label">Taux d'insertion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FILTRES ══════════════ -->
 <div class="filters-bar">
   <div class="filters-inner">
     <button class="filter-btn active" data-filter="all">Toutes</button>
@@ -45,6 +127,7 @@
   </div>
 </div>
 
+<!-- ══════════════ FORMATIONS ══════════════ -->
 <section id="formations-list">
   <div class="container">
 
@@ -55,36 +138,87 @@
           <span class="fd-level">Avancé</span>
           <h2>Cybersécurité Offensive</h2>
           <p>Maîtrisez les techniques d'attaque éthique pour mieux défendre.</p>
-          <div class="fd-meta"><span>📅 4 semaines</span><span>🕐 80h</span><span>📍 Présentiel</span><span>👥 Max 15</span></div>
+          <div class="fd-meta">
+            <span><i class="fa-regular fa-calendar"></i> 4 semaines</span>
+            <span><i class="fa-regular fa-clock"></i> 80h</span>
+            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
+            <span><i class="fa-solid fa-users"></i> Max 15</span>
+          </div>
         </div>
         <div class="fd-price-box">
-          <div class="fd-price-sub">Paiement en 2x possible</div>
-          <a href="contact.html?formation=cyber-off" class="btn btn-white">S'inscrire →</a>
+          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
+          <a href="contact.html?formation=cyber-off" class="btn btn-white">
+            S'inscrire <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
       <div class="fd-body">
         <div class="fd-col">
           <h3>Programme</h3>
           <div class="module-list">
-            <div class="module-item"><div class="module-num">01</div><div><strong>Introduction au hacking éthique</strong><p>Cadre légal, méthodologie PTES, règles d'engagement.</p></div></div>
-            <div class="module-item"><div class="module-num">02</div><div><strong>Reconnaissance & OSINT</strong><p>Google dorks, Shodan, Maltego, recon-ng.</p></div></div>
-            <div class="module-item"><div class="module-num">03</div><div><strong>Scanning & Enumération</strong><p>Nmap, Nessus, Nikto, découverte de vulnérabilités.</p></div></div>
-            <div class="module-item"><div class="module-num">04</div><div><strong>Exploitation Web (OWASP Top 10)</strong><p>SQLi, XSS, CSRF, IDOR, SSRF avec Burp Suite Pro.</p></div></div>
-            <div class="module-item"><div class="module-num">05</div><div><strong>Exploitation Réseau & Active Directory</strong><p>Metasploit, pass-the-hash, kerberoasting, pivoting.</p></div></div>
-            <div class="module-item"><div class="module-num">06</div><div><strong>Rapport de pentest professionnel</strong><p>CVSS scoring, preuves d'exploitation, recommandations.</p></div></div>
+            <div class="module-item">
+              <div class="module-num">01</div>
+              <div><strong>Introduction au hacking éthique</strong><p>Cadre légal, méthodologie PTES, règles d'engagement.</p></div>
+            </div>
+            <div class="module-item">
+              <div class="module-num">02</div>
+              <div><strong>Reconnaissance & OSINT</strong><p>Google dorks, Shodan, Maltego, recon-ng.</p></div>
+            </div>
+            <div class="module-item">
+              <div class="module-num">03</div>
+              <div><strong>Scanning & Enumération</strong><p>Nmap, Nessus, Nikto, découverte de vulnérabilités.</p></div>
+            </div>
+            <div class="module-item">
+              <div class="module-num">04</div>
+              <div><strong>Exploitation Web (OWASP Top 10)</strong><p>SQLi, XSS, CSRF, IDOR, SSRF avec Burp Suite Pro.</p></div>
+            </div>
+            <div class="module-item">
+              <div class="module-num">05</div>
+              <div><strong>Exploitation Réseau & Active Directory</strong><p>Metasploit, pass-the-hash, kerberoasting, pivoting.</p></div>
+            </div>
+            <div class="module-item">
+              <div class="module-num">06</div>
+              <div><strong>Rapport de pentest professionnel</strong><p>CVSS scoring, preuves d'exploitation, recommandations.</p></div>
+            </div>
           </div>
         </div>
         <div class="fd-col">
           <h3>Ce que vous obtenez</h3>
           <div class="benefits-list">
-            <div class="benefit-item"><span class="bi-icon">🎓</span><div><strong>Certificat SISBM Academy</strong><p>Reconnu par les entreprises partenaires en CI.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">💻</span><div><strong>Accès labs virtuels</strong><p>Machines vulnérables, réseaux simulés, scénarios réels.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">📚</span><div><strong>Support de cours complet</strong><p>PDF, vidéos, cheatsheets et outils pré-configurés.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🤝</span><div><strong>Suivi post-formation</strong><p>Accès Discord + 3 mois de support formateur.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🏅</span><div><strong>Prépa certifications</strong><p>CEH, CompTIA PenTest+, OSCP.</p></div></div>
+            <div class="benefit-item">
+              <div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div><strong>Certificat SISBM Academy</strong><p>Reconnu par les entreprises partenaires en CI.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="bi-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div><strong>Accès labs virtuels</strong><p>Machines vulnérables, réseaux simulés, scénarios réels.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="bi-icon"><i class="fa-solid fa-book-open"></i></div>
+              <div><strong>Support de cours complet</strong><p>PDF, vidéos, cheatsheets et outils pré-configurés.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="bi-icon"><i class="fa-solid fa-handshake"></i></div>
+              <div><strong>Suivi post-formation</strong><p>Accès Discord + 3 mois de support formateur.</p></div>
+            </div>
+            <div class="benefit-item">
+              <div class="bi-icon"><i class="fa-solid fa-medal"></i></div>
+              <div><strong>Prépa certifications</strong><p>CEH, CompTIA PenTest+, OSCP.</p></div>
+            </div>
           </div>
-          <div class="prereqs"><h4>Prérequis</h4><ul><li>Bases Linux (terminal)</li><li>Notions réseau TCP/IP</li><li>Curiosité et motivation</li></ul></div>
-          <div class="next-session"><span class="ns-dot"></span><span>Prochaine session : <strong>15 Avril 2026</strong></span><span class="ns-places">3 places restantes</span></div>
+          <div class="prereqs">
+            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
+            <ul>
+              <li>Bases Linux (terminal)</li>
+              <li>Notions réseau TCP/IP</li>
+              <li>Curiosité et motivation</li>
+            </ul>
+          </div>
+          <div class="next-session">
+            <span class="ns-dot"></span>
+            <span>Prochaine session : <strong>15 Avril 2026</strong></span>
+            <span class="ns-places">3 places restantes</span>
+          </div>
         </div>
       </div>
     </div>
@@ -96,11 +230,18 @@
           <span class="fd-level">Intermédiaire</span>
           <h2>Cybersécurité Défensive</h2>
           <p>Détectez, analysez et répondez aux cyberattaques en temps réel.</p>
-          <div class="fd-meta"><span>📅 3 semaines</span><span>🕐 60h</span><span>📍 Présentiel</span><span>👥 Max 15</span></div>
+          <div class="fd-meta">
+            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
+            <span><i class="fa-regular fa-clock"></i> 60h</span>
+            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
+            <span><i class="fa-solid fa-users"></i> Max 15</span>
+          </div>
         </div>
         <div class="fd-price-box">
-          <div class="fd-price-sub">Paiement en 2x possible</div>
-          <a href="contact.html?formation=cyber-def" class="btn btn-white">S'inscrire →</a>
+          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
+          <a href="contact.html?formation=cyber-def" class="btn btn-white">
+            S'inscrire <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
       <div class="fd-body">
@@ -118,14 +259,21 @@
         <div class="fd-col">
           <h3>Ce que vous obtenez</h3>
           <div class="benefits-list">
-            <div class="benefit-item"><span class="bi-icon">🎓</span><div><strong>Certificat SISBM Academy</strong><p>Spécialisation SOC et blue team.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">💻</span><div><strong>Environnement SIEM dédié</strong><p>Splunk + ELK pré-configurés avec données réelles.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">📚</span><div><strong>Playbooks IR</strong><p>Templates de réponse aux incidents prêts à l'emploi.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🤝</span><div><strong>Réseau professionnel CI</strong><p>Mise en relation avec les entreprises partenaires.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🏅</span><div><strong>Prépa certifications</strong><p>CompTIA CySA+, Blue Team Level 1 (BTL1).</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><strong>Certificat SISBM Academy</strong><p>Spécialisation SOC et blue team.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Environnement SIEM dédié</strong><p>Splunk + ELK pré-configurés avec données réelles.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-file-lines"></i></div><div><strong>Playbooks IR</strong><p>Templates de réponse aux incidents prêts à l'emploi.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-handshake"></i></div><div><strong>Réseau professionnel CI</strong><p>Mise en relation avec les entreprises partenaires.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-medal"></i></div><div><strong>Prépa certifications</strong><p>CompTIA CySA+, Blue Team Level 1 (BTL1).</p></div></div>
           </div>
-          <div class="prereqs"><h4>Prérequis</h4><ul><li>Bases réseau TCP/IP</li><li>Notions systèmes Linux/Windows</li><li>Intérêt pour l'analyse de logs</li></ul></div>
-          <div class="next-session"><span class="ns-dot"></span><span>Prochaine session : <strong>5 Mai 2026</strong></span><span class="ns-places">6 places restantes</span></div>
+          <div class="prereqs">
+            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
+            <ul><li>Bases réseau TCP/IP</li><li>Notions systèmes Linux/Windows</li><li>Intérêt pour l'analyse de logs</li></ul>
+          </div>
+          <div class="next-session">
+            <span class="ns-dot"></span>
+            <span>Prochaine session : <strong>5 Mai 2026</strong></span>
+            <span class="ns-places">6 places restantes</span>
+          </div>
         </div>
       </div>
     </div>
@@ -137,11 +285,18 @@
           <span class="fd-level">Débutant</span>
           <h2>Réseau & Système</h2>
           <p>Fondations solides en réseau, administration système et cloud.</p>
-          <div class="fd-meta"><span>📅 3 semaines</span><span>🕐 60h</span><span>📍 Présentiel</span><span>👥 Max 20</span></div>
+          <div class="fd-meta">
+            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
+            <span><i class="fa-regular fa-clock"></i> 60h</span>
+            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
+            <span><i class="fa-solid fa-users"></i> Max 20</span>
+          </div>
         </div>
         <div class="fd-price-box">
-          <div class="fd-price-sub">Paiement en 2x possible</div>
-          <a href="contact.html?formation=reseau" class="btn btn-white">S'inscrire →</a>
+          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
+          <a href="contact.html?formation=reseau" class="btn btn-white">
+            S'inscrire <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
       <div class="fd-body">
@@ -159,14 +314,21 @@
         <div class="fd-col">
           <h3>Ce que vous obtenez</h3>
           <div class="benefits-list">
-            <div class="benefit-item"><span class="bi-icon">🎓</span><div><strong>Certificat SISBM Academy</strong><p>Fondations réseau et système validées.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">💻</span><div><strong>Labs complets</strong><p>Windows Server + Linux pré-configurés.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">📚</span><div><strong>Supports Cisco officiels</strong><p>Packet Tracer, exercices CCNA, documentation.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🤝</span><div><strong>Passerelle formations</strong><p>Accès prioritaire aux formations cyber.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🏅</span><div><strong>Prépa certifications</strong><p>CompTIA Network+, Cisco CCNA.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><strong>Certificat SISBM Academy</strong><p>Fondations réseau et système validées.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Labs complets</strong><p>Windows Server + Linux pré-configurés.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-book-open"></i></div><div><strong>Supports Cisco officiels</strong><p>Packet Tracer, exercices CCNA, documentation.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div><div><strong>Passerelle formations</strong><p>Accès prioritaire aux formations cyber.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-medal"></i></div><div><strong>Prépa certifications</strong><p>CompTIA Network+, Cisco CCNA.</p></div></div>
           </div>
-          <div class="prereqs"><h4>Prérequis</h4><ul><li>Aucun prérequis technique</li><li>Bac ou équivalent conseillé</li><li>Motivation et assiduité</li></ul></div>
-          <div class="next-session"><span class="ns-dot"></span><span>Prochaine session : <strong>20 Avril 2026</strong></span><span class="ns-places">8 places restantes</span></div>
+          <div class="prereqs">
+            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
+            <ul><li>Aucun prérequis technique</li><li>Bac ou équivalent conseillé</li><li>Motivation et assiduité</li></ul>
+          </div>
+          <div class="next-session">
+            <span class="ns-dot"></span>
+            <span>Prochaine session : <strong>20 Avril 2026</strong></span>
+            <span class="ns-places">8 places restantes</span>
+          </div>
         </div>
       </div>
     </div>
@@ -178,11 +340,18 @@
           <span class="fd-level">Intermédiaire</span>
           <h2>GRC – Gouvernance, Risques & Conformité</h2>
           <p>Maîtrisez ISO 27001, RGPD et la gestion des risques cyber.</p>
-          <div class="fd-meta"><span>📅 3 semaines</span><span>🕐 60h</span><span>📍 Présentiel</span><span>👥 Max 15</span></div>
+          <div class="fd-meta">
+            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
+            <span><i class="fa-regular fa-clock"></i> 60h</span>
+            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
+            <span><i class="fa-solid fa-users"></i> Max 15</span>
+          </div>
         </div>
         <div class="fd-price-box">
-          <div class="fd-price-sub">Paiement en 2x possible</div>
-          <a href="contact.html?formation=grc" class="btn btn-white">S'inscrire →</a>
+          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
+          <a href="contact.html?formation=grc" class="btn btn-white">
+            S'inscrire <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
       <div class="fd-body">
@@ -200,14 +369,21 @@
         <div class="fd-col">
           <h3>Ce que vous obtenez</h3>
           <div class="benefits-list">
-            <div class="benefit-item"><span class="bi-icon">🎓</span><div><strong>Certificat SISBM Academy</strong><p>Spécialisation GRC et conformité.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">📋</span><div><strong>Templates professionnels</strong><p>PSSI, registre RGPD, matrice de risques prêts à l'emploi.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">📚</span><div><strong>Documentation normative</strong><p>Normes ISO 27001/27002 commentées.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🤝</span><div><strong>Réseau auditeurs CI</strong><p>Mise en relation avec les cabinets partenaires Abidjan.</p></div></div>
-            <div class="benefit-item"><span class="bi-icon">🏅</span><div><strong>Prépa certifications</strong><p>ISO 27001 Lead Implementer, CISM, CRISC.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><strong>Certificat SISBM Academy</strong><p>Spécialisation GRC et conformité.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-file-contract"></i></div><div><strong>Templates professionnels</strong><p>PSSI, registre RGPD, matrice de risques prêts à l'emploi.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-book-open"></i></div><div><strong>Documentation normative</strong><p>Normes ISO 27001/27002 commentées.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-handshake"></i></div><div><strong>Réseau auditeurs CI</strong><p>Mise en relation avec les cabinets partenaires Abidjan.</p></div></div>
+            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-medal"></i></div><div><strong>Prépa certifications</strong><p>ISO 27001 Lead Implementer, CISM, CRISC.</p></div></div>
           </div>
-          <div class="prereqs"><h4>Prérequis</h4><ul><li>Notions en sécurité informatique</li><li>Expérience en entreprise souhaitée</li><li>Bonnes capacités rédactionnelles</li></ul></div>
-          <div class="next-session"><span class="ns-dot"></span><span>Prochaine session : <strong>10 Mai 2026</strong></span><span class="ns-places">5 places restantes</span></div>
+          <div class="prereqs">
+            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
+            <ul><li>Notions en sécurité informatique</li><li>Expérience en entreprise souhaitée</li><li>Bonnes capacités rédactionnelles</li></ul>
+          </div>
+          <div class="next-session">
+            <span class="ns-dot"></span>
+            <span>Prochaine session : <strong>10 Mai 2026</strong></span>
+            <span class="ns-places">5 places restantes</span>
+          </div>
         </div>
       </div>
     </div>
@@ -215,56 +391,184 @@
   </div>
 </section>
 
-<!-- PARCOURS -->
+<!-- ══════════════ PARCOURS ══════════════ -->
 <section id="parcours">
   <div class="container">
     <div class="section-header" data-aos>
-      <span class="tag">Conseils</span><h2>Quel parcours choisir ?</h2>
-      <p>Suivez le chemin recommandé selon votre profil</p><div class="accent-bar"></div>
+      <span class="tag">Conseils</span>
+      <h2>Quel parcours choisir ?</h2>
+      <p>Suivez le chemin recommandé selon votre profil</p>
+      <div class="accent-bar"></div>
     </div>
     <div class="parcours-grid">
       <div class="parcours-card" data-aos data-aos-delay="100">
-        <div class="pc-icon">🚀</div><h3>Débutant complet</h3>
-        <div class="pc-path"><span class="pc-step">Réseau & Système</span><span class="pc-arrow">→</span><span class="pc-step">Cyber Défensive</span><span class="pc-arrow">→</span><span class="pc-step">Cyber Offensive</span></div>
+        <div class="pc-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>Débutant complet</h3>
+        <div class="pc-path">
+          <span class="pc-step">Réseau & Système</span>
+          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="pc-step">Cyber Défensive</span>
+          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="pc-step">Cyber Offensive</span>
+        </div>
         <p>Construisez des bases solides avant de vous spécialiser.</p>
       </div>
       <div class="parcours-card" data-aos data-aos-delay="200">
-        <div class="pc-icon">💼</div><h3>Profil manager / DSI</h3>
-        <div class="pc-path"><span class="pc-step">GRC / ISO 27001</span><span class="pc-arrow">→</span><span class="pc-step">Cyber Défensive</span></div>
+        <div class="pc-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Profil manager / DSI</h3>
+        <div class="pc-path">
+          <span class="pc-step">GRC / ISO 27001</span>
+          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="pc-step">Cyber Défensive</span>
+        </div>
         <p>Idéal pour les responsables IT souhaitant piloter la sécurité.</p>
       </div>
       <div class="parcours-card" data-aos data-aos-delay="300">
-        <div class="pc-icon">⚔️</div><h3>Futur pentesteur</h3>
-        <div class="pc-path"><span class="pc-step">Réseau & Système</span><span class="pc-arrow">→</span><span class="pc-step">Cyber Offensive</span></div>
+        <div class="pc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Futur pentesteur</h3>
+        <div class="pc-path">
+          <span class="pc-step">Réseau & Système</span>
+          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          <span class="pc-step">Cyber Offensive</span>
+        </div>
         <p>Le chemin direct pour devenir consultant pentest en CI.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ══════════════ FAQ ══════════════ -->
 <section id="faq">
   <div class="container">
-    <div class="section-header" data-aos><span class="tag">Questions fréquentes</span><h2>FAQ Formations</h2><div class="accent-bar"></div></div>
+    <div class="section-header" data-aos>
+      <span class="tag">Questions fréquentes</span>
+      <h2>FAQ Formations</h2>
+      <div class="accent-bar"></div>
+    </div>
     <div class="faq-list">
-      <div class="faq-item" data-aos><button class="faq-q">Les formations sont-elles en présentiel ou en ligne ? <span class="faq-chev">▾</span></button><div class="faq-a">Nos formations sont principalement en présentiel à Abidjan. Des formules en ligne sont en cours de développement. Contactez-nous pour les options disponibles.</div></div>
-      <div class="faq-item" data-aos><button class="faq-q">Peut-on payer en plusieurs fois ? <span class="faq-chev">▾</span></button><div class="faq-a">Oui, toutes nos formations se règlent en 2 fois sans frais : 50% à l'inscription et 50% à mi-parcours.</div></div>
-      <div class="faq-item" data-aos><button class="faq-q">Les certificats sont-ils reconnus par les employeurs ? <span class="faq-chev">▾</span></button><div class="faq-a">Nos certificats sont reconnus par notre réseau de partenaires en CI. Nos formations préparent aussi aux certifications internationales (CEH, OSCP, CCNA, ISO 27001).</div></div>
-      <div class="faq-item" data-aos><button class="faq-q">Y a-t-il un accompagnement pour trouver un emploi ? <span class="faq-chev">▾</span></button><div class="faq-a">Oui ! Nous mettons nos diplômés en contact avec notre réseau d'entreprises partenaires et organisons des sessions coaching CV et entretien.</div></div>
+      <div class="faq-item" data-aos>
+        <button class="faq-q">Les formations sont-elles en présentiel ou en ligne ? <span class="faq-chev"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="faq-a">Nos formations sont principalement en présentiel à Abidjan. Des formules en ligne sont en cours de développement. Contactez-nous pour les options disponibles.</div>
+      </div>
+      <div class="faq-item" data-aos>
+        <button class="faq-q">Peut-on payer en plusieurs fois ? <span class="faq-chev"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="faq-a">Oui, toutes nos formations se règlent en 2 fois sans frais : 50% à l'inscription et 50% à mi-parcours.</div>
+      </div>
+      <div class="faq-item" data-aos>
+        <button class="faq-q">Les certificats sont-ils reconnus par les employeurs ? <span class="faq-chev"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="faq-a">Nos certificats sont reconnus par notre réseau de partenaires en CI. Nos formations préparent aussi aux certifications internationales (CEH, OSCP, CCNA, ISO 27001).</div>
+      </div>
+      <div class="faq-item" data-aos>
+        <button class="faq-q">Y a-t-il un accompagnement pour trouver un emploi ? <span class="faq-chev"><i class="fa-solid fa-chevron-down"></i></span></button>
+        <div class="faq-a">Oui ! Nous mettons nos diplômés en contact avec notre réseau d'entreprises partenaires et organisons des sessions coaching CV et entretien.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="cta"><div class="container"><div class="cta-box" data-aos><h2>Une question sur nos formations ?</h2><p>Notre équipe pédagogique vous répond dans les 24h.</p><div class="cta-actions"><a href="contact.html#contact-form" class="btn btn-primary">Nous contacter &rarr;</a><a href="https://wa.me/2250720161466" class="btn btn-whatsapp">💬 WhatsApp</a></div></div></div></section>
+<!-- ══════════════ CTA ══════════════ -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-box" data-aos>
+      <h2>Une question sur nos formations ?</h2>
+      <p>Notre équipe pédagogique vous répond dans les 24h.</p>
+      <div class="cta-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">
+          Nous contacter <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://wa.me/2250720161466?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services." class="btn btn-whatsapp" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="container"><div class="footer-grid">
-  <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 32px; width: auto;"></a><p>Formations IT certifiantes et cybersécurité à Abidjan.</p></div>
-  <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#cybersec">Cybersécurité</a></li><li><a href="services.html#tracking">Tracking GPS</a></li><li><a href="services.html#electronique">Sécurité élec.</a></li><li><a href="services.html#btp">BTP</a></li></ul></div>
-  <div class="footer-col"><h4>Formations</h4><ul><li><a href="#cyber-off">Cyber Offensive</a></li><li><a href="#cyber-def">Cyber Défensive</a></li><li><a href="#reseau">Réseau & Système</a></li><li><a href="#grc">GRC</a></li></ul></div>
-  <div class="footer-col"><h4>Liens</h4><ul><li><a href="apropos.html">À propos</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-</div><div class="footer-bottom"><p>© 2026 SISBM Academy – Abidjan, Côte d'Ivoire</p><div class="footer-social"><a href="#" class="social-btn" aria-label="LinkedIn">in</a><a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" target="_blank">f</a><a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" target="_blank">W</a></div></div></div></footer>
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
 
-<div class="wa-float" id="wa-float">💬</div>
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:32px;width:auto;" />
+          </a>
+          <p>SISBM - Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en audit cybersécurité, sécurité électronique, BTP, mobilité & logistique et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <div class="footer-contact-info">
+            <div class="fci-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Yopougon, Abidjan – Côte d'Ivoire</span>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2250720161466">+225 07 20 16 14 66</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:sisbm.sarl@gmail.com">sisbm.sarl@gmail.com</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>Lun – Ven : 8h00 – 18h00 &nbsp;|&nbsp; Sam : 9h00 – 13h00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#cybersec"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
+            <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
+            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
+            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250720161466?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
 <script src="js/formations.js"></script>
 </body>
 </html>

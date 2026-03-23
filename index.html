@@ -9,23 +9,41 @@
   <meta name="keywords" content="cybersécurité Côte d'Ivoire, audit cybersécurité Abidjan, formation pentest, tracking GPS Abidjan" />
   <meta name="author" content="SISBM Academy" />
   <meta property="og:title" content="SISBM Academy – Cybersécurité & Formations IT" />
-  <meta property="og:description" content="SISBM - Société d'ingénierie en sécurité bâtiment et mobilité. Votre expert en cybersécurité, audit, sécurité électronique et BTP." />
+  <meta property="og:description" content="SISBM - Société d'ingénierie en sécurité bâtiment et mobilité." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sisbm.ci" />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/index.css" />
   <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
 </head>
 <body>
 
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="images/logo.jpg" alt="SISBM Academy Logo" />
+      </div>
+      <div class="loader-spinner"></div>
+      <p>Chargement en cours...</p>
+    </div>
+  </div>
+
   <!-- ══════════════ NAVBAR ══════════════ -->
   <nav id="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
-      <a href="index.html" class="logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 40px; width: auto;"></a>
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:40px;width:auto;" />
+      </a>
 
       <ul class="nav-links" id="nav-menu">
         <li><a href="index.html" class="active">Accueil</a></li>
@@ -54,7 +72,10 @@
 
     <div class="hero-content">
       <div class="hero-left">
-        <div class="hero-eyebrow">Cybersécurité · Côte d'Ivoire</div>
+        <div class="hero-eyebrow">
+          <i class="fa-solid fa-shield-halved"></i>
+          Cybersécurité · Côte d'Ivoire
+        </div>
 
         <h1 class="hero-title">
           Sécurisez votre<br />
@@ -67,8 +88,12 @@
         </p>
 
         <div class="hero-actions">
-          <a href="contact.html#contact-form" class="btn btn-primary">Demander un devis &rarr;</a>
-          <a href="formations.html" class="btn btn-ghost">Voir les formations</a>
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            Demander un devis <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="formations.html" class="btn btn-ghost">
+            <i class="fa-solid fa-graduation-cap"></i> Voir les formations
+          </a>
         </div>
 
         <div class="hero-stats">
@@ -87,39 +112,47 @@
         </div>
       </div>
 
-      <!-- Cartes services → liens vers services.html -->
+      <!-- Cartes services -->
       <div class="hero-right">
         <a href="services.html#cybersec" class="hero-card">
-          <div class="hc-icon hc-cyber"><img src="images/cybersecurité.png" alt="Cybersécurité" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"></div>
+          <div class="hc-icon hc-cyber">
+            <img src="images/cybersecurité.png" alt="Cybersécurité" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
           <div class="hc-text">
             <h4>Cybersécurité</h4>
             <p>Audit · Pentest · GRC · Incidents</p>
           </div>
-          <span class="hc-arrow">→</span>
+          <i class="fa-solid fa-chevron-right hc-arrow"></i>
         </a>
         <a href="services.html#tracking" class="hero-card">
-          <div class="hc-icon hc-track"><img src="images/vehicle.png" alt="Tracking Véhicules" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"></div>
+          <div class="hc-icon hc-track">
+            <img src="images/vehicle.png" alt="Tracking Véhicules" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
           <div class="hc-text">
             <h4>Tracking Véhicules</h4>
             <p>GPS temps réel · Gestion de flotte</p>
           </div>
-          <span class="hc-arrow">→</span>
+          <i class="fa-solid fa-chevron-right hc-arrow"></i>
         </a>
         <a href="services.html#electronique" class="hero-card">
-          <div class="hc-icon hc-elec"><img src="images/videosurveillance.jpg" alt="Sécurité Électronique" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"></div>
+          <div class="hc-icon hc-elec">
+            <img src="images/videosurveillance.jpg" alt="Sécurité Électronique" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
           <div class="hc-text">
             <h4>Sécurité Électronique</h4>
             <p>Caméras IP · Contrôle d'accès · Alarmes</p>
           </div>
-          <span class="hc-arrow">→</span>
+          <i class="fa-solid fa-chevron-right hc-arrow"></i>
         </a>
         <a href="services.html#btp" class="hero-card">
-          <div class="hc-icon hc-btp"><img src="images/btp.png" alt="BTP &amp; Génie Civil" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;"></div>
+          <div class="hc-icon hc-btp">
+            <img src="images/btp.png" alt="BTP & Génie Civil" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
           <div class="hc-text">
             <h4>BTP & Génie Civil</h4>
             <p>Sécurité chantier · Périmétrique</p>
           </div>
-          <span class="hc-arrow">→</span>
+          <i class="fa-solid fa-chevron-right hc-arrow"></i>
         </a>
       </div>
     </div>
@@ -129,14 +162,16 @@
   <section id="director-note">
     <div class="container director-grid">
       <div class="director-text" data-aos>
-        <span class="tag">Mot du Directeur</span>
+        <span class="tag">
+          <i class="fa-solid fa-quote-left"></i> Mot du Directeur
+        </span>
         <h2>Engagement et vision</h2>
         <p>Chez SISBM, notre mission est de renforcer la sécurité des entreprises ivoiriennes et africaines en alliant expertise technique et proximité locale. Nous investissons dans des solutions durables, des formations pratiques et un accompagnement sur-mesure pour chaque projet.</p>
         <p>Je vous invite à faire confiance à notre équipe pour bâtir une stratégie de sécurité complète, de la cybersécurité au BTP, en passant par la mobilité et le tracking GPS.</p>
-        <strong>– OUATTARA, Directeur Général SISBM</strong>
+        <strong>– m. Bamba, Directeur Général SISBM</strong>
       </div>
       <div class="director-photo" data-aos>
-        <img src="images/directeur.jpg" alt="Photo du Directeur" />
+        <img src="images/dg.jpg" alt="Photo du Directeur" />
       </div>
     </div>
   </section>
@@ -152,56 +187,66 @@
       </div>
 
       <div class="services-grid">
+
         <a href="services.html#cybersec" class="service-card" data-aos data-aos-delay="100">
-          <div class="service-icon-wrap si-cyber"><img src="images/cybersecurité.png" alt="Cybersécurité" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+          <div class="service-icon-wrap si-cyber">
+            <img src="images/cybersecurité.png" alt="Cybersécurité" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
+          </div>
           <h3>Audit et Conseils Cybersécurité</h3>
           <p>Audit de sécurité, pentest, réponse aux incidents et conseil GRC / ISO 27001.</p>
           <div class="service-tags">
-            <span class="tag-pill">Audit</span>
-            <span class="tag-pill">Pentest</span>
-            <span class="tag-pill">GRC</span>
+            <span class="tag-pill"><i class="fa-solid fa-magnifying-glass"></i> Audit</span>
+            <span class="tag-pill"><i class="fa-solid fa-bug"></i> Pentest</span>
+            <span class="tag-pill"><i class="fa-solid fa-scale-balanced"></i> GRC</span>
           </div>
-          <span class="service-link">Découvrir →</span>
+          <span class="service-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
         <a href="services.html#tracking" class="service-card" data-aos data-aos-delay="200">
-          <div class="service-icon-wrap si-track"><img src="images/vehicle.png" alt="Tracking Véhicules" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
-          <h3>Mobilité & Logistique GPS</h3>
-          <p>Localisez et gérez votre flotte en temps réel. Réduisez les coûts, sécurisez vos actifs logistiques.</p>
-          <div class="service-tags">
-            <span class="tag-pill">GPS temps réel</span>
-            <span class="tag-pill">Gestion flotte</span>
-            <span class="tag-pill">Logistique</span>
+          <div class="service-icon-wrap si-track">
+            <img src="images/vehicle.png" alt="Tracking Véhicules" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
           </div>
-          <span class="service-link">Découvrir →</span>
+          <h3>Mobilité & Logistique GPS</h3>
+          <p>Localisez et gérez votre flotte en temps réel. Réduisez les coûts, sécurisez vos actifs.</p>
+          <div class="service-tags">
+            <span class="tag-pill"><i class="fa-solid fa-location-dot"></i> GPS temps réel</span>
+            <span class="tag-pill"><i class="fa-solid fa-truck"></i> Gestion flotte</span>
+          </div>
+          <span class="service-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
         <a href="services.html#electronique" class="service-card" data-aos data-aos-delay="300">
-          <div class="service-icon-wrap si-elec"><img src="images/videosurveillance.jpg" alt="Sécurité Électronique" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
+          <div class="service-icon-wrap si-elec">
+            <img src="images/videosurveillance.jpg" alt="Sécurité Électronique" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
+          </div>
           <h3>Sécurité Électronique</h3>
           <p>Vidéosurveillance IP, contrôle d'accès biométrique, alarmes et interphonie.</p>
           <div class="service-tags">
-            <span class="tag-pill">Caméras IP</span>
-            <span class="tag-pill">Contrôle accès</span>
+            <span class="tag-pill"><i class="fa-solid fa-video"></i> Caméras IP</span>
+            <span class="tag-pill"><i class="fa-solid fa-fingerprint"></i> Contrôle accès</span>
           </div>
-          <span class="service-link">Découvrir →</span>
+          <span class="service-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
         </a>
 
         <a href="services.html#btp" class="service-card" data-aos data-aos-delay="400">
-          <div class="service-icon-wrap si-btp"><img src="images/btp.png" alt="BTP &amp; Génie Civil" style="width: 100%; height: 100%; object-fit: cover; border-radius: 14px;"></div>
-          <h3>Construction BTP & Mobilité</h3>
-          <p>Sécurité périmétrique pour chantiers, gestion des accès, surveillance 24h/24 et solutions logistique.</p>
-          <div class="service-tags">
-            <span class="tag-pill">Chantier</span>
-            <span class="tag-pill">Périmétrique</span>
-            <span class="tag-pill">Logistique</span>
+          <div class="service-icon-wrap si-btp">
+            <img src="images/btp.png" alt="BTP & Génie Civil" style="width:100%;height:100%;object-fit:cover;border-radius:14px;" />
           </div>
-          <span class="service-link">Découvrir →</span>
+          <h3>Construction BTP & Mobilité</h3>
+          <p>Sécurité périmétrique pour chantiers, gestion des accès et surveillance 24h/24.</p>
+          <div class="service-tags">
+            <span class="tag-pill"><i class="fa-solid fa-helmet-safety"></i> Chantier</span>
+            <span class="tag-pill"><i class="fa-solid fa-border-all"></i> Périmétrique</span>
+          </div>
+          <span class="service-link">Découvrir <i class="fa-solid fa-arrow-right"></i></span>
         </a>
+
       </div>
 
       <div class="section-cta" data-aos>
-        <a href="services.html" class="btn btn-outline-cyan">Voir tous nos services →</a>
+        <a href="services.html" class="btn btn-outline-cyan">
+          Voir tous nos services <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -218,6 +263,7 @@
       </div>
 
       <div class="formations-grid">
+
         <a href="formations.html#cyber-off" class="formation-card" data-aos data-aos-delay="100">
           <div class="f-header fh-off">
             <span class="f-level">Avancé</span>
@@ -225,14 +271,14 @@
           </div>
           <div class="f-body">
             <ul>
-              <li>Ethical hacking & pentest</li>
-              <li>Exploitation web (OWASP)</li>
-              <li>Metasploit, Burp Suite, Nmap</li>
+              <li><i class="fa-solid fa-check"></i> Ethical hacking & pentest</li>
+              <li><i class="fa-solid fa-check"></i> Exploitation web (OWASP)</li>
+              <li><i class="fa-solid fa-check"></i> Metasploit, Burp Suite, Nmap</li>
             </ul>
           </div>
           <div class="f-footer">
             <div>
-              <div class="f-duration">4 semaines · Présentiel</div>
+              <div class="f-duration"><i class="fa-regular fa-clock"></i> 4 semaines · Présentiel</div>
             </div>
             <span class="f-btn">S'inscrire</span>
           </div>
@@ -245,14 +291,14 @@
           </div>
           <div class="f-body">
             <ul>
-              <li>SOC & SIEM (Splunk, ELK)</li>
-              <li>Blue team & threat hunting</li>
-              <li>Réponse aux incidents</li>
+              <li><i class="fa-solid fa-check"></i> SOC & SIEM (Splunk, ELK)</li>
+              <li><i class="fa-solid fa-check"></i> Blue team & threat hunting</li>
+              <li><i class="fa-solid fa-check"></i> Réponse aux incidents</li>
             </ul>
           </div>
           <div class="f-footer">
             <div>
-              <div class="f-duration">3 semaines · Présentiel</div>
+              <div class="f-duration"><i class="fa-regular fa-clock"></i> 3 semaines · Présentiel</div>
             </div>
             <span class="f-btn">S'inscrire</span>
           </div>
@@ -265,14 +311,14 @@
           </div>
           <div class="f-body">
             <ul>
-              <li>Cisco CCNA prep</li>
-              <li>Linux & Windows Server</li>
-              <li>Virtualisation & Cloud</li>
+              <li><i class="fa-solid fa-check"></i> Cisco CCNA prep</li>
+              <li><i class="fa-solid fa-check"></i> Linux & Windows Server</li>
+              <li><i class="fa-solid fa-check"></i> Virtualisation & Cloud</li>
             </ul>
           </div>
           <div class="f-footer">
             <div>
-              <div class="f-duration">3 semaines · Présentiel</div>
+              <div class="f-duration"><i class="fa-regular fa-clock"></i> 3 semaines · Présentiel</div>
             </div>
             <span class="f-btn">S'inscrire</span>
           </div>
@@ -285,22 +331,25 @@
           </div>
           <div class="f-body">
             <ul>
-              <li>ISO 27001 / RGPD</li>
-              <li>Gestion des risques</li>
-              <li>Audit de conformité</li>
+              <li><i class="fa-solid fa-check"></i> ISO 27001 / RGPD</li>
+              <li><i class="fa-solid fa-check"></i> Gestion des risques</li>
+              <li><i class="fa-solid fa-check"></i> Audit de conformité</li>
             </ul>
           </div>
           <div class="f-footer">
             <div>
-              <div class="f-duration">3 semaines · Présentiel</div>
+              <div class="f-duration"><i class="fa-regular fa-clock"></i> 3 semaines · Présentiel</div>
             </div>
             <span class="f-btn">S'inscrire</span>
           </div>
         </a>
+
       </div>
 
       <div class="section-cta" data-aos>
-        <a href="formations.html" class="btn btn-outline-cyan">Voir toutes les formations →</a>
+        <a href="formations.html" class="btn btn-outline-cyan">
+          Voir toutes les formations <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -317,32 +366,32 @@
 
       <div class="why-grid">
         <div class="why-card" data-aos data-aos-delay="100">
-          <span class="why-icon">🏆</span>
+          <div class="why-icon"><i class="fa-solid fa-medal"></i></div>
           <h4>Expertise locale certifiée</h4>
           <p>Équipe formée aux standards internationaux (CEH, OSCP, ISO 27001), ancrée au cœur d'Abidjan.</p>
         </div>
         <div class="why-card" data-aos data-aos-delay="200">
-          <span class="why-icon">🔬</span>
+          <div class="why-icon"><i class="fa-solid fa-flask"></i></div>
           <h4>Approche 100% pratique</h4>
           <p>Chaque mission et formation est hands-on avec des environnements réels d'attaque et de défense.</p>
         </div>
         <div class="why-card" data-aos data-aos-delay="300">
-          <span class="why-icon">⚡</span>
+          <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
           <h4>Réactivité 24/7</h4>
           <p>En cas d'incident cyber, notre équipe est disponible en continu pour contenir et remédier aux menaces.</p>
         </div>
         <div class="why-card" data-aos data-aos-delay="400">
-          <span class="why-icon">🎯</span>
+          <div class="why-icon"><i class="fa-solid fa-sliders"></i></div>
           <h4>Solutions sur mesure</h4>
           <p>Chaque client est unique. Nos audits et formations sont personnalisés à votre secteur et vos besoins réels.</p>
         </div>
         <div class="why-card" data-aos data-aos-delay="100">
-          <span class="why-icon">💼</span>
+          <div class="why-icon"><i class="fa-solid fa-briefcase"></i></div>
           <h4>Offre 360°</h4>
-          <p>Audit cybersécurité, sécurité électronique, construction BTP, mobilité & logistique, formations IT : tout sous un seul partenaire de confiance.</p>
+          <p>Audit cybersécurité, sécurité électronique, BTP, mobilité & logistique, formations IT : tout sous un seul partenaire.</p>
         </div>
         <div class="why-card" data-aos data-aos-delay="200">
-          <span class="why-icon">📊</span>
+          <div class="why-icon"><i class="fa-solid fa-chart-bar"></i></div>
           <h4>Rapports détaillés</h4>
           <p>Chaque mission donne lieu à un rapport complet avec preuves, CVSS scoring et recommandations.</p>
         </div>
@@ -361,9 +410,14 @@
       </div>
 
       <div class="testi-grid">
+
         <div class="testi-card" data-aos data-aos-delay="100">
-          <div class="quote-mark">"</div>
-          <div class="stars">★★★★★</div>
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
           <p class="testi-text">SISBM a réalisé un audit complet de notre infrastructure. Des vulnérabilités critiques ont été identifiées et corrigées en moins de 48h. Travail sérieux et professionnel.</p>
           <div class="testi-author">
             <div class="testi-avatar">KD</div>
@@ -375,8 +429,12 @@
         </div>
 
         <div class="testi-card" data-aos data-aos-delay="200">
-          <div class="quote-mark">"</div>
-          <div class="stars">★★★★★</div>
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
           <p class="testi-text">La formation pentest m'a donné toutes les bases pour décrocher mon premier poste en sécurité offensive. Les labs pratiques sont vraiment à la hauteur.</p>
           <div class="testi-author">
             <div class="testi-avatar">AF</div>
@@ -388,8 +446,12 @@
         </div>
 
         <div class="testi-card" data-aos data-aos-delay="300">
-          <div class="quote-mark">"</div>
-          <div class="stars">★★★★★</div>
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
           <p class="testi-text">Le système GPS pour notre flotte de 30 camions nous a permis de réduire les coûts carburant de 18% dès le premier mois. Installation rapide, interface simple.</p>
           <div class="testi-author">
             <div class="testi-avatar">MK</div>
@@ -399,6 +461,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -412,8 +475,12 @@
           <p>Obtenez un devis personnalisé gratuit en moins de 48 heures. Aucun engagement.</p>
         </div>
         <div class="cta-box-actions">
-          <a href="contact.html#contact-form" class="btn btn-primary">Nous contacter →</a>
-          <a href="tel:+2250720161466" class="btn btn-ghost-dark">📞 Appeler maintenant</a>
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            Nous contacter <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="tel:+2250720161466" class="btn btn-ghost-dark">
+            <i class="fa-solid fa-phone"></i> Appeler maintenant
+          </a>
         </div>
       </div>
     </div>
@@ -423,54 +490,86 @@
   <footer id="footer">
     <div class="container">
       <div class="footer-grid">
+
         <div class="footer-brand">
-          <a href="index.html" class="logo footer-logo"><img src="images/logo.jpg" alt="SISBM Academy Logo" style="height: 32px; width: auto;"></a>
-          <p>SISBM - Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Votre expert en audit cybersécurité, sécurité électronique, BTP, mobilité & logistique et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:32px;width:auto;" />
+          </a>
+          <p>SISBM - Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en audit cybersécurité, sécurité électronique, BTP, mobilité & logistique et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <div class="footer-contact-info">
+            <div class="fci-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Yopougon, Abidjan – Côte d'Ivoire</span>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2250720161466">+225 07 20 16 14 66</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:sisbm.sarl@gmail.com">sisbm.sarl@gmail.com</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>Lun – Ven : 8h00 – 18h00 &nbsp;|&nbsp; Sam : 9h00 – 13h00</span>
+            </div>
+          </div>
         </div>
 
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html#cybersec">Cybersécurité</a></li>
-            <li><a href="services.html#tracking">Tracking GPS</a></li>
-            <li><a href="services.html#electronique">Sécurité électronique</a></li>
-            <li><a href="services.html#btp">BTP & Génie civil</a></li>
+            <li><a href="services.html#cybersec"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
+            <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
+            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
+            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Formations</h4>
           <ul>
-            <li><a href="formations.html#cyber-off">Cyber Offensive</a></li>
-            <li><a href="formations.html#cyber-def">Cyber Défensive</a></li>
-            <li><a href="formations.html#reseau">Réseau & Système</a></li>
-            <li><a href="formations.html#grc">GRC / ISO 27001</a></li>
+            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Liens utiles</h4>
           <ul>
-            <li><a href="apropos.html">À propos</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom">
         <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
         <div class="footer-social">
-          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" target="_blank">f</a>
-          <a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" target="_blank">W</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="wa-float" id="wa-float" role="button" tabindex="0" aria-label="WhatsApp">💬</div>
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250720161466?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <script src="js/index.js"></script>
 </body>

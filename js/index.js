@@ -4,6 +4,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── LOADER ── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.classList.add('hidden');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      }
+    }, 2000); // Délai minimum de 2 secondes
+  });
+
   /* ── 1. NAVBAR SCROLL ── */
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -15,13 +28,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks  = document.querySelector('.nav-links');
 
   if (hamburger) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
       const open = navLinks.classList.toggle('mobile-open');
       hamburger.setAttribute('aria-expanded', open);
     });
-    // Fermer au clic sur un lien
+
+    /* Fermer le menu au clic en dehors */
+    document.addEventListener('click', (e) => {
+      if (!navbar.contains(e.target)) {
+        navLinks.classList.remove('mobile-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* Fermer au clic sur un lien — SANS bloquer la navigation */
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('mobile-open'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        /* Pas de e.preventDefault() → le lien navigue normalement */
+      });
     });
   }
 
@@ -63,25 +90,45 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  /* ── 5. SCROLL SMOOTH POUR ANCRES ── */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
+  /* ── 5. SCROLL SMOOTH POUR ANCRES INTERNES UNIQUEMENT ── */
+  /*
+    CORRECTION DU BUG :
+    L'ancien code utilisait 'a[href^="#"]' qui capturait aussi
+    des liens comme "contact.html#contact-form" en cherchant "#"
+    n'importe où dans le href.
+
+    Désormais on ne cible QUE les href qui commencent
+    EXACTEMENT par "#" (ancres pures sur la même page).
+    Tous les liens vers d'autres pages naviguent normalement.
+  */
+  document.querySelectorAll('a').forEach(anchor => {
+    const href = anchor.getAttribute('href') || '';
+
+    /* Ancre pure sur la même page : "#section" */
+    if (href.startsWith('#') && href.length > 1) {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        /* Si la cible n'existe pas → navigation normale */
+      });
+    }
+    /* Liens vers d'autres pages (services.html, formations.html,
+       contact.html#faq, etc.) → jamais interceptés */
   });
 
   /* ── 6. BOUTON WHATSAPP ── */
   const waFloat = document.getElementById('wa-float');
   if (waFloat) {
     waFloat.addEventListener('click', () => {
-      const phone   = '2250700000000'; // ← Remplacer par le vrai numéro
-      const message = encodeURIComponent('Bonjour SISBM Academy, je souhaite avoir des informations sur vos services.');
-      window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+      window.open(
+        'https://wa.me/2250720161466?text=' +
+        encodeURIComponent('Bonjour SISBM, je souhaite des informations sur vos services.'),
+        '_blank'
+      );
     });
   }
 
@@ -92,13 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    const typingSpeed = 80;
+    const typingSpeed   = 80;
     const deletingSpeed = 50;
-    const delayBetween = 1500;
+    const delayBetween  = 1500;
 
     function typewriter() {
       const currentText = texts[textIndex];
-      
+
       if (isDeleting) {
         charIndex--;
       } else {

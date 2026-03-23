@@ -26,6 +26,10 @@
   --shadow: 0 2px 16px rgba(11,60,93,0.08);
   --shadow-h: 0 8px 32px rgba(11,60,93,0.14);
 }
+*{
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+}
 
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-b); color: var(--text); background: var(--white); overflow-x: hidden; line-height: 1.6; }
@@ -34,6 +38,64 @@ ul { list-style: none; }
 button { cursor: pointer; font-family: var(--font-b); }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── LOADER ── */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+  text-align: center;
+  color: white;
+}
+
+.loader-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 2rem;
+  animation: pulse 2s infinite;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid var(--cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+#loader p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 /* ── BOUTONS ── */
 .btn {
@@ -264,13 +326,17 @@ button { cursor: pointer; font-family: var(--font-b); }
 
 .f-header { padding: 1.5rem; position: relative; overflow: hidden; }
 .f-header::after { content: ''; position: absolute; bottom: -20px; right: -20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.08); }
-.fh-off  { background: linear-gradient(135deg, #0B2A4A, #1A9FD6); }
-.fh-def  { background: linear-gradient(135deg, #0B2A40, #00A896); }
-.fh-net  { background: linear-gradient(135deg, #1A1060, #5B4BE8); }
-.fh-grc  { background: linear-gradient(135deg, #2A0E40, #A855F7); }
+.fh-off  { background-image: url('../images/Cybersécurité Offensive.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.fh-off::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.fh-def  { background-image: url('../images/cybersécurité defensive.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.fh-def::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.fh-net  { background-image: url('../images/reseau system.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.fh-net::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.fh-grc  { background-image: url('../images/grc-conformité.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+.fh-grc::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
 
-.f-level { display: inline-block; background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 20px; margin-bottom: 0.75rem; font-weight: 500; }
-.f-header h3 { color: white; font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.f-level { display: inline-block; background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 20px; margin-bottom: 0.75rem; font-weight: 500; position: relative; z-index: 1; }
+.f-header h3 { color: white; font-size: 1rem; font-weight: 600; line-height: 1.3; position: relative; z-index: 1; }
 
 .f-body { padding: 1.25rem 1.5rem; flex: 1; }
 .f-body ul { display: flex; flex-direction: column; gap: 0.45rem; }
@@ -302,7 +368,7 @@ button { cursor: pointer; font-family: var(--font-b); }
 .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
 .testi-card { background: white; border-radius: var(--r-lg); padding: 2rem; border: 1px solid var(--border); position: relative; transition: var(--tr); }
 .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-h); }
-.quote-mark { font-size: 4rem; line-height: 1; color: var(--cyan); opacity: 0.2; font-family: Georgia, serif; position: absolute; top: 1rem; right: 1.5rem; }
+.quote-mark { font-size: 4rem; line-height: 1; color: var(--cyan); opacity: 0.2; font-family: var(--font-d); position: absolute; top: 1rem; right: 1.5rem; }
 .stars { color: #F5A623; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; }
 .testi-text { font-size: 0.87rem; color: var(--muted); line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
 .testi-author { display: flex; align-items: center; gap: 0.75rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
@@ -336,6 +402,7 @@ footer { background: var(--navy); color: rgba(255,255,255,0.45); padding: 4rem 0
 .footer-social { display: flex; gap: 0.75rem; }
 .social-btn { width: 34px; height: 34px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; transition: var(--tr); color: rgba(255,255,255,0.5); cursor: pointer; }
 .social-btn:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(26,159,214,0.1); }
+
 
 /* ── WHATSAPP FLOAT ── */
 .wa-float {
@@ -442,7 +509,7 @@ footer { background: var(--navy); color: rgba(255,255,255,0.45); padding: 4rem 0
   .section-header h2 { font-size: 1.3rem; }
   .section-header p { font-size: 0.9rem; }
   .service-card { padding: 1.5rem; }
-  .formation-card { }
+  
   .f-header { padding: 1.25rem; }
   .f-body { padding: 1rem; }
   .f-body li { font-size: 0.78rem; }

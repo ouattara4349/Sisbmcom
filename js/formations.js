@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  /* ── LOADER ── */
+  window.addEventListener('load',()=>{setTimeout(()=>{const l=document.getElementById('loader');if(l){l.classList.add('hidden');setTimeout(()=>{l.style.display='none'},500)}},2000)});
   // Navbar scroll
   const nb=document.getElementById('navbar');
   if(nb) window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',window.scrollY>50),{passive:true});
