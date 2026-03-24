@@ -364,20 +364,20 @@
 
   /* ── FOOTER COMPLET ── */
   footer {
-    background: var(--navy); color: rgba(255,255,255,0.45);
+    background: var(--navy); color: #ffffff;
     padding: 4rem 0 2rem; border-top: 1px solid rgba(26,159,214,0.12);
   }
   .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
   .footer-brand img { height: 36px; width: auto; display: block; margin-bottom: 1rem; }
-  .footer-brand p { font-size: 0.82rem; line-height: 1.8; color: rgba(255,255,255,0.4); }
+  .footer-brand p { font-size: 0.82rem; line-height: 1.8; color: #ffffff; }
   .footer-contact-info { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
-  .fci-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .fci-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; color: #ffffff; }
   .fci-item i { color: var(--cyan); font-size: 0.85rem; width: 14px; flex-shrink: 0; margin-top: 2px; }
-  .fci-item a { color: rgba(255,255,255,0.45); transition: color var(--tr); }
+  .fci-item a { color: #ffffff; transition: color var(--tr); }
   .fci-item a:hover { color: var(--cyan); }
   .footer-col h4 { color: white; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
   .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
-  .footer-col li a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color var(--tr); display: flex; align-items: center; gap: 0.4rem; }
+  .footer-col li a { font-size: 0.82rem; color: #ffffff; transition: color var(--tr); display: flex; align-items: center; gap: 0.4rem; }
   .footer-col li a i { color: var(--cyan); font-size: 0.75rem; width: 14px; }
   .footer-col li a:hover { color: var(--cyan); }
   .footer-bottom {
@@ -389,9 +389,15 @@
     width: 36px; height: 36px; border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04);
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.9rem; transition: var(--tr); color: rgba(255,255,255,0.5);
+    font-size: 0.9rem; transition: var(--tr); color: #ffffff;
   }
-  .social-btn:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(26,159,214,0.1); }
+  .social-btn:hover { background: rgba(255,255,255,0.1); }
+  .social-btn.social-facebook { color: #1877F2; }
+  .social-btn.social-facebook:hover { background: #1877F2; color: #ffffff; }
+  .social-btn.social-whatsapp { color: #25D366; }
+  .social-btn.social-whatsapp:hover { background: #25D366; color: #ffffff; }
+  .social-btn.social-linkedin { color: #0A66C2; }
+  .social-btn.social-linkedin:hover { background: #0A66C2; color: #ffffff; }
 
   /* ── WHATSAPP ── */
   .wa-float {
@@ -927,13 +933,13 @@
       <div class="footer-bottom">
         <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
         <div class="footer-social">
-          <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+          <a href="#" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank">
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://wa.me/2250720161466" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+          <a href="https://wa.me/2250720161466" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>

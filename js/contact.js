@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       /* ── Ouvrir WhatsApp après 800ms ── */
       setTimeout(() => {
 
-        window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message), '_blank');
+        window.open('https://wa.me/' + +2250720161466+ '?text=' + encodeURIComponent(message), '_blank');
 
         /* Réinitialiser bouton */
         btn.disabled = false;
