@@ -169,4 +169,81 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typewriter, 500);
   }
 
+  /* ── 8. TESTIMONIALS CAROUSEL ── */
+  const testiTrack = document.querySelector('.testi-track');
+  const testiDots = document.querySelectorAll('.testi-dot');
+  const testiPrev = document.querySelector('.testi-prev');
+  const testiNext = document.querySelector('.testi-next');
+  
+  if (testiTrack && testiDots.length > 0) {
+    let currentIndex = 0;
+    const totalSlides = testiDots.length;
+    let autoSlideInterval;
+    const isMobile = window.innerWidth <= 768;
+
+    function goToSlide(index) {
+      currentIndex = index;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      
+      testiTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+      
+      testiDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function startAutoSlide() {
+      if (!isMobile) {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+      }
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    // Manual navigation
+    if (testiNext) testiNext.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      if (!isMobile) startAutoSlide();
+    });
+
+    if (testiPrev) testiPrev.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      if (!isMobile) startAutoSlide();
+    });
+
+    // Dot navigation
+    testiDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        stopAutoSlide();
+        goToSlide(index);
+        if (!isMobile) startAutoSlide();
+      });
+    });
+
+    // Pause on hover (desktop only)
+    if (!isMobile) {
+      const carousel = document.querySelector('.testi-carousel');
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+      }
+    }
+
+    // Start auto slide (desktop only)
+    startAutoSlide();
+  }
+
 });

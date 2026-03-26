@@ -1,6 +1,4 @@
-/* =============================================
-   SISBM ACADEMY – index.css (Page d'accueil)
-   ============================================= */
+
 
 /* ── RESET & VARIABLES ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,10 +106,10 @@ button { cursor: pointer; font-family: var(--font-b); }
 .btn-primary:hover { background: var(--cyan-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,159,214,0.35); }
 .btn-ghost { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.25); }
 .btn-ghost:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); }
-.btn-outline-cyan { background: transparent; color: var(--cyan); border: 1px solid var(--cyan); }
-.btn-outline-cyan:hover { background: var(--cyan); color: white; }
-.btn-ghost-dark { background: transparent; color: var(--navy); border: 1px solid rgba(11,60,93,0.2); }
-.btn-ghost-dark:hover { border-color: var(--navy); background: rgba(11,60,93,0.05); }
+.btn-outline-cyan { background: var(--cyan); color: white; border: 1px solid var(--cyan); }
+.btn-outline-cyan:hover { background: white; color: var(--cyan); }
+.btn-ghost-dark { background: white; color: var(--navy); border: 1px solid rgba(11,60,93,0.2); }
+.btn-ghost-dark:hover { border-color: var(--navy); background: var(--navy); color: white; }
 
 /* ── SECTION COMMUNE ── */
 .section-header { text-align: center; margin-bottom: 3.5rem; }
@@ -192,7 +190,12 @@ button { cursor: pointer; font-family: var(--font-b); }
   display: flex; align-items: center; position: relative;
   overflow: hidden; padding: 8rem 2rem 5rem;
 }
-.hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-bg { 
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none; 
+  background: linear-gradient(135deg, rgba(6,15,30,0.85) 0%, rgba(11,60,93,0.75) 100%), url('../images/bginex.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .hero-grid {
   position: absolute; inset: 0;
   background-image:
@@ -282,7 +285,33 @@ button { cursor: pointer; font-family: var(--font-b); }
 #director-note .director-photo { text-align: right; }
 #director-note .director-photo img { width: 100%; max-width: 380px; height: auto; border-radius: 14px; border: 1px solid var(--border); box-shadow: var(--shadow); }
 
-#services-apercu { padding: 6rem 0; background: var(--gray-bg); }
+#services-apercu { padding: 6rem 0; position: relative; overflow: hidden; }
+
+.services-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.services-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.3);
+}
+
+#services-apercu .container { position: relative; z-index: 1; }
 
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
 
@@ -365,8 +394,15 @@ button { cursor: pointer; font-family: var(--font-b); }
 
 /* ── TÉMOIGNAGES ── */
 #testimonials { padding: 6rem 0; background: var(--gray-bg); }
-.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.testi-card { background: white; border-radius: var(--r-lg); padding: 2rem; border: 1px solid var(--border); position: relative; transition: var(--tr); }
+
+.testi-carousel { position: relative; max-width: 900px; margin: 0 auto; overflow: hidden; touch-action: pan-y; }
+
+.testi-track { display: flex; transition: transform 0.5s ease-in-out; }
+
+.testi-card { 
+  background: white; border-radius: var(--r-lg); padding: 2rem; border: 1px solid var(--border); 
+  position: relative; transition: var(--tr); flex: 0 0 100%; box-sizing: border-box; overflow: hidden;
+}
 .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-h); }
 .quote-mark { font-size: 4rem; line-height: 1; color: var(--cyan); opacity: 0.2; font-family: var(--font-d); position: absolute; top: 1rem; right: 1.5rem; }
 .stars { color: #F5A623; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; }
@@ -376,8 +412,20 @@ button { cursor: pointer; font-family: var(--font-b); }
 .testi-name { font-weight: 600; font-size: 0.87rem; color: var(--navy); }
 .testi-role { font-size: 0.75rem; color: var(--muted); }
 
+.testi-controls { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+.testi-btn { background: var(--cyan); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; transition: var(--tr); display: flex; align-items: center; justify-content: center; }
+.testi-btn:hover { background: var(--navy); transform: scale(1.1); }
+.testi-dots { display: flex; gap: 0.5rem; }
+.testi-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: var(--tr); }
+.testi-dot.active { background: var(--cyan); transform: scale(1.2); }
+
 /* ── CTA CONTACT ── */
-#cta-contact { padding: 5rem 0; background: white; }
+#cta-contact { 
+  padding: 5rem 0; 
+  background: linear-gradient(135deg, rgba(6,15,30,0.9) 0%, rgba(11,60,93,0.85) 100%), url('../images/Cybersécurité\ Offensive.jpg');
+  background-size: cover;
+  background-position: center;
+}
 .cta-box {
   background: linear-gradient(135deg, var(--navy-mid), var(--blue));
   border-radius: var(--r-lg); padding: 3rem;
@@ -392,8 +440,16 @@ button { cursor: pointer; font-family: var(--font-b); }
 /* ── FOOTER ── */
 footer { background: var(--navy); color: #ffffff; padding: 4rem 0 2rem; border-top: 1px solid rgba(26,159,214,0.12); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand { max-width: 300px; }
 .footer-brand .footer-logo { font-family: var(--font-d); font-size: 1.2rem; font-weight: 900; color: white; letter-spacing: 3px; display: block; margin-bottom: 1rem; }
-.footer-brand p { font-size: 0.82rem; line-height: 1.8; max-width: 240px; color: #ffffff; }
+.footer-brand p { font-size: 0.82rem; line-height: 1.8; color: #ffffff; }
+.footer-map { margin-top: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+.footer-map iframe { display: block; }
+
+/* ── CARTE LOCALISATION ── */
+#localisation { padding: 0; }
+.map-full { width: 100%; height: 450px; }
+.map-full iframe { display: block; width: 100%; height: 100%; }
 .footer-col h4 { color: white; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1.25rem; }
 .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
 .footer-col li a { font-size: 0.82rem; color: #ffffff; transition: color var(--tr); }

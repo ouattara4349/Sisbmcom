@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 10 vulnérabilités en Côte d'Ivoire 2026 – SISBM Academy</title>
+  <meta name="description" content="Découvrez les 10 vulnérabilités les plus exploitées par les attaquants en Côte d'Ivoire en 2026. Analyse basée sur nos audits de sécurité." />
+  <meta property="og:title" content="Top 10 vulnérabilités en Côte d'Ivoire 2026" />
+  <meta property="og:description" content="Analyse des failles de sécurité les plus fréquentes dans les entreprises ivoiriennes." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <style>
+    .article-hero { background: linear-gradient(135deg, #060F1E 0%, #0B3C5D 100%); padding: 6rem 2rem 4rem; color: white; }
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+    .article-meta { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem; }
+    .article-meta i { margin-right: 0.5rem; }
+    .article-title { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+    .article-content { line-height: 1.9; color: #1A2B3C; }
+    .article-content h2 { color: #060F1E; font-size: 1.5rem; margin: 2rem 0 1rem; border-bottom: 2px solid #1A9FD6; padding-bottom: 0.5rem; }
+    .article-content p { margin-bottom: 1.5rem; }
+    .article-content ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+    .article-content li { margin-bottom: 0.5rem; }
+    .back-btn { display: inline-block; padding: 0.75rem 1.5rem; background: #1A9FD6; color: white; border-radius: 6px; text-decoration: none; margin-bottom: 2rem; }
+    .back-btn:hover { background: #0B3C5D; }
+    .vuln-card { background: #F0F4F8; border-left: 4px solid #FF6B6B; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 0 8px 8px 0; }
+    .vuln-card h3 { color: #060F1E; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .vuln-card.critical { border-color: #FF6B6B; }
+    .vuln-card.high { border-color: #F5A623; }
+    .vuln-card.medium { border-color: #1A9FD6; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR (same as blog.html) -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:40px;width:auto;" />
+    </a>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="article-container">
+    <div class="article-meta">
+      <span><i class="fa-solid fa-calendar"></i> 15 Mars 2026</span>
+      <span style="margin-left: 1.5rem;"><i class="fa-solid fa-clock"></i> 8 min de lecture</span>
+      <span style="margin-left: 1.5rem;"><i class="fa-solid fa-tag"></i> Pentest</span>
+    </div>
+    <h1 class="article-title">Top 10 des vulnérabilités les plus exploitées en Côte d'Ivoire en 2026</h1>
+  </div>
+</div>
+
+<div class="article-container">
+  <a href="blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Retour au blog</a>
+  
+  <div class="article-content">
+    <p>Notre équipe a analysé plus de 50 audits de sécurité réalisés en 2025-2026 auprès d'entreprises incontourniennes. Voici les 10 vulnérabilités que nous rencontrons le plus souvent dans les systèmes informatiques des PME et grandes entreprises en Côte d'Ivoire.</p>
+
+    <h2>1. Mots de passe faibles ou réutilisés (Critique)</h2>
+    <div class="vuln-card critical">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 73% des audits</h3>
+      <p>Les mots de passe comme "123456", "password" ou le nom de l'entreprise restent courants. Nous avons accès à des comptes admin avec des mots de passe identiques sur plusieurs services.</p>
+    </div>
+
+    <h2>2. Mises à jour non appliquées (Critique)</h2>
+    <div class="vuln-card critical">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 68% des audits</h3>
+      <p>Les systèmes Windows non mis à jour depuis des mois, les serveurs avec des failles connues (CVE-2024-XXXX) non corrigées.</p>
+    </div>
+
+    <h2>3. Configurations par défaut (Élevée)</h2>
+    <div class="vuln-card high">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 61% des audits</h3>
+      <p>Equipements réseau, cameras, imprimantes encore avec mots de passe par défaut (admin/admin, root/root).</p>
+    </div>
+
+    <h2>4. Absence de MFA (Élevée)</h2>
+    <div class="vuln-card high">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 55% des audits</h3>
+      <p>Pas d'authentification multifacteur sur les messageries professionnelles, VPN, ou accès admin.</p>
+    </div>
+
+    <h2>5. Services exposés sur Internet (Élevée)</h2>
+    <div class="vuln-card high">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 49% des audits</h3>
+      <p>Interfaces d'administration, RDP, bases de données accessibles publiquement sans protection.</p>
+    </div>
+
+    <h2>6. Phishing ciblé (Moyenne)</h2>
+    <div class="vuln-card medium">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 42% des audits</h3>
+      <p>Emails de phishing sophistiqués ciblant les employés avec des faux documents, sites de login miroirs.</p>
+    </div>
+
+    <h2>7. Permissions excessives (Moyenne)</h2>
+    <div class="vuln-card medium">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> 38% des audits</h3>
+      <p>Utilisateurs avec droits admin non nécessaires, partage de dossiers sensibles sans restriction.</p>
+    </div>
+
+    <h2>8. Sauvegardes non sécurisées</h2>
+    <p>Sauvegardes stockées sur le même serveur que les données, non chiffrées, accessibles sans authentification.</p>
+
+    <h2>9. Wifi inseguro</h2>
+    <p>Réseaux wifi d'entreprise avec mot de passe faible, absence de segmentation, équipements personnels connectés.</p>
+
+    <h2>10. Logs non surveillés</h2>
+    <p>Absence de centralisation des logs, pas de détection des activités suspectes, pas de保留 des journaux.</p>
+
+    <h2>Recommandations</h2>
+    <ul>
+      <li><strong>Authentification forte :</strong> Implémentez le MFA sur tous les comptes critiques</li>
+      <li><strong>Politique de mots de passe :</strong> Mots de passe uniques par service, utilisation d'un gestionnaire</li>
+      <li><strong>Mises à jour :</strong> Automatisez les correctifs de sécurité</li>
+      <li><strong>Sensibilisation :</strong> Formez vos employés au phishing</li>
+      <li><strong>Audit régulier :</strong> Réalisez un pentest annuel pour identifier les vulnérabilités</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>La plupart des vulnérabilités que nous trouvons sont connues et corrigibles. Un audit de sécurité de base peut identifier 80% de ces problèmes. N'attendez pas qu'une attaque survienne pour agir.</p>
+
+    <p><strong>Vous souhaitez un audit de sécurité ?</strong> <a href="contact.html">Contactez-nous</a> pour un devis gratuit.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <p>&copy; 2026 SISBM Academy – Tous droits réservés</p>
+  </div>
+</footer>
+
+</body>
+</html>

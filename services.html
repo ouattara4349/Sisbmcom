@@ -79,11 +79,9 @@
 
   /* ── HERO ── */
   .page-hero {
-    background: var(--navy);
-    background-image:
-      linear-gradient(rgba(26,159,214,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(26,159,214,0.05) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background: linear-gradient(135deg, rgba(6,15,30,0.85) 0%, rgba(11,60,93,0.75) 100%), url('images/serv.png');
+    background-size: cover;
+    background-position: center;
     padding: 9rem 2rem 5rem;
     position: relative; overflow: hidden;
     display: flex; align-items: center; justify-content: space-between; gap: 3rem;
@@ -220,8 +218,10 @@
   .svc-visual { border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 380px; }
 
   .visual-cyber {
-    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
-    padding: 2rem; display: flex; flex-direction: column; gap: 1rem;
+    border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 380px;
+  }
+  .visual-cyber img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg);
   }
   .cyber-terminal {
     background: rgba(0,0,0,0.4); border-radius: var(--r-md);
@@ -245,8 +245,10 @@
   .c-metric.danger .c-metric-val { color: #FF6B6B; }
 
   .visual-gps {
-    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
-    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+    border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 380px;
+  }
+  .visual-gps img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg);
   }
   .gps-map {
     background: rgba(11,60,93,0.5); border-radius: var(--r-md);
@@ -288,8 +290,10 @@
   .gvs-alr { background: rgba(245,166,35,0.15); color: #F5A623; }
 
   .visual-elec {
-    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
-    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+    border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 380px;
+  }
+  .visual-elec img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg);
   }
   .cam-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
   .cam-feed {
@@ -313,8 +317,10 @@
   .ce-intrusion { background: rgba(255,107,107,0.15); color: #FF6B6B; }
 
   .visual-btp {
-    background: var(--navy-mid); border: 1px solid rgba(26,159,214,0.2);
-    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+    border-radius: var(--r-lg); overflow: hidden; position: relative; min-height: 380px;
+  }
+  .visual-btp img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg);
   }
   .btp-zones { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
   .btp-zone { border-radius: var(--r-sm); padding: 1rem; border: 1px solid; }
@@ -610,23 +616,7 @@
         </div>
       </div>
       <div class="svc-visual visual-cyber" data-aos data-aos-delay="200">
-        <div class="cyber-terminal">
-          <div class="t-line"><span class="t-prompt">root@sisbm:~$</span> <span class="t-cmd">nmap -sV -sC target.ci</span></div>
-          <div class="t-line"><span class="t-ok">PORT     STATE  SERVICE</span></div>
-          <div class="t-line"><span class="t-ok">22/tcp   open   ssh OpenSSH 8.2</span></div>
-          <div class="t-line"><span class="t-warn">80/tcp   open   http Apache 2.4.41</span></div>
-          <div class="t-line"><span class="t-err">443/tcp  open   ssl/https [VULN: CVE-2021-41773]</span></div>
-          <div class="t-line"><span class="t-warn">3306/tcp open   mysql 5.7.38</span></div>
-          <div class="t-line" style="margin-top:0.5rem"><span class="t-prompt">root@sisbm:~$</span> <span class="t-cmd">sqlmap -u "target.ci/login" --dbs</span></div>
-          <div class="t-line"><span class="t-err">  [CRITICAL] Database exposed: users, credentials</span></div>
-          <div class="t-line"><span class="t-ok">  [+] Generating report...</span></div>
-        </div>
-        <div class="cyber-metrics">
-          <div class="c-metric danger"><span class="c-metric-val">17</span><span class="c-metric-lbl">Vulnérabilités critiques</span></div>
-          <div class="c-metric warn"><span class="c-metric-val">34</span><span class="c-metric-lbl">Risques moyens</span></div>
-          <div class="c-metric"><span class="c-metric-val" style="color:var(--cyan)">CVSS</span><span class="c-metric-lbl">Score moyen : 8.4/10</span></div>
-          <div class="c-metric"><span class="c-metric-val" style="color:var(--green)">PDF</span><span class="c-metric-lbl">Rapport prêt en 48h</span></div>
-        </div>
+        <img src="images/audit.png" alt="Cybersécurité SISBM" />
       </div>
     </div>
   </div>
@@ -636,46 +626,6 @@
 <section class="svc-section" id="tracking">
   <div class="container">
     <div class="svc-layout reverse">
-      <div class="svc-visual visual-gps" data-aos>
-        <div class="gps-map">
-          <div class="gps-grid"></div>
-          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15" viewBox="0 0 300 180">
-            <path d="M 0 90 Q 75 60 150 90 Q 225 120 300 90" stroke="#1A9FD6" stroke-width="2" fill="none"/>
-            <path d="M 100 0 Q 120 90 100 180" stroke="#1A9FD6" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
-            <path d="M 200 0 Q 180 90 200 180" stroke="#1A9FD6" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
-          </svg>
-          <div class="gps-dot" style="top:42%;left:35%"></div>
-          <div class="gps-dot gps-dot-2" style="top:60%;left:62%"></div>
-          <div class="gps-dot" style="top:28%;left:70%;background:#F5A623;box-shadow:0 0 0 6px rgba(245,166,35,0.2)"></div>
-          <div style="position:absolute;bottom:8px;right:10px;font-size:0.6rem;color:rgba(255,255,255,0.3);font-family:monospace">Abidjan, CI</div>
-        </div>
-        <div class="gps-vehicles">
-          <div class="gps-vehicle">
-            <i class="fa-solid fa-truck gv-icon"></i>
-            <span class="gv-name">Camion-01 · Yopougon</span>
-            <span class="gv-speed">62 km/h</span>
-            <span class="gv-status gvs-on">EN ROUTE</span>
-          </div>
-          <div class="gps-vehicle">
-            <i class="fa-solid fa-van-shuttle gv-icon"></i>
-            <span class="gv-name">Van-07 · Plateau</span>
-            <span class="gv-speed">0 km/h</span>
-            <span class="gv-status gvs-off">À L'ARRÊT</span>
-          </div>
-          <div class="gps-vehicle">
-            <i class="fa-solid fa-car gv-icon"></i>
-            <span class="gv-name">Véh-12 · Cocody</span>
-            <span class="gv-speed">91 km/h</span>
-            <span class="gv-status gvs-alr">ALERTE VITESSE</span>
-          </div>
-          <div class="gps-vehicle">
-            <i class="fa-solid fa-truck-moving gv-icon"></i>
-            <span class="gv-name">Camion-03 · Abobo</span>
-            <span class="gv-speed">44 km/h</span>
-            <span class="gv-status gvs-on">EN ROUTE</span>
-          </div>
-        </div>
-      </div>
       <div class="svc-text" data-aos data-aos-delay="200">
         <div class="section-label">Tracking de Véhicules</div>
         <h2>Gérez votre flotte en temps réel</h2>
@@ -695,6 +645,9 @@
           <a href="contact.html#contact-form" class="btn btn-primary">Demander une démo <i class="fa-solid fa-arrow-right"></i></a>
           <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-tag"></i> Tarifs sur devis</a>
         </div>
+      </div>
+      <div class="svc-visual visual-gps" data-aos data-aos-delay="200">
+        <img src="images/gpsd.jpg" alt="Tracking GPS SISBM" />
       </div>
     </div>
   </div>
@@ -725,38 +678,7 @@
         </div>
       </div>
       <div class="svc-visual visual-elec" data-aos data-aos-delay="200">
-        <div class="cam-grid">
-          <div class="cam-feed">
-            <div class="cam-feed-bg"></div>
-            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
-            <div class="cam-crosshair"><svg class="crosshair-svg" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/><line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/><line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/><line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/><line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/></svg></div>
-            <div class="cam-label">CAM-01 · ENTRÉE</div>
-          </div>
-          <div class="cam-feed">
-            <div class="cam-feed-bg" style="background:radial-gradient(ellipse, rgba(0,255,178,0.15) 0%, transparent 70%)"></div>
-            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
-            <div class="cam-crosshair"><svg class="crosshair-svg" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/><line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/><line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/><line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/><line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/></svg></div>
-            <div class="cam-label">CAM-02 · PARKING</div>
-          </div>
-          <div class="cam-feed" style="border-color:rgba(255,107,107,0.4)">
-            <div class="cam-feed-bg" style="background:radial-gradient(ellipse, rgba(255,107,107,0.2) 0%, transparent 70%)"></div>
-            <div class="cam-rec" style="color:#FF6B6B"><div class="rec-dot" style="background:#FF6B6B"></div>ALERTE</div>
-            <div class="cam-crosshair"><svg class="crosshair-svg" viewBox="0 0 40 40" fill="none" style="opacity:0.4"><circle cx="20" cy="20" r="10" stroke="#FF6B6B" stroke-width="1.5"/><line x1="20" y1="0" x2="20" y2="8" stroke="#FF6B6B" stroke-width="1.5"/><line x1="20" y1="32" x2="20" y2="40" stroke="#FF6B6B" stroke-width="1.5"/><line x1="0" y1="20" x2="8" y2="20" stroke="#FF6B6B" stroke-width="1.5"/><line x1="32" y1="20" x2="40" y2="20" stroke="#FF6B6B" stroke-width="1.5"/></svg></div>
-            <div class="cam-label" style="color:#FF6B6B">CAM-03 · COULOIR</div>
-          </div>
-          <div class="cam-feed">
-            <div class="cam-feed-bg"></div>
-            <div class="cam-rec"><div class="rec-dot"></div>REC</div>
-            <div class="cam-crosshair"><svg class="crosshair-svg" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="white" stroke-width="1"/><line x1="20" y1="0" x2="20" y2="8" stroke="white" stroke-width="1"/><line x1="20" y1="32" x2="20" y2="40" stroke="white" stroke-width="1"/><line x1="0" y1="20" x2="8" y2="20" stroke="white" stroke-width="1"/><line x1="32" y1="20" x2="40" y2="20" stroke="white" stroke-width="1"/></svg></div>
-            <div class="cam-label">CAM-04 · BUREAU</div>
-          </div>
-        </div>
-        <div class="cam-events">
-          <div class="cam-event" style="background:rgba(255,107,107,0.08)"><span class="ce-time">14:32</span><span class="ce-text">Mouvement détecté – Zone couloir</span><span class="ce-badge ce-intrusion">ALERTE</span></div>
-          <div class="cam-event" style="background:rgba(245,166,35,0.06)"><span class="ce-time">14:28</span><span class="ce-text">Badge inconnu – Tentative accès serveur</span><span class="ce-badge ce-motion">REFUSÉ</span></div>
-          <div class="cam-event"><span class="ce-time">14:15</span><span class="ce-text">Accès autorisé – Salle de réunion</span><span class="ce-badge ce-ok">OK</span></div>
-          <div class="cam-event"><span class="ce-time">13:50</span><span class="ce-text">Toutes caméras opérationnelles</span><span class="ce-badge ce-ok">OK</span></div>
-        </div>
+        <img src="images/lectro.png" alt="Vidéosurveillance SISBM" />
       </div>
     </div>
   </div>
@@ -766,28 +688,6 @@
 <section class="svc-section" id="btp">
   <div class="container">
     <div class="svc-layout reverse">
-      <div class="svc-visual visual-btp" data-aos>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
-          <span style="font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.7)"><i class="fa-solid fa-helmet-safety" style="color:var(--cyan);margin-right:0.4rem"></i>Chantier Cocody – Secteur A</span>
-          <span style="font-size:0.7rem;color:var(--green);font-family:monospace"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> EN DIRECT</span>
-        </div>
-        <div class="btp-zones">
-          <div class="btp-zone bz-secure"><div class="bz-name">Zone Bureaux</div><div class="bz-status"><i class="fa-solid fa-circle-check"></i> Sécurisé · 3 badges</div></div>
-          <div class="btp-zone bz-access"><div class="bz-name">Zone Matériel</div><div class="bz-status"><i class="fa-solid fa-circle-dot"></i> Accès contrôlé</div></div>
-          <div class="btp-zone bz-warning"><div class="bz-name">Périmètre Nord</div><div class="bz-status"><i class="fa-solid fa-triangle-exclamation"></i> Mouvement détecté</div></div>
-          <div class="btp-zone bz-locked"><div class="bz-name">Zone Explosifs</div><div class="bz-status"><i class="fa-solid fa-lock"></i> Accès verrouillé</div></div>
-        </div>
-        <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.5);margin-top:0.25rem;margin-bottom:0.5rem;letter-spacing:0.5px;text-transform:uppercase">
-          <i class="fa-solid fa-list" style="margin-right:0.4rem;color:var(--cyan)"></i>Journal des événements
-        </div>
-        <div class="btp-log">
-          <div class="btp-log-item"><div class="bli-dot bli-amber"></div><div class="bli-text">Mouvement détecté périmètre Nord (CAM-08)</div><div class="bli-time">16:42</div></div>
-          <div class="btp-log-item"><div class="bli-dot bli-green"></div><div class="bli-text">Badge #047 autorisé – Zone matériel</div><div class="bli-time">16:38</div></div>
-          <div class="btp-log-item"><div class="bli-dot bli-red"></div><div class="bli-text">Tentative d'accès non autorisé – Zone explosifs</div><div class="bli-time">16:31</div></div>
-          <div class="btp-log-item"><div class="bli-dot bli-cyan"></div><div class="bli-text">Ronde automatique secteur A – OK</div><div class="bli-time">16:00</div></div>
-          <div class="btp-log-item"><div class="bli-dot bli-green"></div><div class="bli-text">Système de surveillance initialisé</div><div class="bli-time">08:00</div></div>
-        </div>
-      </div>
       <div class="svc-text" data-aos data-aos-delay="200">
         <div class="section-label">BTP & Génie Civil</div>
         <h2>Sécurisez vos chantiers et sites industriels</h2>
@@ -807,6 +707,9 @@
           <a href="contact.html#contact-form" class="btn btn-primary">Devis chantier <i class="fa-solid fa-arrow-right"></i></a>
           <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-star"></i> Nos références BTP</a>
         </div>
+      </div>
+      <div class="svc-visual visual-btp" data-aos data-aos-delay="200">
+        <img src="images/btp8.jpg" alt="BTP SISBM" />
       </div>
     </div>
   </div>
@@ -889,7 +792,7 @@
             </div>
             <div class="fci-item">
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:sisbm.sarl@gmail.com">sisbm.sarl@gmail.com</a>
+              <a href="mailto:contact@sisbim-ci.com">contact@sisbim-ci.com</a>
             </div>
             <div class="fci-item">
               <i class="fa-regular fa-clock"></i>

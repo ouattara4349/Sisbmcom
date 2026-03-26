@@ -118,24 +118,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const companyVal    = company && company.value.trim()? company.value.trim() : 'Non renseignée';
 
       const message = [
-        '━━━━━━━━━━━━━━━━━━━━',
-        '📋 *NOUVELLE DEMANDE – SISBM*',
-        '━━━━━━━━━━━━━━━━━━━━',
+        '-------------------',
+        '*NOUVELLE DEMANDE - SISBM*',
+        '-------------------',
         '',
-        '👤 *Nom :* '        + name.value.trim(),
-        '📧 *Email :* '      + email.value.trim(),
-        '📞 *Téléphone :* '  + phoneVal,
-        '🏢 *Entreprise :* ' + companyVal,
+        '*Nom:* ' + name.value.trim(),
+        '*Email:* ' + email.value.trim(),
+        '*Telephone:* ' + phoneVal,
+        '*Entreprise:* ' + companyVal,
         '',
-        '━━━━━━━━━━━━━━━━━━━━',
-        '🎯 *Objet :* '      + serviceLabel,
-        formationVal ? '🎓 *Formation :* ' + formationVal : null,
-        budgetVal    ? '💰 *Budget :* '    + budgetVal    : null,
+        '-------------------',
+        '*Objet:* ' + serviceLabel,
+        formationVal ? '*Formation:* ' + formationVal : null,
+        budgetVal ? '*Budget:* ' + budgetVal : null,
         '',
-        '━━━━━━━━━━━━━━━━━━━━',
-        '💬 *Message :*',
+        '-------------------',
+        '*Message:*',
         msg.value.trim(),
-        '━━━━━━━━━━━━━━━━━━━━',
+        '-------------------',
       ]
       .filter(line => line !== null)
       .join('\n');
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       /* ── Ouvrir WhatsApp après 800ms ── */
       setTimeout(() => {
 
-        window.open('https://wa.me/' + +2250720161466+ '?text=' + encodeURIComponent(message), '_blank');
+        window.open('https://wa.me/' + 2250556059740 + '?text=' + encodeURIComponent(message), '_blank');
 
         /* Réinitialiser bouton */
         btn.disabled = false;

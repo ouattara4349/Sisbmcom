@@ -1,0 +1,11 @@
+# robots.txt pour SISBM Academy
+# https://ouattara4349.github.io/Sisbmcom/
+
+User-agent: *
+Allow: /
+
+# Chemins autorisés
+Sitemap: https://ouattara4349.github.io/Sisbmcom/sitemap.xml
+
+# Pas de restrictions
+Disallow:
