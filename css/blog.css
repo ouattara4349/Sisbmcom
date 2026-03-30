@@ -380,11 +380,29 @@ footer { background: var(--navy); color: #ffffff; padding: 4rem 0 2rem; border-t
 }
 
 @media (max-width: 640px) {
-  /* Hero */
+  /* Prévention scroll horizontal */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  * { max-width: 100vw; box-sizing: border-box; }
+  
+  /* Hero - Image en haut, texte en dessous */
   .page-hero { padding: 6rem 1rem 3rem; }
-  .page-hero-content { padding: 0; }
-  .page-hero h1 { font-size: 1.6rem; }
-  .page-hero p { font-size: .88rem; }
+  .page-hero-inner { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem;
+  }
+  .page-hero-image { 
+    order: -1; /* Image en premier (en haut) */
+    margin-bottom: 0;
+  }
+  .page-hero-content { 
+    padding: 0; 
+    text-align: center;
+  }
+  .page-hero h1 { font-size: 1.6rem; text-align: center; }
+  .page-hero p { font-size: .88rem; text-align: center; margin: 0 auto 1.5rem; }
+  .hero-badges { justify-content: center; }
+  .breadcrumb { justify-content: center; }
 
   /* Search bar */
   .search-bar { flex-direction: column; max-width: 100%; gap: .4rem; }
