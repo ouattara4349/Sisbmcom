@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersécurité – Audit & Pentest – SISBM Academy</title>
+  <meta name="description" content="Services complets de cybersécurité : audit, conseil et test d'intrusion en Côte d'Ivoire. Protégez vos systèmes avec nos experts certifiés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
+</head>
+<body>
+
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" />
+      </div>
+      <div class="loader-spinner"></div>
+      <p>Chargement en cours...</p>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="service-cybersecurite.html">Services</a>
+          <ul class="dropdown-menu">
+            <li><span class="dropdown-section-title">Nos Domaines</span></li>
+            <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+            <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          </ul>
+        </li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="page-hero">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="https://content.pexels.com/aigc-bundle/videos/d2768979-5917-4739-9378-6516f64a4676.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-grid"></div>
+    
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a> <span>/</span> <span>Services</span> <span>/</span> <span>Cybersécurité</span>
+        </div>
+        
+        <h1 class="page-hero-title">
+          <span class="highlight">Cybersécurité</span>
+        </h1>
+        
+        <p class="page-hero-desc">
+          Audit, Conseil et Test d'Intrusion. Protégez vos systèmes d'information avec nos experts certifiés. 
+          Une approche complète pour sécuriser vos actifs numériques.
+        </p>
+        
+        <div class="mobile-hero-img">
+          <img src="images/hero secure.png" alt="Cybersécurité SISBM" class="hero-img" />
+        </div>
+        
+        <div class="page-hero-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-shield-halved"></i>
+            Demander un Audit
+          </a>
+          <a href="#audit" class="btn btn-secondary btn-discover">
+            <i class="fa-solid fa-arrow-down"></i>
+            Découvrir
+          </a>
+        </div>
+        
+        <div class="page-hero-stats">
+          <div class="stat-box">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Audits & Pentests</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Vulnérabilités Détectées</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Conformité Atteinte</span>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- ══════════════ AUDIT & CONSEIL ══════════════ -->
+  <section id="audit" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Audit & Conseil</span>
+        <h2 class="light">Sécuriser Vos Systèmes</h2>
+        <p class="light">Une expertise complète pour protéger votre organisation</p>
+      </div>
+      
+      <div class="objective-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/objectif.jpg" alt="Objectif" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Objectif Principal</h3>
+          <p>
+            Nos services d'audit et conseil en cybersécurité visent à identifier les vulnérabilités de vos systèmes, 
+            évaluer votre niveau de maturité en sécurité, et vous accompagner dans la mise en place d'une stratégie 
+            de protection robuste conforme aux normes internationales (ISO 27001, RGPD).
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Analyse complète de votre infrastructure</li>
+            <li><i class="fa-solid fa-check"></i> Évaluation des risques et menaces</li>
+            <li><i class="fa-solid fa-check"></i> Conformité ISO 27001 & RGPD</li>
+            <li><i class="fa-solid fa-check"></i> Recommandations actionnables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PRESTATIONS AUDIT ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Prestations</span>
+        <h2 class="light">Nos Domaines d'Expertise</h2>
+        <p class="light">Des solutions complètes pour une sécurité optimale</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3>Gouvernance & Conformité</h3>
+          <p>Mise en place de politiques de sécurité et accompagnement vers la certification.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Politique de sécurité</li>
+            <li><i class="fa-solid fa-check"></i> ISO 27001</li>
+            <li><i class="fa-solid fa-check"></i> RGPD & Compliance</li>
+            <li><i class="fa-solid fa-check"></i> Analyse des risques</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>Sécurité Technique</h3>
+          <p>Audit technique approfondi pour identifier les vulnérabilités de vos systèmes.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Test d'intrusion</li>
+            <li><i class="fa-solid fa-check"></i> Analyse de code</li>
+            <li><i class="fa-solid fa-check"></i> Audit réseau</li>
+            <li><i class="fa-solid fa-check"></i> Scan vulnérabilités</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h3>Sécurité Opérationnelle</h3>
+          <p>Renforcement des processus et formation de vos équipes.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> SOC & supervision</li>
+            <li><i class="fa-solid fa-check"></i> Gestion des incidents</li>
+            <li><i class="fa-solid fa-check"></i> Sensibilisation</li>
+            <li><i class="fa-solid fa-check"></i> Plan de continuité</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PENTEST ══════════════ -->
+  <section id="pentest" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Test d'Intrusion</span>
+        <h2 class="light">Anticiper les Attaques</h2>
+        <p class="light">Simuler les attaques pour mieux se défendre</p>
+      </div>
+      
+      <div class="objective-card pentest-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/cyber.png" alt="Pentest" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Pourquoi un Pentest ?</h3>
+          <p>
+            Le test d'intrusion (Pentest) est une simulation d'attaque contrôlée permettant de détecter 
+            les vulnérabilités exploitables de vos systèmes, applications et infrastructures avant 
+            qu'un attaquant réel ne les découvre.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Identifier les failles de sécurité</li>
+            <li><i class="fa-solid fa-check"></i> Évaluer la résistance aux attaques</li>
+            <li><i class="fa-solid fa-check"></i> Prioriser les correctifs</li>
+            <li><i class="fa-solid fa-check"></i> Respecter les obligations de conformité</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TYPES DE PENTEST ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Types de Pentest</span>
+        <h2 class="light">Nos Approches de Test</h2>
+        <p class="light">Des solutions adaptées à vos besoins spécifiques</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Pentest Externe</h3>
+          <p>Test des systèmes accessibles depuis Internet (site web, API, serveurs).</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Audit site web</li>
+            <li><i class="fa-solid fa-check"></i> Test API</li>
+            <li><i class="fa-solid fa-check"></i> Scan infrastructure</li>
+            <li><i class="fa-solid fa-check"></i> Analyse SSL/TLS</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>Pentest Interne</h3>
+          <p>Simulation d'une attaque depuis l'intérieur du réseau corporate.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Test segment réseau</li>
+            <li><i class="fa-solid fa-check"></i> Élévation de privilèges</li>
+            <li><i class="fa-solid fa-check"></i> Mouvement latéral</li>
+            <li><i class="fa-solid fa-check"></i> Exfiltration de données</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <h3>Pentest Mobile</h3>
+          <p>Analyse de sécurité des applications iOS et Android.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Analyse APK/iPA</li>
+            <li><i class="fa-solid fa-check"></i> Test stockage données</li>
+            <li><i class="fa-solid fa-check"></i> Audit communications</li>
+            <li><i class="fa-solid fa-check"></i> Reverse engineering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CIBLES ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Cibles</span>
+        <h2 class="light">À Qui S'Adresse Ce Service ?</h2>
+        <p class="light">Tous types d'organisations souhaitant renforcer leur sécurité</p>
+      </div>
+      
+      <div class="targets-grid">
+        <div class="target-card" data-aos>
+          <div class="target-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h4>Administrations</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="100">
+          <div class="target-icon">
+            <i class="fa-solid fa-bank"></i>
+          </div>
+          <h4>Banque & Finance</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="200">
+          <div class="target-icon">
+            <i class="fa-solid fa-money-check-dollar"></i>
+          </div>
+          <h4>Microfinance</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="300">
+          <div class="target-icon">
+            <i class="fa-solid fa-satellite-dish"></i>
+          </div>
+          <h4>Opérateurs Numériques</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="400">
+          <div class="target-icon">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <h4>PME</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section id="cta-contact" class="section-pad bg-dark">
+    <div class="container">
+      <div class="cta-box" data-aos>
+        <div class="cta-box-text">
+          <h2>Protégez Votre Organisation</h2>
+          <p>Demandez votre audit de cybersécurité ou test d'intrusion. Nos experts vous fournissent un rapport détaillé et des recommandations actionnables.</p>
+        </div>
+        <div class="cta-box-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            Demander un Devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
+        </a>
+        <p>Votre partenaire de confiance en cybersécurité en Côte d'Ivoire. Nous protégeons vos systèmes d'information avec expertise et innovation.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service-cybersecurite.html">Cybersécurité</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="services.html">Vidéosurveillance</a></li>
+          <li><a href="services.html">GPS Tracking</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-info">
+          <div class="fci-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>23 BP 4326 Abidjan 23, Côte d'Ivoire</span>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+225 27 24 36 32 18</span>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contact@sisbm-ci.com</span>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Lun - Ven : 8h00 - 17h00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 SISBM Academy. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/sisbm-academy" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/search/top/?q=sisbm" target="_blank" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/2250720161466" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="wa-float" id="wa-float">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('[data-aos]').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>

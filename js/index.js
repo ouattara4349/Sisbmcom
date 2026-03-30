@@ -43,13 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* Fermer au clic sur un lien — SANS bloquer la navigation */
-    navLinks.querySelectorAll('a').forEach(link => {
+    navLinks.querySelectorAll('a:not(.dropdown > a)').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('mobile-open');
         hamburger.setAttribute('aria-expanded', 'false');
-        /* Pas de e.preventDefault() → le lien navigue normalement */
       });
     });
+
+    /* Handle dropdown toggle on mobile */
+    const dropdownToggle = navLinks.querySelector('.dropdown > a');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = dropdownToggle.parentElement;
+          dropdown.classList.toggle('dropdown-open');
+        }
+      });
+    }
   }
 
   /* ── 3. ANIMATIONS AU SCROLL (AOS léger) ── */

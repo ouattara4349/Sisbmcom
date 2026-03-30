@@ -11,7 +11,8 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/contact.css" />
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
 </head>
 <body>
 
@@ -19,7 +20,7 @@
 <div id="loader">
   <div class="loader-content">
     <div class="loader-logo">
-      <img src="images/logo.jpg" alt="SISBM Academy Logo" />
+      <img src="images/logo.png" alt="SISBM Academy Logo" />
     </div>
     <div class="loader-spinner"></div>
     <p>Chargement en cours...</p>
@@ -30,18 +31,27 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:40px;width:auto;" />
+      <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
     </a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li class="dropdown">
+        <a href="service-cybersecurite.html">Services</a>
+        <ul class="dropdown-menu">
+          <li><span class="dropdown-section-title">Nos Domaines</span></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+        </ul>
+      </li>
       <li><a href="formations.html">Formations</a></li>
       <li><a href="apropos.html">À propos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
     <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -53,43 +63,10 @@
   <div class="hero-grid"></div>
 
   <div class="page-hero-inner">
-    <!-- Texte gauche -->
-    <div class="page-hero-content">
-      <div class="breadcrumb">
-        <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
-      </div>
-      <h1>Parlons de votre <em>Projet</em></h1>
-      <p>Que ce soit pour un audit de sécurité, une installation GPS, une formation ou toute autre demande, notre équipe vous répond sous 24h.</p>
-
-      <!-- Contacts rapides -->
-      <div class="hero-quick">
-        <a href="tel:+2250720161466" class="quick-item">
-          <div class="quick-icon"><i class="fa-solid fa-phone"></i></div>
-          <div>
-            <small>Appeler maintenant</small>
-            <strong>+225 07 20 16 14 66</strong>
-          </div>
-        </a>
-        <a href="https://wa.me/2250556059740?text=Bonjour%20SISBM%2C%20je%20souhaite%20un%20devis." class="quick-item" target="_blank">
-          <div class="quick-icon quick-wa"><i class="fa-brands fa-whatsapp"></i></div>
-          <div>
-            <small>WhatsApp direct</small>
-            <strong>Réponse en quelques minutes</strong>
-          </div>
-        </a>
-        <a href="mailto:contact@sisbim-ci.com" class="quick-item">
-          <div class="quick-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div>
-            <small>Email</small>
-            <strong>contact@sisbim-ci.com</strong>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Image droite -->
+    <!-- Image première (移动端上) -->
     <div class="page-hero-image">
       <div class="hero-img-wrap">
+        <div class="hero-img-frame"></div>
         <img src="images/contact.png" alt="Contact SISBM Academy" />
         <div class="hero-img-badge">
           <i class="fa-solid fa-headset"></i>
@@ -102,6 +79,40 @@
           <i class="fa-solid fa-circle" style="color:#25D366;font-size:0.55rem"></i>
           <span>Disponible maintenant</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Texte en dessous (移动端下) -->
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+      </div>
+      <h1>Parlons de votre <em>Projet</em></h1>
+      <p>Que ce soit pour un audit de sécurité, une installation GPS, une formation ou toute autre demande, notre équipe vous répond sous 24h.</p>
+
+      <!-- Contacts rapides -->
+      <div class="hero-quick">
+        <a href="tel:+2252724363218" class="quick-item">
+          <div class="quick-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <small>Appeler maintenant</small>
+            <strong>+225 27 24 36 32 18</strong>
+          </div>
+        </a>
+        <a href="https://wa.me/2250556059740?text=Bonjour%20SISBM%2C%20je%20souhaite%20un%20devis." class="quick-item" target="_blank">
+          <div class="quick-icon quick-wa"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <small>WhatsApp direct</small>
+            <strong>Réponse en quelques minutes</strong>
+          </div>
+        </a>
+        <a href="mailto:contact@sisbm-ci.com" class="quick-item">
+          <div class="quick-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <small>Email</small>
+            <strong>contact@sisbim-ci.com</strong>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -117,7 +128,7 @@
         <h2><i class="fa-solid fa-paper-plane"></i> Envoyer un message</h2>
         <p>Décrivez votre besoin, nous vous recontactons rapidement avec une proposition adaptée.</p>
 
-        <form id="cf-form" novalidate>
+        <form id="cf-form" action="https://formspree.io/f/votre-id-formspree" method="POST" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="cf-name">
@@ -178,6 +189,7 @@
               <option>Cybersécurité Défensive</option>
               <option>Réseau & Système</option>
               <option>GRC – Conformité</option>
+              <option>Installation GPS</option>
             </select>
           </div>
 
@@ -235,7 +247,7 @@
             <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <div class="info-label">Adresse</div>
-              <div class="info-value">Yopougon, Abidjan<br />Côte d'Ivoire</div>
+              <div class="info-value">23 BP 4326 Abidjan 23<br />Côte d'Ivoire</div>
             </div>
           </div>
           <div class="info-item">
@@ -243,7 +255,9 @@
             <div>
               <div class="info-label">Téléphone</div>
               <div class="info-value">
-                <a href="tel:+2250720161466">+225 07 20 16 14 66</a>
+                <a href="tel:+2252724363218">+225 27 24 36 32 18</a><br />
+                <a href="tel:+2250707201614">+225 07 07 20 16 14</a><br />
+                <a href="tel:+2250503211422">+225 05 03 21 14 22</a>
               </div>
             </div>
           </div>
@@ -252,7 +266,7 @@
             <div>
               <div class="info-label">Email</div>
               <div class="info-value">
-                <a href="mailto:contact@sisbim-ci.com">contact@sisbim-ci.com</a>
+                <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
               </div>
             </div>
           </div>
@@ -260,7 +274,7 @@
             <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
             <div>
               <div class="info-label">Horaires</div>
-              <div class="info-value">Lun – Ven : 8h00 – 18h00<br />Sam : 9h00 – 13h00</div>
+              <div class="info-value">Lun – Ven : 8h00 – 17h00<br />Sam : 8h00 – 12h00</div>
             </div>
           </div>
         </div>
@@ -369,25 +383,29 @@
 
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">
-          <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:32px;width:auto;" />
+          <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
         </a>
         <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
         <div class="footer-contact-info">
           <div class="fci-item">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Yopougon, Abidjan – Côte d'Ivoire</span>
+            <span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span>
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-phone"></i>
-            <a href="tel:+2250720161466">+225 07 20 16 14 66</a>
+            <a href="tel:+2252724363218">+225 27 24 36 32 18</a>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <a href="tel:+22507201614">+225 07 07 20 16 14</a>
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:contact@sisbim-ci.com">contact@sisbim-ci.com</a>
+            <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
           </div>
           <div class="fci-item">
             <i class="fa-regular fa-clock"></i>
-            <span>Lun – Ven : 8h00 – 18h00 &nbsp;|&nbsp; Sam : 9h00 – 13h00</span>
+            <span>Lun – Ven : 8h00 – 17h00 &nbsp;|&nbsp; Sam : 8h00 – 12h00</span>
           </div>
         </div>
       </div>
@@ -395,7 +413,7 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#cybersec"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
           <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
           <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
           <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>

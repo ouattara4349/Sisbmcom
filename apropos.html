@@ -9,27 +9,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/services.css" />
   <link rel="stylesheet" href="css/apropos.css" />
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
 </head>
 <body>
+
+<!-- ══════════════ LOADER ══════════════ -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="loader-logo">
+      <img src="images/logo.png" alt="SISBM Academy Logo" />
+    </div>
+    <div class="loader-spinner"></div>
+    <p>Chargement en cours...</p>
+  </div>
+</div>
 
 <!-- ══════════════ NAVBAR ══════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:40px;width:auto;" />
+      <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
     </a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li class="dropdown">
+        <a href="service-cybersecurite.html">Services</a>
+        <ul class="dropdown-menu">
+          <li><span class="dropdown-section-title">Nos Domaines</span></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+        </ul>
+      </li>
       <li><a href="formations.html">Formations</a></li>
       <li><a href="apropos.html" class="active">À propos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -62,7 +84,7 @@
       <!-- Carte principale (grande, en haut) -->
       <div class="carousel-main">
         <img id="carousel-main-img"
-             src="images/apropos1.jpg"
+             src="images/notre equipe.png"
              alt="SISBM Academy" />
         <div class="carousel-main-overlay">
           <span id="carousel-main-label">Notre équipe</span>
@@ -217,10 +239,9 @@
     <div class="team-grid">
       <div class="team-card" data-aos data-aos-delay="100">
         <div class="team-avatar-wrap">
-          <img src="images/team1.jpg" alt="Directeur SISBM" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="team-avatar" style="background:linear-gradient(135deg,#0B3C5D,#1A9FD6);display:none;">MB</div>
+          <img src="images/dg.jpg" alt="Equipe SISBM" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0B3C5D,#1A9FD6);display:none;"><i class="fa-solid fa-shield-halved"></i></div>
         </div>
-        <h3>M. BAMBA</h3>
         <span class="team-role">Fondateur & Directeur Général</span>
         <p>Expert en cybersécurité avec 8+ ans d'expérience en pentest et réponse aux incidents.</p>
         <div class="team-certs">
@@ -235,10 +256,9 @@
       </div>
       <div class="team-card" data-aos data-aos-delay="200">
         <div class="team-avatar-wrap">
-          <img src="images/team2.jpg" alt="Responsable Formations" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="team-avatar" style="background:linear-gradient(135deg,#0B2A40,#00A896);display:none;">BH</div>
+          <img src="images/dg.jpg" alt="Equipe SISBM" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0B2A40,#00A896);display:none;"><i class="fa-solid fa-laptop-code"></i></div>
         </div>
-        <h3>M. BAMBA</h3>
         <span class="team-role">Expert SOC & Formateur</span>
         <p>Spécialiste SOC et SIEM. Formateur certifié avec 5 ans d'enseignement en cybersécurité.</p>
         <div class="team-certs">
@@ -253,10 +273,9 @@
       </div>
       <div class="team-card" data-aos data-aos-delay="300">
         <div class="team-avatar-wrap">
-          <img src="images/team3.jpg" alt="Experte GRC" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="team-avatar" style="background:linear-gradient(135deg,#2A0E40,#1470cd);display:none;">EK</div>
+          <img src="images/dg.jpg" alt="Equipe SISBM" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="team-avatar" style="background:linear-gradient(135deg,#2A0E40,#1470cd);display:none;"><i class="fa-solid fa-scale-balanced"></i></div>
         </div>
-        <h3>Elisé Konan YAO</h3>
         <span class="team-role">Consultante Conformité</span>
         <p>Spécialiste ISO 27001, RGPD et politique de sécurité des organisations ivoiriennes.</p>
         <div class="team-certs">
@@ -271,10 +290,9 @@
       </div>
       <div class="team-card" data-aos data-aos-delay="400">
         <div class="team-avatar-wrap">
-          <img src="images/team4.jpg" alt="Ingénieur Réseau" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-          <div class="team-avatar" style="background:linear-gradient(135deg,#1A1060,#5B4BE8);display:none;">YO</div>
+          <img src="images/dg.jpg" alt="Equipe SISBM" class="team-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="team-avatar" style="background:linear-gradient(135deg,#1A1060,#5B4BE8);display:none;"><i class="fa-solid fa-network-wired"></i></div>
         </div>
-        <h3>Ouattara Yacouba Stephane</h3>
         <span class="team-role">Expert Infrastructure & Cloud</span>
         <p>Expert en infrastructure, virtualisation et cloud. Responsable des labs de formation SISBM.</p>
         <div class="team-certs">
@@ -334,24 +352,181 @@
   </div>
 </section>
 
-<!-- ══════════════ PARTENAIRES ══════════════ -->
-<section id="partenaires">
-  <div class="container">
-    <div class="section-header" data-aos>
-      <span class="tag"><i class="fa-solid fa-handshake"></i> Ils nous font confiance</span>
-      <h2>Nos Partenaires</h2>
-      <div class="accent-bar"></div>
+<!-- ══════════════ SECTION CYBERSÉCURITÉ (PRIORITÉ) ══════════════ -->
+<section id="cybersec-section">
+  <div class="cyber-hero-img">
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1400&q=80&auto=format&fit=crop"
+         alt="Cybersécurité SISBM" loading="lazy" />
+    <div class="cyber-hero-overlay"></div>
+    <div class="cyber-hero-content">
+      <span class="cyber-badge"><i class="fa-solid fa-shield-halved"></i> Expertise N°1 SISBM</span>
+      <h2>Audit & Conseil en Cybersécurité</h2>
+      <p>Protection complète de vos systèmes d'information selon les standards ISO 27001, PCI-DSS et EBIOS — adaptés au contexte ivoirien et africain.</p>
     </div>
-    <div class="partenaires-grid" data-aos>
-      <div class="partenaire-item"><i class="fa-solid fa-helmet-safety"></i> Entreprise BTP CI</div>
-      <div class="partenaire-item"><i class="fa-solid fa-tower-broadcast"></i> Telecom Abidjan</div>
-      <div class="partenaire-item"><i class="fa-solid fa-truck"></i> Transport & Log. CI</div>
-      <div class="partenaire-item"><i class="fa-solid fa-landmark"></i> Banque Atlantique</div>
-      <div class="partenaire-item"><i class="fa-solid fa-shield-halved"></i> Groupe Sécurité CI</div>
-      <div class="partenaire-item"><i class="fa-solid fa-hotel"></i> Réseau Hôtels CI</div>
+  </div>
+ 
+  <div class="container">
+ 
+    <!-- 3 pilliers cybersécurité -->
+    <div class="cyber-pillars" data-aos>
+      <div class="cyber-pillar">
+        <div class="cp-icon"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>Gouvernance & Conformité</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Politiques et procédures de sécurité</li>
+          <li><i class="fa-solid fa-check"></i> Analyse de risques (EBIOS, MEHARI, ISO 27005)</li>
+          <li><i class="fa-solid fa-check"></i> Audit organisationnel</li>
+          <li><i class="fa-solid fa-check"></i> Conformité ISO 27001 / PCI-DSS</li>
+          <li><i class="fa-solid fa-check"></i> Sensibilisation & formation</li>
+        </ul>
+        <div class="cp-targets"><i class="fa-solid fa-bullseye"></i> Banques · Administrations · PME</div>
+      </div>
+ 
+      <div class="cyber-pillar cp-featured">
+        <div class="cp-icon"><i class="fa-solid fa-shield-virus"></i></div>
+        <h3>Sécurité Technique</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Test d'intrusion (Pentest)</li>
+          <li><i class="fa-solid fa-check"></i> Refonte d'architecture réseau</li>
+          <li><i class="fa-solid fa-check"></i> Déploiement solutions Fortinet</li>
+          <li><i class="fa-solid fa-check"></i> Firewall · VPN · IDS/IPS</li>
+          <li><i class="fa-solid fa-check"></i> Antivirus & EDR entreprise</li>
+        </ul>
+        <div class="cp-targets"><i class="fa-solid fa-bullseye"></i> Toutes organisations</div>
+      </div>
+ 
+      <div class="cyber-pillar">
+        <div class="cp-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Sécurité Opérationnelle</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> SOC / SIEM (supervision)</li>
+          <li><i class="fa-solid fa-check"></i> Investigation numérique (forensic)</li>
+          <li><i class="fa-solid fa-check"></i> Réponse aux incidents</li>
+          <li><i class="fa-solid fa-check"></i> Gestion des vulnérabilités</li>
+          <li><i class="fa-solid fa-check"></i> Continuité d'activité (PCA/PRA)</li>
+        </ul>
+        <div class="cp-targets"><i class="fa-solid fa-bullseye"></i> Microfinance · Opérateurs · PME</div>
+      </div>
+    </div>
+ 
+    <!-- Vidéo Fortinet intégrée depuis YouTube -->
+    <div class="cyber-video-section" data-aos>
+      <div class="cyber-video-text">
+        <span class="tag"><i class="fa-solid fa-play-circle"></i> En action</span>
+        <h3>SISBM & Fortinet : sécurité de niveau enterprise</h3>
+        <p>En tant que partenaire des solutions Fortinet, SISBM déploie les technologies de cybersécurité les plus avancées au monde pour protéger vos infrastructures en Côte d'Ivoire.</p>
+        <div class="cyber-video-stats">
+          <div class="cvs-item">
+            <strong>FortiGate</strong>
+            <span>Firewall nouvelle génération</span>
+          </div>
+          <div class="cvs-item">
+            <strong>FortiSIEM</strong>
+            <span>Supervision & détection</span>
+          </div>
+          <div class="cvs-item">
+            <strong>FortiEDR</strong>
+            <span>Protection endpoints</span>
+          </div>
+        </div>
+        <a href="contact.html#contact-form" class="btn btn-primary">
+          <i class="fa-solid fa-shield-halved"></i> Demander un audit gratuit
+        </a>
+      </div>
+      <div class="cyber-video-embed">
+        <iframe
+          width="678"
+          height="381"
+          src="https://www.youtube.com/embed/o0btrmZcmGI?rel=0&modestbranding=1&mute=1"
+          title="Leading the Convergence of Networking and Security | Fortinet"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+        <div class="cyber-video-caption">
+          <i class="fa-brands fa-youtube"></i> Fortinet – Leading the Convergence of Networking and Security
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Images cybersécurité (Unsplash) -->
+    <div class="cyber-gallery" data-aos>
+      <div class="cg-item">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80&auto=format&fit=crop"
+             alt="SOC Security Operations Center" loading="lazy" />
+        <div class="cg-label"><i class="fa-solid fa-display"></i> Centre SOC</div>
+      </div>
+      <div class="cg-item">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop"
+             alt="Infrastructure réseau sécurisée" loading="lazy" />
+        <div class="cg-label"><i class="fa-solid fa-server"></i> Infrastructure sécurisée</div>
+      </div>
+      <div class="cg-item">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80&auto=format&fit=crop"
+             alt="Audit et formation cybersécurité" loading="lazy" />
+        <div class="cg-label"><i class="fa-solid fa-graduation-cap"></i> Formation & Audit</div>
+      </div>
+    </div>
+ 
+    <div class="section-cta" data-aos>
+      <a href="service-cybersecurite.html" class="btn btn-outline-cyan">
+        Voir tous nos services cyber <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
   </div>
 </section>
+
+<!-- ══════════════ PARTENAIRES (Grille animée) ══════════════ -->
+  <section id="partners">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag">Ils nous font confiance</span>
+        <h2>Nos Partenaires</h2>
+        <p>Des collaborations stratégiques avec les leaders du marché</p>
+        <div class="accent-bar"></div>
+      </div>
+      
+      <div class="partners-grid">
+        <div class="partner-card" data-aos data-aos-delay="100">
+          <img src="images/partenaire1.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="150">
+          <img src="images/partenaire3.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="200">
+          <img src="images/partenaire 4.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="250">
+          <img src="images/partenaire 5.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="300">
+          <img src="images/partenaire 7.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="350">
+          <img src="images/partenaire 9.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="400">
+          <img src="images/partenaire 10.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="450">
+          <img src="images/partenaire13.jpg" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="450">
+          <img src="images/patenaire4.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="450">
+          <img src="images/patenaire 8.png" alt="Partenaire" />
+        </div>
+        <div class="partner-card" data-aos data-aos-delay="450">
+          <img src="images/paartenaire6.png" alt="Partenaire" />
+        </div>
+         <div class="partner-card" data-aos data-aos-delay="450">
+          <img src="images/Dahua-Logo-PNG.png" alt="Partenaire" />
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- ══════════════ CTA ══════════════ -->
 <section id="cta">
@@ -377,20 +552,21 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">
-          <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:32px;width:auto;" />
+          <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
         </a>
         <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
         <div class="footer-contact-info">
-          <div class="fci-item"><i class="fa-solid fa-location-dot"></i><span>Yopougon, Abidjan – Côte d'Ivoire</span></div>
-          <div class="fci-item"><i class="fa-solid fa-phone"></i><a href="tel:+2250720161466">+225 07 20 16 14 66</a></div>
-          <div class="fci-item"><i class="fa-solid fa-envelope"></i><a href="mailto:contact@sisbim-ci.com">contact@sisbim-ci.com</a></div>
+          <div class="fci-item"><i class="fa-solid fa-location-dot"></i><span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span></div>
+          <div class="fci-item"><i class="fa-solid fa-phone"></i><a href="tel:+2252724363218">+225 27 24 36 32 18</a></div>
+          <div class="fci-item"><i class="fa-solid fa-mobile-screen"></i><a href="tel:+22507201614">+225 07 20 16 14</a></div>
+          <div class="fci-item"><i class="fa-solid fa-envelope"></i><a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a></div>
           <div class="fci-item"><i class="fa-regular fa-clock"></i><span>Lun – Ven : 8h00 – 18h00 &nbsp;|&nbsp; Sam : 9h00 – 13h00</span></div>
         </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#cybersec"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
           <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
           <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
           <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>
@@ -431,6 +607,27 @@
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+<script src="js/index.js"></script>
 <script src="js/apropos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var hb = document.querySelector('.nav-hamburger');
+    var nl = document.querySelector('.nav-links');
+    if (hb) {
+      hb.addEventListener('click', function() {
+        nl.classList.toggle('mobile-open');
+      });
+    }
+    // Fix dropdown
+    var dropdownToggle = nl.querySelector('.dropdown > a');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var dropdown = dropdownToggle.parentElement;
+        dropdown.classList.toggle('dropdown-open');
+      });
+    }
+  });
+</script>
 </body>
 </html>

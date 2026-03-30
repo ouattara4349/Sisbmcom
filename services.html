@@ -18,7 +18,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
 
   <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -65,6 +65,16 @@
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-links { display: flex; align-items: center; gap: 2.25rem; }
+  .nav-links li { position: relative; }
+  .nav-links .dropdown > a { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+  .nav-links .dropdown > a::after { content: '\f107'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 0.7rem; margin-left: 0.3rem; transition: transform 0.3s; }
+  .nav-links .dropdown:hover > a::after { transform: rotate(180deg); }
+  .nav-links .dropdown-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: rgba(6,15,30,0.98); backdrop-filter: blur(12px); min-width: 220px; padding: 0.75rem 0; border-radius: 8px; border: 1px solid rgba(26,159,214,0.2); box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 999; }
+  .nav-links .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; top: calc(100% + 8px); }
+  .nav-links .dropdown-menu li { padding: 0; }
+  .nav-links .dropdown-menu a { display: block; padding: 0.65rem 1.25rem; font-size: 0.8rem; color: rgba(255,255,255,0.75); border-left: 3px solid transparent; transition: all 0.3s ease; }
+  .nav-links .dropdown-menu a:hover { color: white; background: rgba(26,159,214,0.15); border-left-color: var(--cyan); padding-left: 1.5rem; }
+  .dropdown-section-title { display: block; padding: 0.5rem 1.25rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cyan); font-weight: 700; border-bottom: 1px solid rgba(26,159,214,0.2); margin-bottom: 0.5rem; }
   .nav-links a { font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: color var(--tr); }
   .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
   .nav-cta {
@@ -457,10 +467,10 @@
   }
 
   .loader-logo img {
-    width: 80px;
+    width: 120px;
     height: auto;
     margin-bottom: 2rem;
-    animation: pulse 2s infinite;
+    animation: logo-grow 1.5s ease-out forwards;
   }
 
   .loader-spinner {
@@ -489,6 +499,12 @@
     50% { opacity: 0.7; }
   }
 
+  @keyframes logo-grow {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
   #loader.hidden {
     opacity: 0;
     visibility: hidden;
@@ -496,7 +512,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) { .svc-layout { grid-template-columns: 1fr; gap: 2.5rem; } .svc-layout.reverse { direction: ltr; } }
-  @media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } .page-hero { flex-direction: column; padding: 7rem 1.5rem 4rem; } .page-hero-image { max-width: 300px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; } }
+  @media (max-width: 768px) { .nav-links, .nav-cta { display: none; } .nav-hamburger { display: flex; } .nav-links.mobile-open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: rgba(6,15,30,0.98); backdrop-filter: blur(12px); padding: 1.5rem 2rem; gap: 1.25rem; z-index: 999; border-bottom: 1px solid rgba(26,159,214,0.2); } .nav-links.mobile-open a { color: rgba(255,255,255,0.85); font-size: 1rem; } .nav-links.mobile-open .dropdown>a { justify-content: space-between; } .nav-links.mobile-open .dropdown>a::after { content: '\f107'; font-family: 'Font Awesome 6 Free'; font-weight: 900; margin-left: auto; } .nav-links.mobile-open .dropdown.dropdown-open > a::after { transform: rotate(180deg); } .nav-links.mobile-open .dropdown-menu { display: none; opacity: 0; visibility: hidden; padding-left: 1rem; } .nav-links.mobile-open .dropdown.dropdown-open .dropdown-menu { display: block; opacity: 1; visibility: visible; } .nav-links.mobile-open .dropdown-menu li { padding: 0; } .nav-links.mobile-open .dropdown-menu a { padding: 0.5rem 0.75rem; font-size: 0.9rem; border-left: none; } .nav-links.mobile-open .dropdown-menu a:hover { background: rgba(26,159,214,0.15); padding-left: 0.75rem; } .nav-links.mobile-open .dropdown-section-title { font-size: 0.7rem; padding: 0.5rem 0.75rem; } .page-hero { flex-direction: column; padding: 7rem 1.5rem 4rem; } .page-hero-image { max-width: 300px; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; } }
   @media (max-width: 640px) { .page-hero { padding: 6rem 1rem 3rem; } .page-hero-image { max-width: 280px; } .process-grid { grid-template-columns: 1fr; } .process-grid::before { display: none; } .footer-grid { grid-template-columns: 1fr; } .container { padding: 0 1rem; } }
   </style>
 </head>
@@ -506,7 +522,7 @@
 <div id="loader">
   <div class="loader-content">
     <div class="loader-logo">
-      <img src="images/logo.jpg" alt="SISBM Academy Logo" />
+      <img src="images/logo.png" alt="SISBM Academy Logo" />
     </div>
     <div class="loader-spinner"></div>
     <p>Chargement en cours...</p>
@@ -517,18 +533,27 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html">
-      <img src="images/logo.jpg" alt="SISBM Logo" style="height:40px;width:auto;" />
+      <img src="images/logo.png" alt="SISBM Logo" style="height:70px;width:auto;" />
     </a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
+      <li class="dropdown">
+        <a href="service-cybersecurite.html">Services</a>
+        <ul class="dropdown-menu">
+          <li><span class="dropdown-section-title">Nos Domaines</span></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+        </ul>
+      </li>
       <li><a href="formations.html">Formations</a></li>
       <li><a href="apropos.html">À propos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
-    <button class="nav-hamburger" aria-label="Menu" id="hamburger">
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -563,14 +588,14 @@
     <button class="snav-btn active" onclick="scrollToSection('cybersec')">
       <i class="fa-solid fa-shield-halved"></i> Cybersécurité
     </button>
-    <button class="snav-btn" onclick="scrollToSection('tracking')">
-      <i class="fa-solid fa-location-dot"></i> Tracking GPS
-    </button>
     <button class="snav-btn" onclick="scrollToSection('electronique')">
       <i class="fa-solid fa-video"></i> Sécurité Électronique
     </button>
     <button class="snav-btn" onclick="scrollToSection('btp')">
-      <i class="fa-solid fa-helmet-safety"></i> BTP & Génie Civil
+      <i class="fa-solid fa-helmet-safety"></i> Construction & Bâtiment
+    </button>
+    <button class="snav-btn" onclick="scrollToSection('mobilite')">
+      <i class="fa-solid fa-truck"></i> Mobilité & Logistique
     </button>
   </div>
 </div>
@@ -580,36 +605,33 @@
   <div class="container">
     <div class="svc-layout">
       <div class="svc-text" data-aos>
-        <div class="section-label">Cybersécurité</div>
-        <h2>Protégez votre système d'information</h2>
-        <p>Nos experts certifiés (CEH, OSCP) analysent vos vulnérabilités, testent vos défenses et vous accompagnent pour bâtir une posture de sécurité robuste. Chaque mission est documentée avec un rapport CVSS complet.</p>
-        <div class="svc-kpis">
-          <div class="kpi-item"><span class="kpi-val">98%</span><span class="kpi-lbl">Vulnérabilités détectées</span></div>
-          <div class="kpi-item"><span class="kpi-val">48h</span><span class="kpi-lbl">Délai rapport</span></div>
-          <div class="kpi-item"><span class="kpi-val">24/7</span><span class="kpi-lbl">Support IR</span></div>
-        </div>
+        <div class="section-label">Audit & Conseil en Cybersécurité</div>
+        <h2>Sécurisez vos systèmes d'information</h2>
+        <p><strong>Objectif principal :</strong> Sécuriser les systèmes d'information et accompagner à la conformité réglementaire.</p>
+        <p>Nos experts certifiés (CEH, OSCP, CISM) analysent vos vulnérabilités, testent vos défenses et vous accompagnent pour bâtir une posture de sécurité robuste selon les standards internationaux (ISO 27001, PCI-DSS).</p>
+        
+        <h3 style="margin: 1.5rem 0 1rem; color: var(--navy); font-size: 1.1rem;">Nos 3 piliers d'expertise :</h3>
+        
         <div class="prestation-list">
           <div class="prestation-item">
-            <div class="pi-check"><i class="fa-solid fa-check"></i></div>
-            <div class="pi-text"><strong>Audit de sécurité (interne / externe)</strong><span>Analyse complète de votre périmètre réseau, applicatif et organisationnel selon la méthodologie PTES.</span></div>
+            <div class="pi-check"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="pi-text"><strong>Gouvernance & Conformité</strong><span>Politiques et procédures de sécurité, Analyse de risques (EBIOS, MEHARI, ISO 27005), Audit organisationnel, Conformité ISO 27001 / PCI-DSS, Sensibilisation & formation.</span></div>
           </div>
           <div class="prestation-item">
-            <div class="pi-check"><i class="fa-solid fa-check"></i></div>
-            <div class="pi-text"><strong>Test d'intrusion (Pentest)</strong><span>Simulation d'attaques réelles : web, réseau, Active Directory, mobile. Rapport détaillé + preuves d'exploitation.</span></div>
+            <div class="pi-check"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="pi-text"><strong>Sécurité Technique</strong><span>Tests d'intrusion (Pentest), Refonte d'architecture réseau, Déploiement solutions Fortinet, Firewall · VPN · IDS/IPS, Antivirus & EDR entreprise.</span></div>
           </div>
           <div class="prestation-item">
-            <div class="pi-check"><i class="fa-solid fa-check"></i></div>
-            <div class="pi-text"><strong>Réponse aux incidents (IR)</strong><span>Intervention rapide en cas de cyberattaque : containment, éradication, forensic et remédiation.</span></div>
-          </div>
-          <div class="prestation-item">
-            <div class="pi-check"><i class="fa-solid fa-check"></i></div>
-            <div class="pi-text"><strong>Conseil GRC / ISO 27001</strong><span>Accompagnement à la conformité : politique de sécurité, analyse des risques, préparation aux certifications.</span></div>
-          </div>
-          <div class="prestation-item">
-            <div class="pi-check"><i class="fa-solid fa-check"></i></div>
-            <div class="pi-text"><strong>Formation & sensibilisation</strong><span>Ateliers phishing, ingénierie sociale et bonnes pratiques pour vos équipes non-techniques.</span></div>
+            <div class="pi-check"><i class="fa-solid fa-eye"></i></div>
+            <div class="pi-text"><strong>Sécurité Opérationnelle</strong><span>SOC / SIEM (supervision), Investigation numérique (forensic), Réponse aux incidents, Gestion des vulnérabilités, Continuité d'activité (PCA/PRA).</span></div>
           </div>
         </div>
+        
+        <div class="svc-targets" style="margin: 1rem 0; padding: 0.75rem; background: rgba(26,159,214,0.08); border-radius: 8px; border-left: 3px solid var(--cyan);">
+          <i class="fa-solid fa-bullseye" style="color: var(--cyan); margin-right: 0.5rem;"></i>
+          <strong>Cibles :</strong> Administrations, Banques, Microfinance, Opérateurs de services numériques, PME
+        </div>
+        
         <div class="svc-ctas">
           <a href="contact.html#contact-form" class="btn btn-primary">Demander un audit <i class="fa-solid fa-arrow-right"></i></a>
           <a href="formations.html" class="btn btn-outline"><i class="fa-solid fa-graduation-cap"></i> Voir les formations</a>
@@ -659,19 +681,25 @@
     <div class="svc-layout">
       <div class="svc-text" data-aos>
         <div class="section-label">Sécurité Électronique</div>
-        <h2>Surveillez et sécurisez vos locaux</h2>
-        <p>Nous concevons et installons des systèmes de vidéosurveillance IP haute définition, de contrôle d'accès biométrique et d'alarmes intrusion pour vos bureaux, entrepôts et sites industriels.</p>
-        <div class="svc-kpis">
-          <div class="kpi-item"><span class="kpi-val">4K</span><span class="kpi-lbl">Résolution max</span></div>
-          <div class="kpi-item"><span class="kpi-val">30j</span><span class="kpi-lbl">Stockage vidéo</span></div>
-          <div class="kpi-item"><span class="kpi-val">40m</span><span class="kpi-lbl">Vision nuit IR</span></div>
-        </div>
+        <h2>Protégez vos biens et vos personnes</h2>
+        <p><strong>Objectif principal :</strong> Protéger les biens et les personnes par des systèmes technologiques avancés.</p>
+        <p>Nous concevons et installons des systèmes de vidéosurveillance IP haute définition, de contrôle d'accès biométrique et d'alarmes pour vos bureaux, entrepôts et sites industriels.</p>
+        
         <div class="prestation-list">
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Vidéosurveillance IP HD / 4K</strong><span>Caméras dôme, bullet, fisheye. NVR local + accès cloud depuis votre smartphone.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Contrôle d'accès biométrique</strong><span>Badges RFID, lecteurs d'empreintes, claviers à code. Gestion des habilitations et journaux d'accès.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Alarmes intrusion & incendie</strong><span>Détecteurs de mouvement, bris de vitre, fumée. Télésurveillance 24h/24 avec levée de doute.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Interphonie & portiers vidéo</strong><span>Gestion des entrées à distance via application mobile. Intégration avec le contrôle d'accès.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-id-card"></i></div><div class="pi-text"><strong>Contrôle d'accès</strong><span>Badges, biométrie (empreintes, reconnaissance faciale), claviers à code. Gestion des habilitations et journaux d'accès.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-video"></i></div><div class="pi-text"><strong>Vidéosurveillance</strong><span>Caméras IP/analogiques, NVR, dashcam. Résolution jusqu'en 4K, vision nocturne, stockage cloud et local.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-bell"></i></div><div class="pi-text"><strong>Détection d'intrusion</strong><span>Capteurs, barrières, alarmes. Télésurveillance 24h/24 avec levée de doute.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-fire"></i></div><div class="pi-text"><strong>Détection & alarme incendie</strong><span>Détecteurs de fumée, centrales, sirènes. Conformité aux normes de sécurité incendie.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-phone"></i></div><div class="pi-text"><strong>Interphonie & visiophonie</strong><span>Interphones IP, moniteurs, postes de garde. Gestion des entrées à distance via application mobile.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-location-dot"></i></div><div class="pi-text"><strong>Tracking de véhicules & géolocalisation</strong><span>Suivi en temps réel, géofencing, alertes intelligentes. Réduction des coûts et prévention des vols.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-gauge-high"></i></div><div class="pi-text"><strong> Télémétrie</strong><span>Capteurs carburant, suivi consommation. Optimisation de la gestion de flotte.</span></div></div>
         </div>
+        
+        <div class="svc-targets" style="margin: 1rem 0; padding: 0.75rem; background: rgba(26,159,214,0.08); border-radius: 8px; border-left: 3px solid var(--cyan);">
+          <i class="fa-solid fa-bullseye" style="color: var(--cyan); margin-right: 0.5rem;"></i>
+          <strong>Cibles :</strong> Bâtiments publics/privés, Commerces, Banques, PME, Entreprises logistiques, Particuliers
+        </div>
+        
         <div class="svc-ctas">
           <a href="contact.html#contact-form" class="btn btn-primary">Demander une étude <i class="fa-solid fa-arrow-right"></i></a>
           <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-images"></i> Nos réalisations</a>
@@ -689,27 +717,64 @@
   <div class="container">
     <div class="svc-layout reverse">
       <div class="svc-text" data-aos data-aos-delay="200">
-        <div class="section-label">BTP & Génie Civil</div>
-        <h2>Sécurisez vos chantiers et sites industriels</h2>
-        <p>Les chantiers présentent des risques spécifiques : vols de matériaux, intrusions nocturnes, accidents. Nos solutions intègrent vidéosurveillance mobile, contrôle d'accès et périmétrie.</p>
-        <div class="svc-kpis">
-          <div class="kpi-item"><span class="kpi-val">-80%</span><span class="kpi-lbl">Vols chantier</span></div>
-          <div class="kpi-item"><span class="kpi-val">360°</span><span class="kpi-lbl">Couverture</span></div>
-          <div class="kpi-item"><span class="kpi-val">GSM</span><span class="kpi-lbl">Sans câblage</span></div>
-        </div>
+        <div class="section-label">Construction & Bâtiment</div>
+        <h2>Concevez et réalisez des ouvrages durables</h2>
+        <p><strong>Objectif principal :</strong> Concevoir et réaliser des ouvrages durables et fonctionnels.</p>
+        <p>Nous accompagnons les maîtres d'ouvrage publics et privés dans la réalisation de projets de construction, de réhabilitation et d'aménagement, avec une expertise technique pointue.</p>
+        
         <div class="prestation-list">
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Vidéosurveillance mobile solaire</strong><span>Tours autonomes (panneau solaire + 4G). Idéal pour chantiers sans électricité.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Clôture périmétrique intelligente</strong><span>Détection de franchissement, alarme sonore et alerte SMS vers le responsable.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Contrôle d'accès chantier</strong><span>Badges nominatifs pour chaque intervenant. Traçabilité complète entrées/sorties.</span></div></div>
-          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-check"></i></div><div class="pi-text"><strong>Gardiennage & télésurveillance</strong><span>Ronde virtuelle automatisée la nuit. Intervention physique en cas d'alerte confirmée.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-pencil"></i></div><div class="pi-text"><strong>Études et ingénierie</strong><span>Études techniques, études topographiques, BIM, calculs de structure. Accompagnement depuis la faisabilité jusqu'au DOE.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-hammer"></i></div><div class="pi-text"><strong>Construction & réhabilitation</strong><span>Génie civil, extension de bâtiments, infrastructures industrielles et tertiaires. Suivi de chantier rigoureux.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-bolt"></i></div><div class="pi-text"><strong>Électricité, plomberie & climatisation</strong><span>Installations BT/HT, réseaux d'eau, climatisation, ventilation. Conformité aux normes en vigueur.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-road"></i></div><div class="pi-text"><strong>Aménagement urbain & infrastructures</strong><span>Voirie, drainage, assainissement, éclairage public. Projets d'aménagement de quartier.</span></div></div>
         </div>
+        
+        <div class="svc-targets" style="margin: 1rem 0; padding: 0.75rem; background: rgba(26,159,214,0.08); border-radius: 8px; border-left: 3px solid var(--cyan);">
+          <i class="fa-solid fa-bullseye" style="color: var(--cyan); margin-right: 0.5rem;"></i>
+          <strong>Cibles :</strong> Bâtiments administratifs, Logements, Écoles, Hôpitaux, Infrastructures publiques et industrielles
+        </div>
+        
         <div class="svc-ctas">
-          <a href="contact.html#contact-form" class="btn btn-primary">Devis chantier <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-star"></i> Nos références BTP</a>
+          <a href="contact.html#contact-form" class="btn btn-primary">Demander un devis <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-star"></i> Nos références</a>
         </div>
       </div>
       <div class="svc-visual visual-btp" data-aos data-aos-delay="200">
         <img src="images/btp8.jpg" alt="BTP SISBM" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MOBILITÉ & LOGISTIQUE ══════════════ -->
+<section class="svc-section" id="mobilite">
+  <div class="container">
+    <div class="svc-layout">
+      <div class="svc-text" data-aos>
+        <div class="section-label">Mobilité & Logistique</div>
+        <h2>Optimisez vos déplacements et transports</h2>
+        <p><strong>Objectif principal :</strong> Optimiser les déplacements de personnes et de marchandises à travers des solutions intelligentes, sécurisées et durables.</p>
+        <p>Nous vous proposons des solutions complètes de transport et de logistique pour assurer le déplacement sécurisé de vos marchandises et de vos équipes.</p>
+        
+        <div class="prestation-list">
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-bus"></i></div><div class="pi-text"><strong>Transport de personnes</strong><span>Transport public, location de véhicules avec ou sans chauffeur.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-truck"></i></div><div class="pi-text"><strong>Transport d'engins</strong><span>Transport de machines, équipements lourds, manutention spécialisée.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-boxes-packing"></i></div><div class="pi-text"><strong>Transport d'équipements et de matériels</strong><span>Équipements de bureau, mobilier, matériel informatique, emballage et protection.</span></div></div>
+          <div class="prestation-item"><div class="pi-check"><i class="fa-solid fa-ship"></i></div><div class="pi-text"><strong>Transport de marchandises</strong><span>Transport national et international, gestion douanière, suivi en temps réel.</span></div></div>
+        </div>
+        
+        <div class="svc-targets" style="margin: 1rem 0; padding: 0.75rem; background: rgba(26,159,214,0.08); border-radius: 8px; border-left: 3px solid var(--cyan);">
+          <i class="fa-solid fa-bullseye" style="color: var(--cyan); margin-right: 0.5rem;"></i>
+          <strong>Cibles :</strong> Entreprises, Collectivités, Particuliers, Institutions
+        </div>
+        
+        <div class="svc-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">Demander un devis <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html#contact-form" class="btn btn-outline"><i class="fa-solid fa-star"></i> Nos références</a>
+        </div>
+      </div>
+      <div class="svc-visual visual-btp" data-aos data-aos-delay="200">
+        <img src="images/logistiques.jpg" alt="Mobilité & Logistique SISBM" />
       </div>
     </div>
   </div>
@@ -771,85 +836,91 @@
   </div>
 </div>
 
-  <!-- ══════════════ FOOTER ══════════════ -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-grid">
+  
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
 
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="images/logo.jpg" alt="SISBM Academy Logo" style="height:32px;width:auto;" />
-          </a>
-          <p>SISBM - Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en audit cybersécurité, sécurité électronique, BTP, mobilité & logistique et formations IT à Abidjan, Côte d'Ivoire.</p>
-          <div class="footer-contact-info">
-            <div class="fci-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Yopougon, Abidjan – Côte d'Ivoire</span>
-            </div>
-            <div class="fci-item">
-              <i class="fa-solid fa-phone"></i>
-              <a href="tel:+2250720161466">+225 07 20 16 14 66</a>
-            </div>
-            <div class="fci-item">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:contact@sisbim-ci.com">contact@sisbim-ci.com</a>
-            </div>
-            <div class="fci-item">
-              <i class="fa-regular fa-clock"></i>
-              <span>Lun – Ven : 8h00 – 18h00 &nbsp;|&nbsp; Sam : 9h00 – 13h00</span>
-            </div>
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
+        </a>
+        <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
+        <div class="footer-contact-info">
+          <div class="fci-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+2252724363218">+225 27 24 36 32 18</a>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <a href="tel:+22507201614">+225 07 07 20 16 14</a>
+          </div>
+          <div class="fci-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
+          </div>
+          <div class="fci-item">
+            <i class="fa-regular fa-clock"></i>
+            <span>Lun – Ven : 8h00 – 17h00 &nbsp;|&nbsp; Sam : 8h00 – 12h00</span>
           </div>
         </div>
-
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html#cybersec"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
-            <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
-            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
-            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Formations</h4>
-          <ul>
-            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
-            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
-            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
-            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Liens utiles</h4>
-          <ul>
-            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
-            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
-          </ul>
-        </div>
-
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
-        <div class="footer-social">
-          <a href="#" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://wa.me/2250720161466" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & Bâtiment</a></li>
+          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Formations</h4>
+        <ul>
+          <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+          <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+          <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+          <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+          <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+          <li><a href="mentions-legales.html"><i class="fa-solid fa-gavel"></i> Mentions légales</a></li>
+          <li><a href="politique-confidentialite.html"><i class="fa-solid fa-shield-halved"></i> Politique de confidentialité</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/sisbm-academy" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/2250556059740" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
       </div>
     </div>
-  </footer>
-
+  </div>
+</footer>
   <!-- Bouton WhatsApp flottant -->
   <a href="https://wa.me/2250720161466?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services."
      class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
@@ -888,7 +959,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* Onglets actifs au scroll */
-  const sections = ['cybersec', 'tracking', 'electronique', 'btp'];
+  const sections = ['cybersec', 'electronique', 'btp', 'mobilite'];
   const btns = document.querySelectorAll('.snav-btn');
   const sectionObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -911,7 +982,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const open = navLinks.classList.toggle('mobile-open');
       hamburger.setAttribute('aria-expanded', open);
     });
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
+    
+    // Handle dropdown toggle on mobile
+    const dropdownToggle = navLinks.querySelector('.dropdown > a');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        // Only on mobile - prevent default and toggle submenu
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = dropdownToggle.parentElement;
+          dropdown.classList.toggle('dropdown-open');
+        }
+      });
+    }
+    
+    // Close menu when clicking regular links
+    navLinks.querySelectorAll('a:not(.dropdown > a)').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
   }
 
   /* Hover image hero */

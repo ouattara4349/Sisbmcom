@@ -29,7 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const o = nl.classList.toggle('mobile-open');
       hb.setAttribute('aria-expanded', o);
     });
-    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('mobile-open')));
+    nl.querySelectorAll('a:not(.dropdown > a)').forEach(a => a.addEventListener('click', () => nl.classList.remove('mobile-open')));
+    /* Handle dropdown toggle on mobile */
+    const dropdownToggle = nl.querySelector('.dropdown > a');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = dropdownToggle.parentElement;
+          dropdown.classList.toggle('dropdown-open');
+        }
+      });
+    }
   }
 
   /* ── AOS ── */
@@ -150,27 +162,51 @@ document.addEventListener('DOMContentLoaded', () => {
       if (btnTxt)  btnTxt.style.display  = 'none';
       if (btnLoad) btnLoad.style.display = 'inline';
 
-      /* ── Ouvrir WhatsApp après 800ms ── */
-      setTimeout(() => {
+      /* ── Envoyer via Formspree ── */
+      const formData = new FormData();
+      formData.append('name', name.value.trim());
+      formData.append('email', email.value.trim());
+      formData.append('phone', phoneVal);
+      formData.append('company', companyVal);
+      formData.append('service', serviceLabel);
+      formData.append('formation', formationVal || '');
+      formData.append('budget', budgetVal || '');
+      formData.append('message', msg.value.trim());
 
-        window.open('https://wa.me/' + 2250556059740 + '?text=' + encodeURIComponent(message), '_blank');
-
-        /* Réinitialiser bouton */
+      /* ⚠️ REMPLACEZ 'votre-id-formspree' PAR VOTRE VRAI ID FORMSPREE */
+      fetch('https://formspree.io/f/votre-id-formspree', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          /* ── Succès ── */
+          if (btnLoad) btnLoad.style.display = 'none';
+          success.style.display = 'block';
+          form.reset();
+          if (formationGroup) formationGroup.style.display = 'none';
+          setTimeout(() => { success.style.display = 'none'; btn.disabled = false; if (btnTxt) btnTxt.style.display = 'inline'; }, 5000);
+        } else {
+          throw new Error('Erreur');
+        }
+      })
+      .catch(() => {
+        /* ── Erreur → fallback WhatsApp ── */
         btn.disabled = false;
-        if (btnTxt)  btnTxt.style.display  = 'inline';
         if (btnLoad) btnLoad.style.display = 'none';
+        if (btnTxt)  btnTxt.style.display  = 'inline';
 
-        /* Message succès */
+        window.open('https://wa.me/' + 2250720161466 + '?text=' + encodeURIComponent(message), '_blank');
+
         if (success) {
           success.style.display = 'flex';
           setTimeout(() => { success.style.display = 'none'; }, 6000);
         }
 
-        /* Reset formulaire */
         form.reset();
         if (formationGroup) formationGroup.style.display = 'none';
-
-      }, 800);
+      });
     });
   }
 

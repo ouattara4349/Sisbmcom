@@ -27,7 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const o = nl.classList.toggle('mobile-open');
       hb.setAttribute('aria-expanded', o);
     });
-    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('mobile-open')));
+    nl.querySelectorAll('a:not(.dropdown > a)').forEach(a => a.addEventListener('click', () => nl.classList.remove('mobile-open')));
+    /* Handle dropdown toggle on mobile */
+    const dropdownToggle = nl.querySelector('.dropdown > a');
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const dropdown = dropdownToggle.parentElement;
+          dropdown.classList.toggle('dropdown-open');
+        }
+      });
+    }
   }
 
   /* ── AOS ANIMATIONS ── */
