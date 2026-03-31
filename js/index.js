@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggle = navLinks.querySelector('.dropdown > a');
     if (dropdownToggle) {
       dropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        // Allow toggle on mobile (up to 1024px) 
+        if (window.innerWidth <= 1024) {
           e.preventDefault();
           e.stopPropagation();
           const dropdown = dropdownToggle.parentElement;
@@ -147,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── 7. TYPEWRITER EFFECT ── */
   const typewriterEl = document.getElementById('typewriter-text');
   if (typewriterEl) {
-    const texts = ['avenir numérique', 'sécurité robuste', 'transformation digitale'];
+    const texts = ['avenir numérique', 'environnement de travail', 'transformation digitale'];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

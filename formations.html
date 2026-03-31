@@ -42,6 +42,8 @@
           <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
           <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
           <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          <li><span class="dropdown-section-title">Autres</span></li>
+          <li><a href="services.html"><i class="fa-solid fa-list"></i> Voir tous les services</a></li>
         </ul>
       </li>
       <li><a href="formations.html" class="active">Formations</a></li>
@@ -126,125 +128,371 @@
   </div>
 </section>
 
-<!-- ══════════════ FILTRES ══════════════ -->
-<div class="filters-bar">
-  <div class="filters-inner">
-    <button class="filter-btn active" data-filter="all">Toutes</button>
-    <button class="filter-btn" data-filter="debutant">Débutant</button>
-    <button class="filter-btn" data-filter="intermediaire">Intermédiaire</button>
-    <button class="filter-btn" data-filter="avance">Avancé</button>
-  </div>
-</div>
-
 <!-- ══════════════ FORMATIONS ══════════════ -->
-<section id="formations-list">
+<section id="formations-list" style="padding:4rem 0;background:var(--gray);">
   <div class="container">
-
-    <!-- CYBER OFFENSIVE -->
-    <div class="formation-detail" id="cyber-off" data-level="avance" data-aos>
-      <div class="fd-header fh-off">
-        <div class="fd-header-left">
-          <span class="fd-level">Avancé</span>
-          <h2>Cybersécurité Offensive</h2>
-          <p>Maîtrisez les techniques d'attaque éthique pour mieux défendre.</p>
-          <div class="fd-meta">
-            <span><i class="fa-regular fa-calendar"></i> 4 semaines</span>
-            <span><i class="fa-regular fa-clock"></i> 80h</span>
-            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
-            <span><i class="fa-solid fa-users"></i> Max 15</span>
-          </div>
+    <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+      <span class="tag">Catalogue</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(1.3rem,3vw,2rem);color:var(--navy);margin:0.5rem 0;">Nos Formations</h2>
+      <p style="color:var(--muted);font-size:0.95rem;max-width:600px;margin:0 auto;">Découvrez notre gamme complète de formations professionnelles</p>
+      <div class="accent-bar" style="width:44px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--green));margin:1rem auto;border-radius:2px;"></div>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;">
+      
+      <!-- ===== CATÉGORIE: CYBERSÉCURITÉ ===== -->
+      <div style="grid-column: 1/-1; margin-top: 1rem;">
+        <h3 style="font-family:var(--fd);font-size:1.3rem;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid var(--cyan);display:flex;align-items:center;gap:0.75rem;">
+          <i class="fa-solid fa-shield-halved" style="color:var(--cyan);"></i>
+          Formations en Cybersécurité
+        </h3>
+      </div>
+      
+      <!-- 1. Sécurité des Réseaux -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Sécurité des Réseaux.jpg" alt="Sécurité des Réseaux" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:var(--cyan);color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Réseaux</span>
         </div>
-        <div class="fd-price-box">
-          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
-          <a href="contact.html?formation=cyber-off" class="btn btn-white">
-            S'inscrire <i class="fa-solid fa-arrow-right"></i>
-          </a>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">1. Sécurité des Réseaux</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Fondamentaux et techniques avancées de protection des infrastructures réseau.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 3-5 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=sec-reseau" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="fd-body">
-        <div class="fd-col">
-          <h3>Programme</h3>
-          <div class="module-list">
-            <div class="module-item">
-              <div class="module-num">01</div>
-              <div><strong>Introduction au hacking éthique</strong><p>Cadre légal, méthodologie PTES, règles d'engagement.</p></div>
-            </div>
-            <div class="module-item">
-              <div class="module-num">02</div>
-              <div><strong>Reconnaissance & OSINT</strong><p>Google dorks, Shodan, Maltego, recon-ng.</p></div>
-            </div>
-            <div class="module-item">
-              <div class="module-num">03</div>
-              <div><strong>Scanning & Enumération</strong><p>Nmap, Nessus, Nikto, découverte de vulnérabilités.</p></div>
-            </div>
-            <div class="module-item">
-              <div class="module-num">04</div>
-              <div><strong>Exploitation Web (OWASP Top 10)</strong><p>SQLi, XSS, CSRF, IDOR, SSRF avec Burp Suite Pro.</p></div>
-            </div>
-            <div class="module-item">
-              <div class="module-num">05</div>
-              <div><strong>Exploitation Réseau & Active Directory</strong><p>Metasploit, pass-the-hash, kerberoasting, pivoting.</p></div>
-            </div>
-            <div class="module-item">
-              <div class="module-num">06</div>
-              <div><strong>Rapport de pentest professionnel</strong><p>CVSS scoring, preuves d'exploitation, recommandations.</p></div>
-            </div>
-          </div>
+
+      <!-- 2. Sécurité des Systèmes -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Sécurité des Systèmes.jpg" alt="Sécurité des Systèmes" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#00A896;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Systèmes</span>
         </div>
-        <div class="fd-col">
-          <h3>Ce que vous obtenez</h3>
-          <div class="benefits-list">
-            <div class="benefit-item">
-              <div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div><strong>Certificat SISBM Academy</strong><p>Reconnu par les entreprises partenaires en CI.</p></div>
-            </div>
-            <div class="benefit-item">
-              <div class="bi-icon"><i class="fa-solid fa-laptop-code"></i></div>
-              <div><strong>Accès labs virtuels</strong><p>Machines vulnérables, réseaux simulés, scénarios réels.</p></div>
-            </div>
-            <div class="benefit-item">
-              <div class="bi-icon"><i class="fa-solid fa-book-open"></i></div>
-              <div><strong>Support de cours complet</strong><p>PDF, vidéos, cheatsheets et outils pré-configurés.</p></div>
-            </div>
-            <div class="benefit-item">
-              <div class="bi-icon"><i class="fa-solid fa-handshake"></i></div>
-              <div><strong>Suivi post-formation</strong><p>Accès Discord + 3 mois de support formateur.</p></div>
-            </div>
-            <div class="benefit-item">
-              <div class="bi-icon"><i class="fa-solid fa-medal"></i></div>
-              <div><strong>Prépa certifications</strong><p>CEH, CompTIA PenTest+, OSCP.</p></div>
-            </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">2. Sécurité des Systèmes</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Renforcer la résilience des environnements Windows, Linux et serveurs.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
           </div>
-          <div class="prereqs">
-            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
-            <ul>
-              <li>Bases Linux (terminal)</li>
-              <li>Notions réseau TCP/IP</li>
-              <li>Curiosité et motivation</li>
-            </ul>
-          </div>
-          <div class="next-session">
-            <span class="ns-dot"></span>
-            <span>Prochaine session : <strong>15 Avril 2026</strong></span>
-            <span class="ns-places">3 places restantes</span>
-          </div>
+          <a href="contact.html?formation=sec-systeme" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+      </div>
+
+      <!-- 3. Sécurité des Applications -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Sécurité des Applications.jpg" alt="Sécurité des Applications" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#1A9FD6;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Application</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">3. Sécurité des Applications</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Développement et exploitation d'applications sûres.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 4 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Avancé</span>
+          </div>
+          <a href="contact.html?formation=appsec" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 4. SOC / Blue Team -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Cybersécurité Opérationnelle (SOC).jpg" alt="SOC Blue Team" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#00A896;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">SOC</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">4. Cybersécurité Opérationnelle (SOC)</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Surveillance, détection et réponse aux incidents.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 5 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Avancé</span>
+          </div>
+          <a href="contact.html?formation=soc" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 5. Pentest / Red Team -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Tests d'Intrusion & Ethical Hacking.jpg" alt="Pentest" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#E24B4A;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Offensive</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">5. Tests d'Intrusion & Ethical Hacking</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Approche offensive pour évaluer le niveau de sécurité.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 5-10 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Avancé</span>
+          </div>
+          <a href="contact.html?formation=pentest" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 6. Malware & Forensics -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Analyse de Malware & Forensics.jpg" alt="Malware & Forensics" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#E24B4A;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Forensics</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">6. Analyse de Malware & Forensics</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Investigations numériques et analyse de malwares.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 5 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Avancé</span>
+          </div>
+          <a href="contact.html?formation=malware" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 7. Cybersécurité Cloud -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Cybersécurité Cloud.jpg" alt="Cloud Security" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#5B4BE8;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Cloud</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">7. Cybersécurité Cloud</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Sécurisation des plateformes AWS, Azure et GCP.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 3-4 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=cloud" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 8. Cryptographie & PKI -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Cryptographie & PKI.jpg" alt="Cryptographie" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Crypto</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">8. Cryptographie & PKI</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Mécanismes cryptographiques et gestion des certificats.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 2-3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=crypto" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 9. GRC -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Gouvernance, Risques & Conformité.jpg" alt="GRC" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">GRC</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">9. Gouvernance, Risques & Conformité</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Normes ISO et exigences réglementaires.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=grc" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 10. SMCA ISO 22301 -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/SMCA ISO 22301.jpg" alt="SMCA" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Continuité</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">10. SMCA ISO 22301</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Système de Management de la Continuité d'Activité.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 2-3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=smca" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 11. ISO 27001 -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/SO 27001 exigences, SMS.jpg" alt="ISO 27001" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">ISO</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">11. ISO 27001 : exigences, SMSI</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Système de Management de la Sécurité de l'Information.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 2-3 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Débutant</span>
+          </div>
+          <a href="contact.html?formation=iso27001" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 12. ISO 27005 -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/ISO 27005  gestion des risques.jpg" alt="ISO 27005" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Risques</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">12. ISO 27005 : gestion des risques</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Méthodes de gestion des risques SSI.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 2-3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=iso27005" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 13. MEHARII 2022 -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Méthodologie MEHARII 2022.jpg" alt="MEHARI" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#A855F7;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Méthode</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">13. Méthodologie MEHARII 2022</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Analyse des risques selon l'approche CLUSIF.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 2-3 jours</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=mehari" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 14. Sécurité Humaine -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Sécurité Humaine & Sensibilisation.jpg" alt="Sécurité Humaine" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#5B4BE8;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Humain</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">14. Sécurité Humaine & Sensibilisation</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Renforcer la conscience cyber au sein du personnel.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 1-2 jours</span>
+            <span style="background:rgba(0,255,178,0.15);color:#00B48A;padding:0.2rem 0.5rem;border-radius:10px;">Débutant</span>
+          </div>
+          <a href="contact.html?formation=sensibilisation" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- ===== CATÉGORIE: SÉCURITÉ ÉLECTRONIQUE ===== -->
+      <div style="grid-column: 1/-1; margin-top: 1rem;">
+        <h3 style="font-family:var(--fd);font-size:1.3rem;color:var(--navy);margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid #00A896;display:flex;align-items:center;gap:0.75rem;">
+          <i class="fa-solid fa-microchip" style="color:#00A896;"></i>
+          Formations en Sécurité Électronique
+        </h3>
+      </div>
+
+      <!-- 15. Tracking GPS -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Tracking & Géolocalisation.jpg" alt="Tracking GPS" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#00A896;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Électronique</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">15. Tracking & Géolocalisation</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Maîtrisez les systèmes de tracking GPS et la gestion de flotte.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 12-15h</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=tracking-gps" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- 16. Vidéosurveillance -->
+      <div class="training-card" style="background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);overflow:hidden;transition:var(--tr);">
+        <div class="tc-image" style="position:relative;height:180px;overflow:hidden;">
+          <img src="images/Vidéosurveillance CCTV.jpg" alt="Vidéosurveillance" style="width:100%;height:100%;object-fit:cover;" />
+          <span style="position:absolute;top:12px;left:12px;background:#1A9FD6;color:#fff;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;text-transform:uppercase;">Électronique</span>
+        </div>
+        <div class="tc-content" style="padding:1.25rem;">
+          <h3 style="font-family:var(--fd);font-size:1rem;color:var(--navy);margin-bottom:0.5rem;line-height:1.3;">16. Vidéosurveillance CCTV</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.5;">Installez et exploitez un système de vidéosurveillance.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--muted);margin-bottom:1rem;">
+            <span><i class="fa-regular fa-clock"></i> 14-18h</span>
+            <span style="background:rgba(26,159,214,0.1);color:var(--cyan);padding:0.2rem 0.5rem;border-radius:10px;">Intermédiaire</span>
+          </div>
+          <a href="contact.html?formation=videosurveillance" style="display:block;text-align:center;padding:0.65rem;background:var(--navy);color:#fff;border-radius:var(--r-sm);font-size:0.82rem;font-weight:500;text-decoration:none;transition:var(--tr);">Voir détails <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      
+<!-- ══════════════ PARCOURS ══════════════ -->
+<section id="parcours" style="padding:5rem 0;background:var(--gray);">
+  <div class="container">
+    <div class="section-header" style="text-align:center;margin-bottom:3rem;">
+      <span class="tag">Conseils</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(1.3rem,2.5vw,1.8rem);color:var(--navy);margin:0.5rem 0;">Quel parcours choisir ?</h2>
+      <p style="color:var(--muted);font-size:0.92rem;">Suivez le chemin recommandé selon votre profil</p>
+      <div class="accent-bar" style="width:44px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--green));margin:1rem auto;border-radius:2px;"></div>
+    </div>
+    <div class="parcours-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+      <div class="parcours-card" style="background:#fff;border-radius:var(--r-lg);padding:2rem;border:1px solid var(--border);transition:var(--tr);">
+        <div class="pc-icon" style="font-size:2rem;margin-bottom:1rem;color:var(--cyan);"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">Débutant Cyber</h3>
+        <div class="pc-path" style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">ISO 27001</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Sensibilisation</span>
+        </div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Commencez par les fondamentaux de la sécurité et la sensibilisation.</p>
+      </div>
+      <div class="parcours-card" style="background:#fff;border-radius:var(--r-lg);padding:2rem;border:1px solid var(--border);transition:var(--tr);">
+        <div class="pc-icon" style="font-size:2rem;margin-bottom:1rem;color:var(--cyan);"><i class="fa-solid fa-network-wired"></i></div>
+        <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">Technicien Sécurité</h3>
+        <div class="pc-path" style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Réseaux</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Systèmes</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Cloud</span>
+        </div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Formez-vous aux bases techniques de la sécurité informatique.</p>
+      </div>
+      <div class="parcours-card" style="background:#fff;border-radius:var(--r-lg);padding:2rem;border:1px solid var(--border);transition:var(--tr);">
+        <div class="pc-icon" style="font-size:2rem;margin-bottom:1rem;color:var(--cyan);"><i class="fa-solid fa-bug"></i></div>
+        <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">Expert Offensive</h3>
+        <div class="pc-path" style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">AppSec</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Pentest</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">Malware</span>
+        </div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Devenez expert en tests d'intrusion et analyse de malwares.</p>
+      </div>
+      <div class="parcours-card" style="background:#fff;border-radius:var(--r-lg);padding:2rem;border:1px solid var(--border);transition:var(--tr);">
+        <div class="pc-icon" style="font-size:2rem;margin-bottom:1rem;color:var(--cyan);"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:1rem;">Responsable GRC</h3>
+        <div class="pc-path" style="display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">GRC</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">ISO 27001</span>
+          <span style="color:var(--cyan);font-size:0.9rem;">→</span>
+          <span style="background:rgba(26,159,214,0.1);color:var(--blue);font-size:0.75rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:20px;">SMCA</span>
+        </div>
+        <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Maitrisez la gouvernance et la conformité de votre organisation.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- CYBER DÉFENSIVE -->
-    <div class="formation-detail" id="cyber-def" data-level="intermediaire" data-aos>
-      <div class="fd-header fh-def">
-        <div class="fd-header-left">
-          <span class="fd-level">Intermédiaire</span>
-          <h2>Cybersécurité Défensive</h2>
-          <p>Détectez, analysez et répondez aux cyberattaques en temps réel.</p>
-          <div class="fd-meta">
-            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
-            <span><i class="fa-regular fa-clock"></i> 60h</span>
-            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
-            <span><i class="fa-solid fa-users"></i> Max 15</span>
-          </div>
+<!-- ══════════════ FAQ ══════════════ -->
         </div>
         <div class="fd-price-box">
           <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
@@ -287,81 +535,10 @@
       </div>
     </div>
 
-    <!-- RÉSEAU & SYSTÈME -->
-    <div class="formation-detail" id="reseau" data-level="debutant" data-aos>
-      <div class="fd-header fh-net">
-        <div class="fd-header-left">
-          <span class="fd-level">Débutant</span>
-          <h2>Réseau & Système</h2>
-          <p>Fondations solides en réseau, administration système et cloud.</p>
-          <div class="fd-meta">
-            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
-            <span><i class="fa-regular fa-clock"></i> 60h</span>
-            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
-            <span><i class="fa-solid fa-users"></i> Max 20</span>
-          </div>
-        </div>
-        <div class="fd-price-box">
-          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
-          <a href="contact.html?formation=reseau" class="btn btn-white">
-            S'inscrire <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-col">
-          <h3>Programme</h3>
-          <div class="module-list">
-            <div class="module-item"><div class="module-num">01</div><div><strong>Fondamentaux réseau</strong><p>Modèle OSI/TCP-IP, adressage IP, VLAN, routage, switching.</p></div></div>
-            <div class="module-item"><div class="module-num">02</div><div><strong>Administration Linux</strong><p>Commandes essentielles, services, scripts Bash, sécurisation.</p></div></div>
-            <div class="module-item"><div class="module-num">03</div><div><strong>Administration Windows Server</strong><p>Active Directory, GPO, DNS, DHCP, partage de fichiers.</p></div></div>
-            <div class="module-item"><div class="module-num">04</div><div><strong>Virtualisation</strong><p>VMware, VirtualBox, création de labs, réseaux virtuels.</p></div></div>
-            <div class="module-item"><div class="module-num">05</div><div><strong>Introduction Cloud</strong><p>AWS et Azure : VM, stockage, réseau, sécurité de base.</p></div></div>
-            <div class="module-item"><div class="module-num">06</div><div><strong>Préparation CCNA</strong><p>Configuration routeurs/switches Cisco, exercices examen.</p></div></div>
-          </div>
-        </div>
-        <div class="fd-col">
-          <h3>Ce que vous obtenez</h3>
-          <div class="benefits-list">
-            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><strong>Certificat SISBM Academy</strong><p>Fondations réseau et système validées.</p></div></div>
-            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Labs complets</strong><p>Windows Server + Linux pré-configurés.</p></div></div>
-            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-book-open"></i></div><div><strong>Supports Cisco officiels</strong><p>Packet Tracer, exercices CCNA, documentation.</p></div></div>
-            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div><div><strong>Passerelle formations</strong><p>Accès prioritaire aux formations cyber.</p></div></div>
-            <div class="benefit-item"><div class="bi-icon"><i class="fa-solid fa-medal"></i></div><div><strong>Prépa certifications</strong><p>CompTIA Network+, Cisco CCNA.</p></div></div>
-          </div>
-          <div class="prereqs">
-            <h4><i class="fa-solid fa-circle-check"></i> Prérequis</h4>
-            <ul><li>Aucun prérequis technique</li><li>Bac ou équivalent conseillé</li><li>Motivation et assiduité</li></ul>
-          </div>
-          <div class="next-session">
-            <span class="ns-dot"></span>
-            <span>Prochaine session : <strong>20 Avril 2026</strong></span>
-            <span class="ns-places">8 places restantes</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <!-- GRC -->
-    <div class="formation-detail" id="grc" data-level="intermediaire" data-aos>
-      <div class="fd-header fh-grc">
-        <div class="fd-header-left">
-          <span class="fd-level">Intermédiaire</span>
-          <h2>GRC – Gouvernance, Risques & Conformité</h2>
-          <p>Maîtrisez ISO 27001, RGPD et la gestion des risques cyber.</p>
-          <div class="fd-meta">
-            <span><i class="fa-regular fa-calendar"></i> 3 semaines</span>
-            <span><i class="fa-regular fa-clock"></i> 60h</span>
-            <span><i class="fa-solid fa-location-dot"></i> Présentiel</span>
-            <span><i class="fa-solid fa-users"></i> Max 15</span>
-          </div>
-        </div>
-        <div class="fd-price-box">
-          <div class="fd-price-sub"><i class="fa-solid fa-credit-card"></i> Paiement en 2x possible</div>
-          <a href="contact.html?formation=grc" class="btn btn-white">
-            S'inscrire <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
+<!-- ══════════════ FAQ ══════════════ -->
       </div>
       <div class="fd-body">
         <div class="fd-col">
@@ -395,57 +572,10 @@
           </div>
         </div>
       </div>
-    </div>
-
   </div>
 </section>
 
 <!-- ══════════════ PARCOURS ══════════════ -->
-<section id="parcours">
-  <div class="container">
-    <div class="section-header" data-aos>
-      <span class="tag">Conseils</span>
-      <h2>Quel parcours choisir ?</h2>
-      <p>Suivez le chemin recommandé selon votre profil</p>
-      <div class="accent-bar"></div>
-    </div>
-    <div class="parcours-grid">
-      <div class="parcours-card" data-aos data-aos-delay="100">
-        <div class="pc-icon"><i class="fa-solid fa-rocket"></i></div>
-        <h3>Débutant complet</h3>
-        <div class="pc-path">
-          <span class="pc-step">Réseau & Système</span>
-          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          <span class="pc-step">Cyber Défensive</span>
-          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          <span class="pc-step">Cyber Offensive</span>
-        </div>
-        <p>Construisez des bases solides avant de vous spécialiser.</p>
-      </div>
-      <div class="parcours-card" data-aos data-aos-delay="200">
-        <div class="pc-icon"><i class="fa-solid fa-briefcase"></i></div>
-        <h3>Profil manager / DSI</h3>
-        <div class="pc-path">
-          <span class="pc-step">GRC / ISO 27001</span>
-          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          <span class="pc-step">Cyber Défensive</span>
-        </div>
-        <p>Idéal pour les responsables IT souhaitant piloter la sécurité.</p>
-      </div>
-      <div class="parcours-card" data-aos data-aos-delay="300">
-        <div class="pc-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3>Futur pentesteur</h3>
-        <div class="pc-path">
-          <span class="pc-step">Réseau & Système</span>
-          <span class="pc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          <span class="pc-step">Cyber Offensive</span>
-        </div>
-        <p>Le chemin direct pour devenir consultant pentest en CI.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════ FAQ ══════════════ -->
 <section id="faq">
   <div class="container">
@@ -511,7 +641,7 @@
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-phone"></i>
-            <a href="tel:+2252724363218">+225 27 24 36 32 18</a>
+            <a href="tel:+2252723239402">+225 27 23 23 94 02</a>
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-mobile-screen"></i>
@@ -531,10 +661,10 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
-          <li><a href="services.html#tracking"><i class="fa-solid fa-location-dot"></i> Tracking GPS</a></li>
-          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
-          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> BTP & Génie civil</a></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
         </ul>
       </div>
 

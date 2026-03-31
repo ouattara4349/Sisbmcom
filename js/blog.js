@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownToggle = nl.querySelector('.dropdown > a');
     if (dropdownToggle) {
       dropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
           e.preventDefault();
           e.stopPropagation();
           const dropdown = dropdownToggle.parentElement;

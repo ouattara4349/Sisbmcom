@@ -545,6 +545,8 @@
           <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
           <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
           <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          <li><span class="dropdown-section-title">Autres</span></li>
+          <li><a href="services.html"><i class="fa-solid fa-list"></i> Voir tous les services</a></li>
         </ul>
       </li>
       <li><a href="formations.html">Formations</a></li>
@@ -854,7 +856,7 @@
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-phone"></i>
-            <a href="tel:+2252724363218">+225 27 24 36 32 18</a>
+            <a href="tel:+2252723239402">+225 27 23 23 94 02</a>
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-mobile-screen"></i>
@@ -874,9 +876,9 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</a></li>
-          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité électronique</a></li>
-          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & Bâtiment</a></li>
+          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
           <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
         </ul>
       </div>
@@ -988,7 +990,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dropdownToggle) {
       dropdownToggle.addEventListener('click', (e) => {
         // Only on mobile - prevent default and toggle submenu
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
           e.preventDefault();
           e.stopPropagation();
           const dropdown = dropdownToggle.parentElement;

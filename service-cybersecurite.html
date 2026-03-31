@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/mobile-nav.css" />
   <link rel="icon" type="image/png" href="images/logorech.jpg" />
 </head>
 <body>
@@ -35,7 +36,7 @@
 
       <ul class="nav-links" id="nav-menu">
         <li><a href="index.html">Accueil</a></li>
-        <li class="dropdown">
+        <!-- <li class="dropdown">
           <a href="service-cybersecurite.html">Services</a>
           <ul class="dropdown-menu">
             <li><span class="dropdown-section-title">Nos Domaines</span></li>
@@ -43,8 +44,10 @@
             <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
             <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
             <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+            <li><span class="dropdown-section-title">Autres</span></li>
+            <li><a href="services.html"><i class="fa-solid fa-list"></i> Voir tous les services</a></li>
           </ul>
-        </li>
+        </li> -->
         <li><a href="formations.html">Formations</a></li>
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -114,7 +117,9 @@
         </div>
       </div>
       
-
+      <div class="page-hero-image">
+        <img src="images/hero secure.png" alt="Cybersécurité SISBM" class="hero-img" />
+      </div>
     </div>
   </section>
 
@@ -357,95 +362,96 @@
   </section>
 
   <!-- ══════════════ FOOTER ══════════════ -->
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
-        </a>
-        <p>Votre partenaire de confiance en cybersécurité en Côte d'Ivoire. Nous protégeons vos systèmes d'information avec expertise et innovation.</p>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="service-cybersecurite.html">Cybersécurité</a></li>
-          <li><a href="formations.html">Formations</a></li>
-          <li><a href="services.html">Vidéosurveillance</a></li>
-          <li><a href="services.html">GPS Tracking</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Entreprise</h4>
-        <ul>
-          <li><a href="apropos.html">À propos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-info">
-          <div class="fci-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>23 BP 4326 Abidjan 23, Côte d'Ivoire</span>
-          </div>
-          <div class="fci-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+225 27 24 36 32 18</span>
-          </div>
-          <div class="fci-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>contact@sisbm-ci.com</span>
-          </div>
-          <div class="fci-item">
-            <i class="fa-solid fa-clock"></i>
-            <span>Lun - Ven : 8h00 - 17h00</span>
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
+          </a>
+          <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <div class="footer-contact-info">
+            <div class="fci-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2252723239402">+225 27 23 23 94 02</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <a href="tel:+22507201614">+225 07 07 20 16 14</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>Lun – Ven : 8h00 – 17h00 &nbsp;|&nbsp; Sam : 8h00 – 12h00</span>
+            </div>
           </div>
         </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+            <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+            <li><a href="mentions-legales.html"><i class="fa-solid fa-gavel"></i> Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html"><i class="fa-solid fa-shield-halved"></i> Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
       </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 SISBM Academy. Tous droits réservés.</p>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/company/sisbm-academy" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/search/top/?q=sisbm" target="_blank" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://wa.me/2250720161466" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+
+      <div class="footer-bottom">
+        <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/sisbm-academy" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/2250556059740" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <div class="wa-float" id="wa-float">
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250556059740?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
-  </div>
+  </a>
 
   <script src="js/index.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-      
-      document.querySelectorAll('[data-aos]').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-      });
-    });
-  </script>
-
 </body>
 </html>

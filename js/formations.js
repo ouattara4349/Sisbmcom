@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  /* ── FAQ ── */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
+  });
+
   /* ── LOADER ── */
   window.addEventListener('load',()=>{setTimeout(()=>{const l=document.getElementById('loader');if(l){l.classList.add('hidden');setTimeout(()=>{l.style.display='none'},500)}},2000)});
   // Navbar scroll
@@ -12,7 +21,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const dropdownToggle=nl.querySelector('.dropdown > a');
     if(dropdownToggle){
       dropdownToggle.addEventListener('click',(e)=>{
-        if(window.innerWidth<=768){
+        if(window.innerWidth<=1024){
           e.preventDefault();
           e.stopPropagation();
           const dropdown=dropdownToggle.parentElement;
