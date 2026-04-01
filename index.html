@@ -24,7 +24,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/services.css" />
-  <link rel="stylesheet" href="css/mobile-nav.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link rel="icon" type="image/png" href="images/logorech.jpg" />
 </head>
 <body>
@@ -40,6 +41,9 @@
     </div>
   </div>
 
+  <!-- Overlay mobile : ferme le menu au clic en dehors -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
   <!-- ══════════════ NAVBAR ══════════════ -->
   <nav id="navbar" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
@@ -49,18 +53,52 @@
 
       <ul class="nav-links" id="nav-menu">
         <li><a href="index.html" class="active">Accueil</a></li>
+
         <li class="dropdown">
-          <a href="service-cybersecurite.html">Services</a>
-          <ul class="dropdown-menu">
-            <li><span class="dropdown-section-title">Nos Domaines</span></li>
-            <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
-            <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
-            <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
-            <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          <a
+            href="service-cybersecurite.html"
+            class="nav-dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><span class="dropdown-section-title">Nos domaines</span></li>
+            <li>
+              <a href="service-cybersecurite.html" role="menuitem">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                Audit &amp; Conseil Cybersécurité
+              </a>
+            </li>
+            <li>
+              <a href="services.html#electronique" role="menuitem">
+                <i class="fa-solid fa-video" aria-hidden="true"></i>
+                Sécurité Électronique
+              </a>
+            </li>
+            <li>
+              <a href="services.html#btp" role="menuitem">
+                <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                Construction &amp; BTP
+              </a>
+            </li>
+            <li>
+              <a href="services.html#mobilite" role="menuitem">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                Mobilité &amp; Logistique
+              </a>
+            </li>
             <li><span class="dropdown-section-title">Autres</span></li>
-            <li><a href="services.html"><i class="fa-solid fa-list"></i> Voir tous les services</a></li>
+            <li>
+              <a href="services.html" role="menuitem">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                Voir tous les services
+              </a>
+            </li>
           </ul>
         </li>
+
         <li><a href="formations.html">Formations</a></li>
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -69,7 +107,14 @@
 
       <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
 
-      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+      <button
+        type="button"
+        class="nav-hamburger"
+        id="hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -794,6 +839,8 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>

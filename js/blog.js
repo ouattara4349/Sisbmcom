@@ -20,33 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
      (évite le blocage si une image est absente) */
   setTimeout(hideLoader, 3000);
 
-  /* ── NAVBAR SCROLL ── */
-  const nb = document.getElementById('navbar');
-  if (nb) window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), { passive: true });
-
-  /* ── MENU MOBILE ── */
-  const hb = document.querySelector('.nav-hamburger');
-  const nl = document.querySelector('.nav-links');
-  if (hb) {
-    hb.addEventListener('click', () => {
-      const o = nl.classList.toggle('mobile-open');
-      hb.setAttribute('aria-expanded', o);
-    });
-    nl.querySelectorAll('a:not(.dropdown > a)').forEach(a => a.addEventListener('click', () => nl.classList.remove('mobile-open')));
-    /* Handle dropdown toggle on mobile */
-    const dropdownToggle = nl.querySelector('.dropdown > a');
-    if (dropdownToggle) {
-      dropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 1024) {
-          e.preventDefault();
-          e.stopPropagation();
-          const dropdown = dropdownToggle.parentElement;
-          dropdown.classList.toggle('dropdown-open');
-        }
-      });
-    }
-  }
-
   /* ── AOS ── */
   const obs = new IntersectionObserver(e => {
     e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('aos-animate'); obs.unobserve(x.target); } });

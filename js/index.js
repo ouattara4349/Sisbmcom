@@ -17,54 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000); // Délai minimum de 2 secondes
   });
 
-  /* ── 1. NAVBAR SCROLL ── */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  }, { passive: true });
-
-  /* ── 2. MENU MOBILE (hamburger) ── */
-  const hamburger = document.querySelector('.nav-hamburger');
-  const navLinks  = document.querySelector('.nav-links');
-
-  if (hamburger) {
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const open = navLinks.classList.toggle('mobile-open');
-      hamburger.setAttribute('aria-expanded', open);
-    });
-
-    /* Fermer le menu au clic en dehors */
-    document.addEventListener('click', (e) => {
-      if (!navbar.contains(e.target)) {
-        navLinks.classList.remove('mobile-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    /* Fermer au clic sur un lien — SANS bloquer la navigation */
-    navLinks.querySelectorAll('a:not(.dropdown > a)').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Handle dropdown toggle on mobile */
-    const dropdownToggle = navLinks.querySelector('.dropdown > a');
-    if (dropdownToggle) {
-      dropdownToggle.addEventListener('click', (e) => {
-        // Allow toggle on mobile (up to 1024px) 
-        if (window.innerWidth <= 1024) {
-          e.preventDefault();
-          e.stopPropagation();
-          const dropdown = dropdownToggle.parentElement;
-          dropdown.classList.toggle('dropdown-open');
-        }
-      });
-    }
-  }
-
   /* ── 3. ANIMATIONS AU SCROLL (AOS léger) ── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

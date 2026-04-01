@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="stylesheet" href="css/services.css" />
-  <link rel="stylesheet" href="css/mobile-nav.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link rel="icon" type="image/png" href="images/logorech.jpg" />
 </head>
 <body>
@@ -28,37 +29,84 @@
   </div>
 </div>
 
-<!-- ══════════════ NAVBAR ══════════════ -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
-    </a>
-    <ul class="nav-links" id="nav-menu">
-      <li><a href="index.html">Accueil</a></li>
-      <li class="dropdown">
-        <a href="service-cybersecurite.html">Services</a>
-        <ul class="dropdown-menu">
-          <li><span class="dropdown-section-title">Nos Domaines</span></li>
-          <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
-          <li><a href="services.html#electronique"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
-          <li><a href="services.html#btp"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
-          <li><a href="services.html#mobilite"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
-          <li><span class="dropdown-section-title">Autres</span></li>
-          <li><a href="services.html"><i class="fa-solid fa-list"></i> Voir tous les services</a></li>
-        </ul>
-      </li>
-      <li><a href="formations.html">Formations</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-    <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
-    <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  <!-- Overlay mobile : ferme le menu au clic en dehors -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+          <a
+            href="service-cybersecurite.html"
+            class="nav-dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><span class="dropdown-section-title">Nos domaines</span></li>
+            <li>
+              <a href="service-cybersecurite.html" role="menuitem">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                Audit &amp; Conseil Cybersécurité
+              </a>
+            </li>
+            <li>
+              <a href="services.html#electronique" role="menuitem">
+                <i class="fa-solid fa-video" aria-hidden="true"></i>
+                Sécurité Électronique
+              </a>
+            </li>
+            <li>
+              <a href="services.html#btp" role="menuitem">
+                <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                Construction &amp; BTP
+              </a>
+            </li>
+            <li>
+              <a href="services.html#mobilite" role="menuitem">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                Mobilité &amp; Logistique
+              </a>
+            </li>
+            <li><span class="dropdown-section-title">Autres</span></li>
+            <li>
+              <a href="services.html" role="menuitem">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                Voir tous les services
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+
+      <button
+        type="button"
+        class="nav-hamburger"
+        id="hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
 <!-- ══════════════ HERO ══════════════ -->
 <div class="page-hero">
@@ -403,7 +451,7 @@
           </div>
           <div class="fci-item">
             <i class="fa-solid fa-envelope"></i>
-           <a href="contact@sisbm-ci.com"> <span>contact@sisbm-ci.com</span></a>
+            <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
           </div>
           <div class="fci-item">
             <i class="fa-regular fa-clock"></i>
@@ -456,9 +504,20 @@
           <i class="fa-brands fa-facebook-f"></i>
         </a>
         <a href="https://wa.me/2250556059740" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
-          <i class="fa-brands fa-wha
-  <!-- ═══ SCRIPTS ═══ -->
-  <script src="js/nav.js"></script>
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250720161466?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  
+  <script src="js/footer.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>
