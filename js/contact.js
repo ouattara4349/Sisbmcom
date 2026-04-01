@@ -110,36 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      /* ── Construire le message WhatsApp bien structuré ── */
-      const serviceLabel  = service.options[service.selectedIndex].text;
-      const formationVal  = (formation && formation.value) ? formation.options[formation.selectedIndex].text : null;
-      const budgetVal     = (budget && budget.value)       ? budget.options[budget.selectedIndex].text       : null;
-      const phoneVal      = phone && phone.value.trim()    ? phone.value.trim()   : 'Non renseigné';
-      const companyVal    = company && company.value.trim()? company.value.trim() : 'Non renseignée';
-
-      const message = [
-        '-------------------',
-        '*NOUVELLE DEMANDE - SISBM*',
-        '-------------------',
-        '',
-        '*Nom:* ' + name.value.trim(),
-        '*Email:* ' + email.value.trim(),
-        '*Telephone:* ' + phoneVal,
-        '*Entreprise:* ' + companyVal,
-        '',
-        '-------------------',
-        '*Objet:* ' + serviceLabel,
-        formationVal ? '*Formation:* ' + formationVal : null,
-        budgetVal ? '*Budget:* ' + budgetVal : null,
-        '',
-        '-------------------',
-        '*Message:*',
-        msg.value.trim(),
-        '-------------------',
-      ]
-      .filter(line => line !== null)
-      .join('\n');
-
       /* ── Feedback visuel ── */
       const btn     = document.getElementById('submit-btn');
       const btnTxt  = document.getElementById('btn-text');
@@ -161,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
       formData.append('budget', budgetVal || '');
       formData.append('message', msg.value.trim());
 
-      /* ⚠️ REMPLACEZ 'votre-id-formspree' PAR VOTRE VRAI ID FORMSPREE */
-      fetch('https://formspree.io/f/votre-id-formspree', {
+      /* ⚠️ FORMSPREE ID - NE PAS MODIFIER */
+      fetch('https://formspree.io/f/xojplwld', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
@@ -180,12 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
       .catch(() => {
-        /* ── Erreur → fallback WhatsApp ── */
+        /* ── Erreur → Message d'erreur ── */
         btn.disabled = false;
         if (btnLoad) btnLoad.style.display = 'none';
         if (btnTxt)  btnTxt.style.display  = 'inline';
-
-        window.open('https://wa.me/' + 2250720161466 + '?text=' + encodeURIComponent(message), '_blank');
+        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter par email.');
 
         if (success) {
           success.style.display = 'flex';
