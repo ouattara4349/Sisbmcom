@@ -2,6 +2,24 @@
    Service: Audit & Conseil Cybersécurité
    ============================================= */
 
+:root {
+  --navy:       #0E7AB0;
+  --navy-mid:   #0E7AB0;
+  --blue:       #0E7AB0;
+  --cyan:       #1A9FD6;
+  --cyan-light: #4BB8E8;
+  --green:      #00FFB2;
+  --white:      #FFFFFF;
+  --gray-bg:    #F0F4F8;
+  --text:       #1A2B3C;
+  --muted:      #607080;
+  --border:     rgba(11,60,93,0.1);
+  --tr:         0.25s ease;
+  --r-sm:       6px;
+  --r-md:       10px;
+  --r-lg:       16px;
+}
+
 .objective-card {
   display: flex;
   align-items: stretch;
