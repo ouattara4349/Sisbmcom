@@ -80,11 +80,26 @@ document.addEventListener('DOMContentLoaded', () => {
       let valid = true;
       const errName    = document.getElementById('err-name');
       const errEmail   = document.getElementById('err-email');
+      const errPhone   = document.getElementById('err-phone');
       const errService = document.getElementById('err-service');
       const errMsg     = document.getElementById('err-message');
 
       if (!name.value.trim())        { errName.textContent    = 'Ce champ est requis';           valid = false; } else { errName.textContent    = ''; }
       if (!email.value.includes('@')){ errEmail.textContent   = 'Email invalide';                valid = false; } else { errEmail.textContent   = ''; }
+      
+      // Validation du téléphone : uniquement chiffres, espaces, +, -, parenthèses
+      const phoneRegex = /^[0-9+\s\-()]+$/;
+      if (phone && phone.value.trim()) {
+        if (!phoneRegex.test(phone.value.trim())) {
+          errPhone.textContent = 'Numéro invalide : utilisez uniquement des chiffres';
+          valid = false;
+        } else {
+          errPhone.textContent = '';
+        }
+      } else {
+        errPhone.textContent = '';
+      }
+      
       if (!service.value)            { errService.textContent = 'Veuillez sélectionner un objet';valid = false; } else { errService.textContent = ''; }
       if (!msg.value.trim())         { errMsg.textContent     = 'Veuillez décrire votre demande';valid = false; } else { errMsg.textContent     = ''; }
 
