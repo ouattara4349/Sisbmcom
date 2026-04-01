@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".dropdown .nav-dropdown-trigger").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
-      if (!isMobileLayout() && !navLinks?.classList.contains("mobile-open")) return;
       e.preventDefault();
       const dropdown = trigger.closest(".dropdown");
       if (!dropdown || !navLinks) return;

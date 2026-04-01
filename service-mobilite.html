@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobilité & Logistique – Transport & Location – SISBM Academy</title>
+  <meta name="description" content="Services de mobilité et logistique : transport de personnes, transport d'engins et de marchandises, location de véhicules en Côte d'Ivoire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
+</head>
+<body>
+
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" />
+      </div>
+      <div class="loader-spinner"></div>
+      <p>Chargement en cours...</p>
+    </div>
+  </div>
+
+  <!-- Overlay mobile -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+          <a
+            href="service-mobilite.html"
+            class="nav-dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><span class="dropdown-section-title">Nos domaines</span></li>
+            <li>
+              <a href="service-cybersecurite.html" role="menuitem">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                Audit & Conseil Cybersécurité
+              </a>
+            </li>
+            <li>
+              <a href="service-electronique.html" role="menuitem">
+                <i class="fa-solid fa-video" aria-hidden="true"></i>
+                Sécurité Électronique
+              </a>
+            </li>
+            <li>
+              <a href="service-btp.html" role="menuitem">
+                <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                Construction & BTP
+              </a>
+            </li>
+            <li>
+              <a href="service-mobilite.html" role="menuitem">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                Mobilité & Logistique
+              </a>
+            </li>
+            <li><span class="dropdown-section-title">Autres</span></li>
+            <li>
+              <a href="services.html" role="menuitem">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                Voir tous les services
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+
+      <button
+        type="button"
+        class="nav-hamburger"
+        id="hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="page-hero">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="https://www.pexels.com/fr-fr/download/video/3695967/" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-grid"></div>
+    
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a> <span>/</span> <span>Services</span> <span>/</span> <span>Mobilité & Logistique</span>
+        </div>
+        
+        <h1 class="page-hero-title">
+          <span class="highlight">Mobilité & Logistique</span>
+        </h1>
+        
+        <p class="page-hero-desc">
+          Solutions complètes de transport et de logistique pour les entreprises et les particuliers.
+          Fiabilité, sécurité et performance pour toutes vos opérations.
+        </p>
+        
+        <div class="mobile-hero-img">
+          <img src="images/mobilité logis.jpg" alt="Mobilité & Logistique SISBM" class="hero-img" />
+        </div>
+        
+        <div class="page-hero-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-truck"></i>
+            Demander un Devis
+          </a>
+          <a href="#transport-personnes" class="btn btn-secondary btn-discover">
+            <i class="fa-solid fa-arrow-down"></i>
+            Découvrir
+          </a>
+        </div>
+        
+        <div class="page-hero-stats">
+          <div class="stat-box">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Clients Satisfaits</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">5000+</span>
+            <span class="stat-label">Livraisons</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Véhicules</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-hero-image">
+        <img src="images/mobilité logis.jpg" alt="Mobilité & Logistique SISBM" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TRANSPORT DE PERSONNES ══════════════ -->
+  <section id="transport-personnes" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Transport de Personnes</span>
+        <h2 class="light">Déplacement des Personnes</h2>
+        <p class="light">Des solutions adaptées à vos besoins</p>
+      </div>
+      
+      <div class="objective-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/Méthodologie MEHARII 2022.jpg" alt="Transport de personnes" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Objectif Principal</h3>
+          <p>
+            Nous proposons des solutions complètes et intégrées pour la gestion et l'optimisation des déplacements de personnes.
+            Que ce soit pour le transport public de personnes ou la location de véhicules pour les entreprises et les collectivités,
+            nous vous accompagnons avec professionnalisme et fiabilité.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Transport public de personnes</li>
+            <li><i class="fa-solid fa-check"></i> Location de véhicules pour entreprises</li>
+            <li><i class="fa-solid fa-check"></i> Location de véhicules pour collectivités</li>
+            <li><i class="fa-solid fa-check"></i> Service de navette</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TRANSPORT MARCHANDISES ══════════════ -->
+  <section id="transport-marchandises" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Transport d'Engins & Marchandises</span>
+        <h2 class="light">Logistique Fiable</h2>
+        <p class="light">Sécurité et performance garanties</p>
+      </div>
+      
+      <div class="objective-card pentest-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/voila.jpg" alt="Transport de marchandises" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Pourquoi Choisir SISBM ?</h3>
+          <p>
+            Nous garantissons la fiabilité, la sécurité et la performance de vos véhicules grâce à des interventions
+            adaptées et une gestion proactive. Notre expertise couvre le transport d'engins, le transport d'équipements,
+            le transport de marchandises et le transport de matériels.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Transport d'engins lourds</li>
+            <li><i class="fa-solid fa-check"></i> Transport d'équipements</li>
+            <li><i class="fa-solid fa-check"></i> Transport de marchandises</li>
+            <li><i class="fa-solid fa-check"></i> Transport de matériels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES MOBILITÉ ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Nos Services</span>
+        <h2 class="light">Gamme Complète</h2>
+        <p class="light">Des solutions pour tous vos besoins</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <h3>Transport Public</h3>
+          <p>Service de transport de personnes pour les collectivités.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Cars et bus</li>
+            <li><i class="fa-solid fa-check"></i> Navettes régionales</li>
+            <li><i class="fa-solid fa-check"></i> Transport scolaire</li>
+            <li><i class="fa-solid fa-check"></i> Circuits touristiques</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fa-solid fa-car"></i>
+          </div>
+          <h3>Location de Véhicules</h3>
+          <p>Location de véhicules pour professionnels et particuliers.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Voitures berline</li>
+            <li><i class="fa-solid fa-check"></i> SUV et 4x4</li>
+            <li><i class="fa-solid fa-check"></i> Utilitaires</li>
+            <li><i class="fa-solid fa-check"></i> Location longue durée</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fa-solid fa-truck-loading"></i>
+          </div>
+          <h3>Transport Spécial</h3>
+          <p>Transport d'équipements et de matériaux spéciaux.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Transport hors gabarit</li>
+            <li><i class="fa-solid fa-check"></i> Transport de charges lourdes</li>
+            <li><i class="fa-solid fa-check"></i> Escorte et accompagnement</li>
+            <li><i class="fa-solid fa-check"></i> Logistique de projet</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FLOTTE VÉHICULES ══════════════ -->
+  <section id="flotte" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Notre Flotte</span>
+        <h2 class="light">Des Véhicules Adaptés</h2>
+        <p class="light">Pour tous types de missions</p>
+      </div>
+      
+      <div class="objective-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/tranport.jpg" alt="Flotte de véhicules" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Notre Parc Automobile</h3>
+          <p>
+            Nous disposons d'une flotte de véhicules diversifiée pour répondre à tous vos besoins.
+            Tous nos véhicules sont régulièrement entretenus et garantissent seguridad et confort.
+            Nous assurons également la maintenance et l'entretien de votre propre flotte.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Véhicules récents et entretenus</li>
+            <li><i class="fa-solid fa-check"></i> Assurance tous risques</li>
+            <li><i class="fa-solid fa-check"></i> Service de maintenance</li>
+            <li><i class="fa-solid fa-check"></i> Chauffeurs professionnels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CIBLES ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Cibles</span>
+        <h2 class="light">À Qui S'Adresse Ce Service ?</h2>
+        <p class="light">Entreprises, institutions et particuliers</p>
+      </div>
+      
+      <div class="targets-grid">
+        <div class="target-card" data-aos>
+          <div class="target-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h4>Entreprises</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="100">
+          <div class="target-icon">
+            <i class="fa-solid fa-university"></i>
+          </div>
+          <h4>Institutions</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="200">
+          <div class="target-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h4>Collectivités</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="300">
+          <div class="target-icon">
+            <i class="fa-solid fa-person"></i>
+          </div>
+          <h4>Particuliers</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="400">
+          <div class="target-icon">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <h4>Industries</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section id="cta-contact" class="section-pad bg-dark">
+    <div class="container">
+      <div class="cta-box" data-aos>
+        <div class="cta-box-text">
+          <h2>Optimisez Vos Déplacements</h2>
+          <p>Demandez votre devis pour nos services de transport et de logistique.
+            Nous vous garantissons un service fiable, sécurisé et performant.</p>
+        </div>
+        <div class="cta-box-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            Demander un Devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
+          </a>
+          <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <div class="footer-contact-info">
+            <div class="fci-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2252723239402">+225 27 23 23 94 02</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <a href="tel:+22507201614">+225 07 07 20 16 14</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>Lun – Ven : 8h00 – 17h00 &nbsp;|&nbsp; Sam : 8h00 – 12h00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+            <li><a href="service-electronique.html"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+            <li><a href="service-btp.html"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+            <li><a href="service-mobilite.html"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+            <li><a href="mentions-legales.html"><i class="fa-solid fa-gavel"></i> Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html"><i class="fa-solid fa-shield-halved"></i> Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/sisbm-academy" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/2250707201614" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250707201614?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services%20de%20mobilit%C3%A9%20et%20logistique."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/nav.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

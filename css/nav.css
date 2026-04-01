@@ -152,7 +152,8 @@
 }
 
 @media (min-width: 901px) {
-  .nav-links .dropdown:hover .dropdown-menu {
+  .nav-links .dropdown:hover .dropdown-menu,
+  .nav-links .dropdown.dropdown-open .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(10px);

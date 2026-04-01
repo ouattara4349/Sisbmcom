@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sécurité Électronique – Vidéosurveillance & Contrôle d'Accès – SISBM Academy</title>
+  <meta name="description" content="Services complets de sécurité électronique : contrôle d'accès, vidéosurveillance, détection d'intrusion, détection incendie, interphonie et tracking véhicule en Côte d'Ivoire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="icon" type="image/png" href="images/logorech.jpg" />
+</head>
+<body>
+
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" />
+      </div>
+      <div class="loader-spinner"></div>
+      <p>Chargement en cours...</p>
+    </div>
+  </div>
+
+  <!-- Overlay mobile -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="SISBM Academy Logo" style="height:70px;width:auto;" />
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+          <a
+            href="service-electronique.html"
+            class="nav-dropdown-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><span class="dropdown-section-title">Nos domaines</span></li>
+            <li>
+              <a href="service-cybersecurite.html" role="menuitem">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                Audit & Conseil Cybersécurité
+              </a>
+            </li>
+            <li>
+              <a href="service-electronique.html" role="menuitem">
+                <i class="fa-solid fa-video" aria-hidden="true"></i>
+                Sécurité Électronique
+              </a>
+            </li>
+            <li>
+              <a href="service-btp.html" role="menuitem">
+                <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                Construction & BTP
+              </a>
+            </li>
+            <li>
+              <a href="service-mobilite.html" role="menuitem">
+                <i class="fa-solid fa-truck" aria-hidden="true"></i>
+                Mobilité & Logistique
+              </a>
+            </li>
+            <li><span class="dropdown-section-title">Autres</span></li>
+            <li>
+              <a href="services.html" role="menuitem">
+                <i class="fa-solid fa-list" aria-hidden="true"></i>
+                Voir tous les services
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html#contact-form" class="nav-cta">Demander un devis</a>
+
+      <button
+        type="button"
+        class="nav-hamburger"
+        id="hamburger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="page-hero">
+    <video class="hero-video-bg" autoplay muted loop playsinline>
+      <source src="https://www.pexels.com/fr-fr/download/video/6573544/" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-grid"></div>
+    
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a> <span>/</span> <span>Services</span> <span>/</span> <span>Sécurité Électronique</span>
+        </div>
+        
+        <h1 class="page-hero-title">
+          <span class="highlight">Sécurité Électronique</span>
+        </h1>
+        
+        <p class="page-hero-desc">
+          Protection physique de vos locaux : vidéosurveillance, contrôle d'accès, détection d'intrusion et incendie.
+          Des solutions intégrées pour sécuriser vos biens et vos personnes.
+        </p>
+        
+        <div class="mobile-hero-img">
+          <img src="images/Vidéosurveillance CCTV.jpg" alt="Sécurité Électronique SISBM" class="hero-img" />
+        </div>
+        
+        <div class="page-hero-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-shield-halved"></i>
+            Demander un Devis
+          </a>
+          <a href="#controle-acces" class="btn btn-secondary btn-discover">
+            <i class="fa-solid fa-arrow-down"></i>
+            Découvrir
+          </a>
+        </div>
+        
+        <div class="page-hero-stats">
+          <div class="stat-box">
+            <span class="stat-number">150+</span>
+            <span class="stat-label">Installations</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Caméras Installées</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-hero-image">
+        <img src="images/Vidéosurveillance CCTV.jpg" alt="Sécurité Électronique SISBM" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTRÔLE D'ACCÈS ══════════════ -->
+  <section id="controle-acces" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Contrôle d'Accès</span>
+        <h2 class="light">Gérer et Restreindre l'Accès</h2>
+        <p class="light">Sécurisez vos zones sensibles</p>
+      </div>
+      
+      <div class="objective-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/controle d'acc.jpg" alt="Contrôle d'accès" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Objectif Principal</h3>
+          <p>
+            Le contrôle d'accès permet de gérer et restreindre l'accès physique aux zones sensibles de votre bâtiment.
+            Nous vous proposons des solutions modernes utilisant des technologies de pointe comme les badges RFID, les lecteurs biométriques
+            et les systèmes de reconnaissance faciale.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Contrôle par badge et carte</li>
+            <li><i class="fa-solid fa-check"></i> Authentification biométrique</li>
+            <li><i class="fa-solid fa-check"></i> Gestion centralisée des accès</li>
+            <li><i class="fa-solid fa-check"></i> Traçabilité des entrées et sorties</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ VIDÉOSURVEILLANCE ══════════════ -->
+  <section id="videosurveillance" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Vidéosurveillance</span>
+        <h2 class="light">Surveillance Visuelle</h2>
+        <p class="light">Gardez un œil sur vos installations</p>
+      </div>
+      
+      <div class="objective-card pentest-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/lectro.png" alt="Vidéosurveillance" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Pourquoi la Vidéosurveillance ?</h3>
+          <p>
+            La vidéosurveillance assure la surveillance visuelle et la traçabilité des événements dans vos locaux.
+            Nos systèmes IP et analogiques offrent une qualité d'image exceptionnelle, de jour comme de nuit,
+            avec des fonctionnalités avancées de détection de mouvement et d'analyse vidéo.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Caméras IP et analogiques HD</li>
+            <li><i class="fa-solid fa-check"></i> Vision nocturne infrarouge</li>
+            <li><i class="fa-solid fa-check"></i> Enregistrement NVR/DVR</li>
+            <li><i class="fa-solid fa-check"></i> Accès à distance via smartphone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES ÉLECTRONIQUE ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Nos Services</span>
+        <h2 class="light">Solutions Complètes</h2>
+        <p class="light">Une gamme complète de services pour votre sécurité</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h3>Détection d'Intrusion</h3>
+          <p>Détectez et signalez toute tentative d'effraction.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Capteurs infrarouges</li>
+            <li><i class="fa-solid fa-check"></i> Contacts magnétiques</li>
+            <li><i class="fa-solid fa-check"></i> Barrières périmétriques</li>
+            <li><i class="fa-solid fa-check"></i> Centrales d'alarme</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3>Détection Incendie</h3>
+          <p>Prévenez les risques d'incendie et protejez les vies.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Détecteurs de fumée</li>
+            <li><i class="fa-solid fa-check"></i> Détecteurs de chaleur</li>
+            <li><i class="fa-solid fa-check"></i> Centrales incendie</li>
+            <li><i class="fa-solid fa-check"></i> Sirènes et déclencheurs</li>
+          </ul>
+        </div>
+        
+        <div class="service-card" data-aos data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <h3>Interphonie & Visiophonie</h3>
+          <p>Communication sécurisée aux accès de vos bâtiments.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Interphones audio/vidéo IP</li>
+            <li><i class="fa-solid fa-check"></i> Moniteurs de contrôle</li>
+            <li><i class="fa-solid fa-check"></i> Postes de garde</li>
+            <li><i class="fa-solid fa-check"></i> Contrôle à distance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TRACKING VÉHICULE ══════════════ -->
+  <section id="tracking" class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Tracking & Géolocalisation</span>
+        <h2 class="light">Suivez Vos Véhicules</h2>
+        <p class="light">Optimisez votre flotte et améliorez la productivité</p>
+      </div>
+      
+      <div class="objective-card" data-aos>
+        <div class="objective-icon">
+          <img src="images/Tracking & Géolocalisation.jpg" alt="Tracking véhicule" class="obj-img" />
+        </div>
+        <div class="objective-content">
+          <h3>Objectif Principal</h3>
+          <p>
+            Le tracking véhicule et géolocalisation permet de suivre en temps réel vos véhicules pour améliorer
+            la productivité, la sécurité et la rentabilité de vos opérations de transport.
+            Nos solutions de géolocalisation offrent un suivi précis et fiable.
+          </p>
+          <ul class="objective-list">
+            <li><i class="fa-solid fa-check"></i> Suivi en temps réel</li>
+            <li><i class="fa-solid fa-check"></i> Historique des trajets</li>
+            <li><i class="fa-solid fa-check"></i> Alertes de vitesse et géofencing</li>
+            <li><i class="fa-solid fa-check"></i> Rapports de performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TÉLÉMÉTRIE CARBURANT ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Télémétrie</span>
+        <h2 class="light">Suivi Carburant</h2>
+        <p class="light">Optimisez votre consommation</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <i class="fa-solid fa-gas-pump"></i>
+          </div>
+          <h3>Capteurs Carburant</h3>
+          <p>Suivez en temps réel le niveau de carburant de vos véhicules.</p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> Mesure précise du carburant</li>
+            <li><i class="fa-solid fa-check"></i> Alertes de consommation anormale</li>
+            <li><i class="fa-solid fa-check"></i> Rapports de consommation</li>
+            <li><i class="fa-solid fa-check"></i> Prévention des vols</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CIBLES ══════════════ -->
+  <section class="section-pad bg-dark">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="tag light-tag">Cibles</span>
+        <h2 class="light">À Qui S'Adresse Ce Service ?</h2>
+        <p class="light">Tous types d'organisations souhaitant renforcer leur sécurité physique</p>
+      </div>
+      
+      <div class="targets-grid">
+        <div class="target-card" data-aos>
+          <div class="target-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h4>Bâtiments Publics</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="100">
+          <div class="target-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h4>Banque & Finance</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="200">
+          <div class="target-icon">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <h4>Commerces</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="300">
+          <div class="target-icon">
+            <i class="fa-solid fa-warehouse"></i>
+          </div>
+          <h4>Centres Logistiques</h4>
+        </div>
+        
+        <div class="target-card" data-aos data-aos-delay="400">
+          <div class="target-icon">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h4>Microfinance</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section id="cta-contact" class="section-pad bg-dark">
+    <div class="container">
+      <div class="cta-box" data-aos>
+        <div class="cta-box-text">
+          <h2>Sécurisez Vos Locaux</h2>
+          <p>Demandez votre devis pour l'installation de votre système de sécurité électronique.
+            Nos experts vous conseillent et vous accompagnent dans votre projet.</p>
+        </div>
+        <div class="cta-box-actions">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            Demander un Devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.png" alt="SISBM Academy Logo" style="height:56px;width:auto;" />
+          </a>
+          <p>SISBM – Société d'Ingénierie en Sécurité Bâtiment et Mobilité. Expert en cybersécurité, sécurité électronique, BTP et formations IT à Abidjan, Côte d'Ivoire.</p>
+          <div class="footer-contact-info">
+            <div class="fci-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>23 BP 4326 Abidjan 23 – Côte d'Ivoire</span>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+2252723239402">+225 27 23 23 94 02</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <a href="tel:+22507201614">+225 07 07 20 16 14</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@sisbm-ci.com">contact@sisbm-ci.com</a>
+            </div>
+            <div class="fci-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>Lun – Ven : 8h00 – 17h00 &nbsp;|&nbsp; Sam : 8h00 – 12h00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-cybersecurite.html"><i class="fa-solid fa-shield-halved"></i> Audit & Conseil Cybersécurité</a></li>
+            <li><a href="service-electronique.html"><i class="fa-solid fa-video"></i> Sécurité Électronique</a></li>
+            <li><a href="service-btp.html"><i class="fa-solid fa-helmet-safety"></i> Construction & BTP</a></li>
+            <li><a href="service-mobilite.html"><i class="fa-solid fa-truck"></i> Mobilité & Logistique</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formations</h4>
+          <ul>
+            <li><a href="formations.html#cyber-off"><i class="fa-solid fa-terminal"></i> Cyber Offensive</a></li>
+            <li><a href="formations.html#cyber-def"><i class="fa-solid fa-shield-virus"></i> Cyber Défensive</a></li>
+            <li><a href="formations.html#reseau"><i class="fa-solid fa-network-wired"></i> Réseau & Système</a></li>
+            <li><a href="formations.html#grc"><i class="fa-solid fa-scale-balanced"></i> GRC / ISO 27001</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="apropos.html"><i class="fa-solid fa-circle-info"></i> À propos</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="contact.html#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+            <li><a href="mentions-legales.html"><i class="fa-solid fa-gavel"></i> Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html"><i class="fa-solid fa-shield-halved"></i> Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SISBM Academy – Tous droits réservés | Abidjan, Côte d'Ivoire</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/sisbm-academy" class="social-btn social-linkedin" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=sisbm" class="social-btn social-facebook" aria-label="Facebook" title="Facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/2250707201614" class="social-btn social-whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250707201614?text=Bonjour%20SISBM%2C%20je%20souhaite%20des%20informations%20sur%20vos%20services%20de%20s%C3%A9curit%C3%A9%20%C3%A9lectronique."
+     class="wa-float" id="wa-float" target="_blank" aria-label="Contacter sur WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="js/nav.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
